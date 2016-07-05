@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Centerfold Strips Talent Confirmation</title>
+    <style type="text/css" >
+    body
+    {
+        font: 11px Tahoma, Verdana, Arial, Helvetica; 
+        color: #000000;
+    }
+    
+    h1
+    {
+        font-size: 1.5em;
+    }
+    
+    h2
+    {
+        font-size: 1.3em;
+    }
+    
+    p
+    {
+        margin-left: 30px;
+        margin-bottom: 5px;
+    }
+
+    table
+    {
+        border-collapse: collapse;
+    }
+    
+    table th
+    {
+        text-align: right;
+        padding: 4px;
+    }
+    
+    table td
+    {
+        padding: 2px;
+    }
+    
+    div
+    {
+        margin: 5px;
+    }
+    
+    #divContent
+    {
+        width: 650px;
+    }
+    
+    /* These can by styled, if you choose */
+    #divIntro {}
+    #divTableContainer { margin: 5px;}
+    #divPolicy {}
+    #divStatge {}
+    #divTipping {}
+    #divPartyHost {}
+    #divWrapUp {}
+    
+    .feeSection, .totalSection
+    {
+        background-color: #EBEBEB;
+        text-align: right;
+    }
+    
+    .totalSection
+    {
+        border-top: 1px solid black;
+    }
+    
+    .header
+    {
+        text-align: left;
+        background-color: #CCC;
+        padding: 5px;
+    }
+    
+    /* ul */
+    .policyList {}
+    
+    .policyList li
+    {
+        margin-top: 3px;
+    }
+    
+    /* ul */
+    .stageList {}
+    
+    .stageList li
+    {
+        margin-top: 3px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="divContent">
+        <div id="divIntro">
+            <h1>CENTERFOLD STRIPS DANCER CONFIRMATION</h1>
+        </div>
+
+        <div id="divTableContainer">
+            <table>
+                <tr>
+                    <th class="header" colspan="4">Event Info:</th>
+                </tr>
+                <tr>
+                    <th width="125">Contact Person:</th>
+                    <td width="175">#FIRSTNAME#</td>
+                    <th width="125">Guest of Honor:</th>
+                    <td width="175">#GUESTOFHONOR#</td>
+                </tr>
+                <tr>
+                    <th>Date of Event:</th>
+                    <td>#EVENTDATE#</td>
+                    <th>Type of Function:</th>
+	                <td>#TYPEOFEVENT#</td>
+                </tr>
+                <tr>
+                    <th>Location:</th>
+	                <td>#LOCNAME#</td>
+                    <th>&nbsp;</th>
+                    <td>&nbsp;</td>
+                </tr>
+	            <tr>
+	                <th>Address1:</th>
+	                <td>#LOCADDRESS1#</td>
+	                <th>Address2:</th>
+	                <td>#LOCADDRESS2#</td>
+	            </tr>
+	            <tr>
+	                <th>City:</th>
+	                <td>#LOCCITY#</td>
+	                <th>State:</th>
+	                <td>#LOCSTATE#</td>
+	            </tr>
+                <tr>
+                    <th>Country:</th>
+                    <td>United States</td>
+                    <th>Zip:</th>
+                    <td>#ZIP#</td>
+                </tr>
+                <tr>
+                    <th>Start Time:</th>
+                    <td>#STARTTIME#</td>
+                    <th>Payroll:</th>
+                    <td>#PAYROLL#</td>
+                </tr>
+            </table>
+        </div>
+        <div id="divPolicy">
+            <h2>Booking Confirmations</h2>
+            <ul class="policyList">
+                <li>
+                    Please confirm that you have received this email by calling the office at 1-877-427-8747. You must also call the office to confirm 
+                    for this booking on the Monday prior to the event, and you must also call the office again on the morning of the booking date. This 
+                    is to ensure that you are aware of the booking & have all the proper information. 
+                </li>
+                <li>
+                    It is your responsibility to call the office and confirm on these two dates.  If you do <strong><u>not</u></strong> call to confirm, then you 
+                    <strong><u>will be replaced</u></strong> for that event.  Thank you for your cooperation with these critical, easy and brief confirmation calls.
+                </li>
+            </ul>
+            <h2>Arrival Time</h2>
+            <ul class="policyList">
+                <li>
+                    It is critical that you arrive on time to this and all bookings. Always allow sufficient traveling time between shows in case of traffic, 
+                    construction, parking, etc.
+                </li>
+            </ul>
+            <h2>Music</h2>
+            <ul class="policyList">
+                <li>
+                    Please bring a CD or an Ipod with your choice of music on it.
+                </li>
+                <li>
+                    If you have any questions, please call the office at 1-877-427-8747.
+                </li>
+                <li>
+                    Thank you and have a fun, safe, and profitable show!
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

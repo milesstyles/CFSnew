@@ -1,0 +1,15 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Footer.ascx.cs" Inherits="Controls_Footer" %>
+
+<div id="footer" style="clear:both;">
+     <asp:HyperLink runat="server" NavigateUrl="~/Legal.aspx" ID="hlLegal" Text="Legal" />&nbsp;&nbsp;|&nbsp;&nbsp;
+     <asp:HyperLink runat="server" NavigateUrl="~/Terms-of-Use.aspx" ID="hlTermsofUse" Text="Terms of Use" />&nbsp;&nbsp;|&nbsp;&nbsp;
+     <asp:HyperLink runat="server" NavigateUrl="~/Privacy-Policy.aspx" ID="hlPrivacy" Text="Privacy Policy" />
+     <br />
+     <br />
+     <p>&copy; Centerfold Strips 1996-<%=DateTime.Now.Year %> All Rights Reserved. Violators will be prosecuted to the fullest extent of the law.</p>
+     <div style="text-transform:none; padding:12px 25px">
+          This site is intended for individuals 18 years of age or older and of legal age to book adult entertainment as determined by the local laws in which you reside. If you are not 18, please leave now.<br />
+		All models and performers that appear in any visual depiction contained in this Website are over the age of 18 years in strict accordance with the requirements of U.S.C. 2257.<br />
+          Centerfold Strips ensures that all models we represent have two forms of ID and are fully documented. Documentation is available to any proper governmental or law enforcement agencies.<br />
+		The owner and operator of Centerfold Strips is not the primary producer of any of any talent imagery contained within.</div>
+<a href="http://twitter.com/centerfoldstrip" target="_blank"><img src="../images/twitterIcon.png" alt="Connect on Twitter" /></a>&nbsp;&nbsp;<a href="http://www.facebook.com/pages/New-York-NY/Centerfold-Strips/121157427508" target="_blank"><img src="../images/facebookIcon.png" alt="Connect on Facebook" /></a></div>

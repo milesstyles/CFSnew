@@ -1,0 +1,26 @@
+﻿
+div.editableImageControl
+{
+	border: solid 1px black;	
+}
+
+	div.editableImageControl div.editImageContainer
+	{
+		border: solid 2px black;	
+		overflow: hidden;
+		zoom: 1;
+		position: relative;
+		background-color: #999;
+	}
+
+	div.editableImageControl div.scaleSlider
+	{
+		width: 200px;	
+	}
+	
+	
+div.watermark img
+{
+	width: 100% !important;
+	height: 100% !important;
+}

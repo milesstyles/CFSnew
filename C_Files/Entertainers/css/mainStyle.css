@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike,  sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+body {
+	background-color: #000;
+	text-align: center;
+	font: 62.5%/1.1 "Trebuchet MS", Tahoma, Arial, Helvetica;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+h1, #mainMenu/*, #mainMenu li ul*/  { behavior: url(js/iepngfix.htc) }
+ol, ul {
+	list-style: none;
+}
+p, #middleColumn ol , #middleColumn ul{ padding-bottom: 12px; }
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+.cleaner {
+	clear:both;
+	height:1px;
+	font-size:1px;
+	border:none;
+	margin:0; padding:0;
+	background:transparent;
+}
+.contentBlock {
+	padding: 16px;
+	background-color: #000;
+	border: 1px solid #8A181A;
+	margin-bottom: 8px;
+	color: #A7A9Ac;
+	height:185px;
+}
+.contentBlock3 {
+	padding: 16px;
+	background-color: #000;
+	border: 1px solid #8A181A;
+	margin-bottom: 8px;
+	color: #A7A9Ac;
+	height:500px;
+}
+.contentBlock h2 { margin-bottom: 11px; }
+
+.contentBlock h2 span { display: none; }
+.contentBlock2 {
+	padding: 16px;
+	background-color: #000;
+	border: 1px solid #8A181A;
+	margin-bottom: 8px;
+	color: #A7A9Ac;
+	height:275px;
+	width:273px;
+}
+.contentBlock2 h2 { margin-bottom: 11px; }
+
+.contentBlock2 h2 span { display: none; }
+.error {
+	color: #fff !important;
+	background-color: #FF0303 !important;
+	border: 1px solid #8A181A !important;
+}
+.errorBox {
+	border-style: solid;
+	border-color: #8A181A;
+	display: block;
+	background-color: #FF0303;
+	padding: 12px 12px 0px;
+	color: #fff;
+	margin-bottom: 12px;
+}
+.errorBox a {
+	color: #fff !important;
+	text-decoration: underline !important;
+}
+.errorBox span
+{
+	color: #fff !important;
+}
+.errorBox ul li {
+	color: #fff !important;
+	text-decoration: underline !important;
+}
+.errorBox ul li a
+{
+	color:#fff !important;
+}
+.floatRight {
+	clear: right;
+	float: right;
+	margin-bottom: 8px;
+	margin-left: 12px;
+}
+.formDoubleWidth { width: 260px !important; }
+.formHalfWidth { width: 65px !important; }
+.formQuarterWidth { width: 33px !important; }
+.mailingBox {
+	width: 100px;
+	color: #000;
+	padding: 1px 2px;
+	border-top: 1px solid #808080;
+	border-right: none;
+	border-bottom: 1px solid #808080;
+	border-left: none;
+	float: left;
+	margin: 3px 8px 0px 0px;
+	font: 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.noPaddingMargin {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.redBorder {
+	border: 1px solid #8a181a;
+	margin-bottom: 8px;
+}
+.required {
+	color: #FF0303;
+	font-weight: bold;
+}
+.select, .textfield {
+	color: #000;
+	padding: 1px 2px;
+	border-top: 1px solid #808080;
+	border-right: none;
+	border-bottom: 1px solid #808080;
+	border-left: none;
+	font: 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	width: 130px;
+}
+#container {
+	margin: 0px auto;
+	width: 1050px;
+	text-align: left;
+	padding: 0px 25px;
+	
+	background-repeat: repeat-y;
+}
+
+.noclass{ background-color:black; background-image:none;}
+#content {
+	width: 1050px;
+	background-image: url(../images/mainBGGradient.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color: #08070b;
+}
+#footer {
+	width: 1050px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	text-transform: uppercase;
+	color: #A7A9AC;
+	text-align: center;
+}
+#footer a {
+	color: #A7A9AC;
+	text-decoration: none;
+}
+#footer span {
+	text-transform: none;
+	text-align: left;
+	display: block;
+	margin: 10px 0px 0px;
+	padding: 0px 40px;
+}
+#leftColumn {
+	display: inline;
+	float: left;
+	width: 178px;
+	margin-left: 24px;
+}
+#leftColumn #subMenu {
+	margin-top: 13px;
+	margin-left: 18px;
+	padding-bottom: 10px;
+}
+#leftColumn #subMenu li a {
+	font-size: 1.1em;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 9px;
+	width: 160px;
+}
+#leftColumn #subMenu li a:hover { text-decoration: underline; }
+#middleColumn {
+	float: left;
+	width: 548px;
+	margin: 0px 0px 8px 8px;
+}
+#middleColumn ol { margin-left: 16px; }
+#middleColumn ol li { list-style: decimal; }
+#middleColumn ul { margin-left: 12px; }
+#middleColumn ul li { list-style: disc; }
+#middleColumn #middleRightColumn {
+	float: left;
+	width: 270px;
+	margin-left: 8px;
+}
+#middleColumn #middleRightColumn h3 {
+	color: #FF6700;
+	font-size: 1.2em;
+	padding: 13px 17px;
+	font-weight: normal;
+	line-height: 1.4em;
+	height: 54px;
+}
+#rightColumn {
+	float: left;
+	margin-left: 8px;
+	width: 178px;
+}
+
+
+.clear { clear: both; }

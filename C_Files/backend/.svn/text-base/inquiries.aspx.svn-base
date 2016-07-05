@@ -1,0 +1,59 @@
+﻿﻿<%@ Page Title="Centerfold Strips | View Inquiries" Language="C#" MasterPageFile="~/backend/MasterPage.master" AutoEventWireup="true" CodeFile="inquiries.aspx.cs" Inherits="backend_inquiries" EnableEventValidation="false"%>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<style type="text/css" >
+#inquiriesTable
+{
+    width: 938px;
+    border: none;
+    clear: both;
+}
+  #inquiriesTable td
+  {
+    vertical-align: top;
+    padding-bottom: 20px;
+  }
+  
+  #inquiriesTable tr.nth-child-even td
+  {
+	border-top: 2px solid #383838;
+	border-bottom: 2px solid #383838;
+  }
+</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
+   <h3>View Inquiries</h3>
+    <div id="fullColumn">
+    <div style="margin-bottom: 20px;">
+        <asp:Button runat="server" ID="btnSwitchView" Text="VIEW ARCHIVED" CssClass="button" OnClick="OnClick_btnSwitchView" Visible="false" />
+    </div>
+        <asp:Repeater runat="server" ID="rptViewInquiries" >
+            <HeaderTemplate>
+                <table id="inquiriesTable" >
+                <tr>
+                     <th scope="col">Date</th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Email</th>
+                     <th scope="col">Phone Number</th>
+                     <th width="350" scope="col">&nbsp;</th>
+                     <th width="60" scope="col">&nbsp;</th>
+                </tr>                  
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                     <td><%# ((DateTime)Eval("Date")).ToString() %></td>
+                     <td><%# Eval("Name") %></td>
+                     <td><a href='mailto:<%# Eval("EmailAddress") %>'><%# Eval("EmailAddress") %></a></td>
+                     <td><%# Eval("PhoneNumber") %></td>
+                     <td><%# Eval("ContactText") %></td>
+                     <td><asp:Button runat="server" ID="btnArchive" Text="Delete" CssClass="button" OnClick="OnClick_btnArchive" CommandArgument='<%# Eval("ContactFormId") %>' Visible='<%# viewNewMessages %>' /></td>
+                </tr>                                            
+            </ItemTemplate>
+            <FooterTemplate>
+                </table>
+            </FooterTemplate>
+        </asp:Repeater>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="deleteConfirm" Runat="Server">
+</asp:Content>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videos>
+     <video>
+          <src>/talentvids/female/cfs_Main.flv</src>
+          <still>/images/videoStill1.jpg</still>
+     </video>
+	<video>
+          <src>/talentvids/female/cfs_female.flv</src>
+          <still>/images/videoStill1.jpg</still>
+     </video>
+</videos>

@@ -1,0 +1,1972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CfsNamespace.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="CfsNamespaceStoreContainer">
+          <EntitySet Name="Applicant" EntityType="CfsNamespace.Store.Applicant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AppSetting" EntityType="CfsNamespace.Store.AppSetting" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CfsSection" EntityType="CfsNamespace.Store.CfsSection" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CfsUser" EntityType="CfsNamespace.Store.CfsUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CfsUserToSection" EntityType="CfsNamespace.Store.CfsUserToSection" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CfsUserType" EntityType="CfsNamespace.Store.CfsUserType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CfsUserTypeTemplate" EntityType="CfsNamespace.Store.CfsUserTypeTemplate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactForm" EntityType="CfsNamespace.Store.ContactForm" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customer" EntityType="CfsNamespace.Store.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Event" EntityType="CfsNamespace.Store.Event" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Images" EntityType="CfsNamespace.Store.Images" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Job" EntityType="CfsNamespace.Store.Job" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Location" EntityType="CfsNamespace.Store.Location" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MailingList" EntityType="CfsNamespace.Store.MailingList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OnlineBooking" EntityType="CfsNamespace.Store.OnlineBooking" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pending" EntityType="CfsNamespace.Store.Pending" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StaffNote" EntityType="CfsNamespace.Store.StaffNote" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="CfsNamespace.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Talent" EntityType="CfsNamespace.Store.Talent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TalentAltPhone" EntityType="CfsNamespace.Store.TalentAltPhone" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TalentCredit" EntityType="CfsNamespace.Store.TalentCredit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TalentHold" EntityType="CfsNamespace.Store.TalentHold" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TalentImages" EntityType="CfsNamespace.Store.TalentImages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TalentToJob" EntityType="CfsNamespace.Store.TalentToJob" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TalentWorksIn" EntityType="CfsNamespace.Store.TalentWorksIn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TextMsgLog" EntityType="CfsNamespace.Store.TextMsgLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USState" EntityType="CfsNamespace.Store.USState" store:Type="Tables" store:Schema="dbo" store:Name="USState">
+            <DefiningQuery>SELECT 
+      [USState].[ID] AS [ID], 
+      [USState].[StateName] AS [StateName], 
+      [USState].[StateAbbrev] AS [StateAbbrev]
+      FROM [dbo].[USState] AS [USState]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CfsUser_CfsUserType" Association="CfsNamespace.Store.FK_CfsUser_CfsUserType">
+            <End Role="CfsUserType" EntitySet="CfsUserType" />
+            <End Role="CfsUser" EntitySet="CfsUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserToSection_CfsSection" Association="CfsNamespace.Store.FK_CfsUserToSection_CfsSection">
+            <End Role="CfsSection" EntitySet="CfsSection" />
+            <End Role="CfsUserToSection" EntitySet="CfsUserToSection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserToSection_CfsUser" Association="CfsNamespace.Store.FK_CfsUserToSection_CfsUser">
+            <End Role="CfsUser" EntitySet="CfsUser" />
+            <End Role="CfsUserToSection" EntitySet="CfsUserToSection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserTypeTemplate_CfsSection" Association="CfsNamespace.Store.FK_CfsUserTypeTemplate_CfsSection">
+            <End Role="CfsSection" EntitySet="CfsSection" />
+            <End Role="CfsUserTypeTemplate" EntitySet="CfsUserTypeTemplate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserTypeTemplate_CfsUserType" Association="CfsNamespace.Store.FK_CfsUserTypeTemplate_CfsUserType">
+            <End Role="CfsUserType" EntitySet="CfsUserType" />
+            <End Role="CfsUserTypeTemplate" EntitySet="CfsUserTypeTemplate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Event_Customer" Association="CfsNamespace.Store.FK_Event_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Event" EntitySet="Event" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Event" Association="CfsNamespace.Store.FK_Job_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="Job" EntitySet="Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentAltPhone_Talent" Association="CfsNamespace.Store.FK_TalentAltPhone_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentAltPhone" EntitySet="TalentAltPhone" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentCredit_Talent" Association="CfsNamespace.Store.FK_TalentCredit_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentCredit" EntitySet="TalentCredit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentHold_Talent" Association="CfsNamespace.Store.FK_TalentHold_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentHold" EntitySet="TalentHold" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentToJob_Job" Association="CfsNamespace.Store.FK_TalentToJob_Job">
+            <End Role="Job" EntitySet="Job" />
+            <End Role="TalentToJob" EntitySet="TalentToJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentToJob_Talent" Association="CfsNamespace.Store.FK_TalentToJob_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentToJob" EntitySet="TalentToJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentWorksIn_Talent" Association="CfsNamespace.Store.FK_TalentWorksIn_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentWorksIn" EntitySet="TalentWorksIn" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Applicant">
+          <Key>
+            <PropertyRef Name="ApplicantId" />
+          </Key>
+          <Property Name="ApplicantId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateApplied" Type="datetime" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="30" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" />
+          <Property Name="Country" Type="nvarchar" MaxLength="30" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="15" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="AltPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Website" Type="nvarchar" MaxLength="50" />
+          <Property Name="StageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeightFt" Type="int" />
+          <Property Name="HeightIn" Type="int" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="EyeColor" Type="nvarchar" MaxLength="10" />
+          <Property Name="HairColor" Type="nvarchar" MaxLength="20" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="Bust" Type="varchar" MaxLength="10" />
+          <Property Name="Waist" Type="varchar" MaxLength="10" />
+          <Property Name="Hips" Type="varchar" MaxLength="10" />
+          <Property Name="Experience" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ImageOne" Type="nvarchar" MaxLength="255" />
+          <Property Name="ImageTwo" Type="nvarchar" MaxLength="255" />
+          <Property Name="ImageThree" Type="nvarchar" MaxLength="255" />
+          <Property Name="DaysAvail" Type="nvarchar" MaxLength="255" />
+          <Property Name="DaysPrefer" Type="nvarchar" MaxLength="255" />
+          <Property Name="HasBeenContacted" Type="bit" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="HiringInfo" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="AppSetting">
+          <Key>
+            <PropertyRef Name="SettingKey" />
+          </Key>
+          <Property Name="SettingKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SettingValue" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CfsSection">
+          <Key>
+            <PropertyRef Name="SectionId" />
+          </Key>
+          <Property Name="SectionId" Type="int" Nullable="false" />
+          <Property Name="SectionName" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="CfsUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="UserPass" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CfsUserToSection">
+          <Key>
+            <PropertyRef Name="UserToSectionPk" />
+          </Key>
+          <Property Name="UserToSectionPk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="SectionId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CfsUserType">
+          <Key>
+            <PropertyRef Name="UserTypeId" />
+          </Key>
+          <Property Name="UserTypeId" Type="int" Nullable="false" />
+          <Property Name="UserTypeName" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="CfsUserTypeTemplate">
+          <Key>
+            <PropertyRef Name="TemplatePk" />
+          </Key>
+          <Property Name="TemplatePk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="SectionId" Type="int" />
+        </EntityType>
+        <EntityType Name="ContactForm">
+          <Key>
+            <PropertyRef Name="ContactFormId" />
+          </Key>
+          <Property Name="ContactFormId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EmailAddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="ContactText" Type="text" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="New" Type="bit" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="30" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="14" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="14" />
+          <Property Name="BusinessPhone" Type="nvarchar" MaxLength="14" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="14" />
+          <Property Name="AltContactName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AltContactPhone" Type="nvarchar" MaxLength="14" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferredBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsCustConfirmSent" Type="bit" Nullable="false" />
+          <Property Name="BusinessPhoneExt" Type="nvarchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="ContactPerson" Type="nvarchar" MaxLength="30" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="14" />
+          <Property Name="GuestOfHonor" Type="nvarchar" MaxLength="30" />
+          <Property Name="LocationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationAddress1" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationAddress2" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationCity" Type="nvarchar" MaxLength="30" />
+          <Property Name="LocationState" Type="nvarchar" MaxLength="2" />
+          <Property Name="LocationZip" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationCountry" Type="nvarchar" MaxLength="30" />
+          <Property Name="LocationPhone" Type="nvarchar" MaxLength="14" />
+          <Property Name="HasPrivateRoom" Type="bit" />
+          <Property Name="HasOwnerPermission" Type="bit" />
+          <Property Name="EventDate" Type="datetime" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="30" />
+          <Property Name="NumGuests" Type="smallint" />
+          <Property Name="AgeRange" Type="varchar" MaxLength="20" />
+          <Property Name="IsSurpriseParty" Type="bit" />
+        </EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="imageID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="data" Type="varbinary(max)" Nullable="false" />
+          <Property Name="isOriginal" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobId" />
+          </Key>
+          <Property Name="JobId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="DateTimeCreated" Type="datetime" Nullable="false" />
+          <Property Name="PreparedBy" Type="int" Nullable="false" />
+          <Property Name="CCIssueBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="CCTypeCreditOrDebit" Type="nvarchar" MaxLength="50" />
+          <Property Name="CCTypeBrand" Type="nvarchar" MaxLength="15" />
+          <Property Name="CCName" Type="nvarchar" MaxLength="30" />
+          <Property Name="CCNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="CCcv2Num" Type="nvarchar" MaxLength="5" />
+          <Property Name="CCExp" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpecialInstructions" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsJobCancelled" Type="bit" Nullable="false" />
+          <Property Name="IsJobComplete" Type="bit" Nullable="false" />
+          <Property Name="IsBalanceCollected" Type="bit" Nullable="false" />
+          <Property Name="IsChargeNetToCC" Type="bit" Nullable="false" />
+          <Property Name="ChargeForAccessories" Type="int" Nullable="false" />
+          <Property Name="ChargeForEntertain" Type="int" Nullable="false" />
+          <Property Name="ChargeForLimo" Type="int" Nullable="false" />
+          <Property Name="ChargeForLocation" Type="int" Nullable="false" />
+          <Property Name="ExpenseTalent" Type="int" Nullable="false" />
+          <Property Name="ExpenseGratuity" Type="int" Nullable="false" />
+          <Property Name="ExpenseSecurity" Type="int" Nullable="false" />
+          <Property Name="ExpenseReferral" Type="int" Nullable="false" />
+          <Property Name="ExpenseSales" Type="int" Nullable="false" />
+          <Property Name="GrossIncome" Type="int" Nullable="false" />
+          <Property Name="ExpenseTotal" Type="int" Nullable="false" />
+          <Property Name="OfficeNet" Type="int" Nullable="false" />
+          <Property Name="BalanceDue" Type="int" />
+          <Property Name="RespForBalance" Type="int" />
+          <Property Name="TotalShowLengthMins" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="int" Nullable="false" />
+          <Property Name="LocDisplayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LocStateProvince" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="LocCountry" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="MailingList">
+          <Key>
+            <PropertyRef Name="EmailId" />
+          </Key>
+          <Property Name="EmailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmailAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="OnlineBooking">
+          <Key>
+            <PropertyRef Name="BookingId" />
+          </Key>
+          <Property Name="BookingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateSubmitted" Type="datetime" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address1" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="State" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="Zip" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Country" Type="nvarchar" MaxLength="30" />
+          <Property Name="HomePhone" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="ReferredBy" Type="nvarchar" MaxLength="30" />
+          <Property Name="LocName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocAddress1" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocAddress2" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocCity" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="LocState" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="LocZip" Type="nvarchar" MaxLength="10" />
+          <Property Name="LocCountry" Type="nvarchar" MaxLength="30" />
+          <Property Name="LocPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="LocCrossSt" Type="nvarchar" MaxLength="64" />
+          <Property Name="EventDate" Type="datetime" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="30" />
+          <Property Name="WantFemale" Type="bit" Nullable="false" />
+          <Property Name="WantMale" Type="bit" Nullable="false" />
+          <Property Name="WantToplessWtr" Type="bit" Nullable="false" />
+          <Property Name="WantLittlePeople" Type="bit" Nullable="false" />
+          <Property Name="WantDragQueen" Type="bit" Nullable="false" />
+          <Property Name="WantBellyDancer" Type="bit" Nullable="false" />
+          <Property Name="WantFatMama" Type="bit" Nullable="false" />
+          <Property Name="WantImpersonator" Type="bit" Nullable="false" />
+          <Property Name="NumGuests" Type="int" />
+          <Property Name="NumTalent" Type="int" />
+          <Property Name="ShowLengthMins" Type="int" />
+          <Property Name="ArrivalTime" Type="datetime" />
+          <Property Name="CrowdType" Type="nvarchar" MaxLength="6" />
+          <Property Name="GuestAgeRange" Type="nvarchar" MaxLength="20" />
+          <Property Name="GuestOfHonor" Type="nvarchar" MaxLength="64" />
+          <Property Name="IsSurprise" Type="bit" Nullable="false" />
+          <Property Name="SpecialInstructions" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Pending">
+          <Key>
+            <PropertyRef Name="PendId" />
+          </Key>
+          <Property Name="PendId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferredBy" Type="nvarchar" MaxLength="30" />
+          <Property Name="CityStateZip" Type="nvarchar" MaxLength="300" />
+          <Property Name="EventDate" Type="datetime" Nullable="false" />
+          <Property Name="EventType" Type="varchar" MaxLength="60" />
+          <Property Name="EntertainType" Type="nvarchar" MaxLength="20" />
+          <Property Name="GuestType" Type="nvarchar" MaxLength="10" />
+          <Property Name="NumOfGuests" Type="int" />
+          <Property Name="Budget" Type="nvarchar" MaxLength="30" />
+          <Property Name="NumEntertainers" Type="int" />
+          <Property Name="TimeRequested" Type="datetime" />
+          <Property Name="QuotedPrice" Type="nvarchar" MaxLength="30" />
+          <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="StaffNote">
+          <Key>
+            <PropertyRef Name="StaffNoteId" />
+          </Key>
+          <Property Name="StaffNoteId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="text" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Talent">
+          <Key>
+            <PropertyRef Name="TalentId" />
+          </Key>
+          <Property Name="TalentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsFeatureTalent" Type="bit" Nullable="false" />
+          <Property Name="TalentType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmailPrimary" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailSecondary" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="30" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="15" />
+          <Property Name="Country" Type="nvarchar" MaxLength="30" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="CellCarrier" Type="nvarchar" MaxLength="20" />
+          <Property Name="IMClient" Type="nvarchar" MaxLength="20" />
+          <Property Name="IMName" Type="nvarchar" MaxLength="30" />
+          <Property Name="PersonalSite" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpecialNotes" Type="varchar" MaxLength="1000" />
+          <Property Name="NewTalentImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="ThumbImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="ImageOne" Type="nvarchar" MaxLength="255" />
+          <Property Name="ImageTwo" Type="nvarchar" MaxLength="255" />
+          <Property Name="ImageThree" Type="nvarchar" MaxLength="255" />
+          <Property Name="VideoOne" Type="nvarchar" MaxLength="255" />
+          <Property Name="VideoTwo" Type="nvarchar" MaxLength="255" />
+          <Property Name="VideoThree" Type="nvarchar" MaxLength="255" />
+          <Property Name="Bust" Type="nvarchar" MaxLength="10" />
+          <Property Name="Waist" Type="nvarchar" MaxLength="10" />
+          <Property Name="Hips" Type="nvarchar" MaxLength="10" />
+          <Property Name="HeightFt" Type="int" />
+          <Property Name="HeightIn" Type="int" />
+          <Property Name="HairColor" Type="nvarchar" MaxLength="15" />
+          <Property Name="EyeColor" Type="nvarchar" MaxLength="10" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="Race" Type="nvarchar" MaxLength="10" />
+          <Property Name="DoesToys" Type="bit" Nullable="false" />
+          <Property Name="DoesFullNudeStrip" Type="bit" Nullable="false" />
+          <Property Name="DoesLesbianShow" Type="bit" Nullable="false" />
+          <Property Name="DoesPromoModeling" Type="bit" Nullable="false" />
+          <Property Name="DoesToplessBartender" Type="bit" Nullable="false" />
+          <Property Name="DoesPoleDancing" Type="bit" Nullable="false" />
+          <Property Name="DoesToplessStrip" Type="bit" Nullable="false" />
+          <Property Name="DoesToplessWaiting" Type="bit" Nullable="false" />
+          <Property Name="DoesPopoutCake" Type="bit" Nullable="false" />
+          <Property Name="DoesInternetChat" Type="bit" Nullable="false" />
+          <Property Name="DoesToplessCardDealing" Type="bit" Nullable="false" />
+          <Property Name="DoesLapdancing" Type="bit" Nullable="false" />
+          <Property Name="Likes" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Dislikes" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Costumes" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SpecialTalents" Type="nvarchar" MaxLength="1000" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateLastUpdate" Type="datetime" Nullable="false" />
+          <Property Name="WorksInList" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TalentAltPhone">
+          <Key>
+            <PropertyRef Name="AltPhoneId" />
+          </Key>
+          <Property Name="AltPhoneId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="TalentId" Type="int" Nullable="false" />
+          <Property Name="AltPhoneName" Type="nvarchar" MaxLength="12" />
+          <Property Name="AltPhoneNum" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TalentCredit">
+          <Key>
+            <PropertyRef Name="CreditId" />
+          </Key>
+          <Property Name="CreditId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TalentId" Type="int" Nullable="false" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Info" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="TalentHold">
+          <Key>
+            <PropertyRef Name="HoldId" />
+          </Key>
+          <Property Name="HoldId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TalentId" Type="int" Nullable="false" />
+          <Property Name="DateStart" Type="datetime" Nullable="false" />
+          <Property Name="CurLocation" Type="nvarchar" MaxLength="60" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TalentImages">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="imageID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="data" Type="varbinary(max)" Nullable="false" />
+          <Property Name="isOriginal" Type="bit" Nullable="false" />
+          <Property Name="FK_talentID" Type="int" Nullable="false" />
+          <Property Name="imageIndex" Type="int" Nullable="false" />
+          <Property Name="isApplicant" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TalentToJob">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="JobId" Type="int" Nullable="false" />
+          <Property Name="TalentId" Type="int" Nullable="false" />
+          <Property Name="StartDateTime" Type="datetime" Nullable="false" />
+          <Property Name="ShowLengthMins" Type="int" Nullable="false" />
+          <Property Name="Payroll" Type="int" Nullable="false" />
+          <Property Name="IsConfirmSent" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TalentWorksIn">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TalentId" Type="int" Nullable="false" />
+          <Property Name="State" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="Country" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="TextMsgLog">
+          <Key>
+            <PropertyRef Name="MessageId" />
+          </Key>
+          <Property Name="MessageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PhoneNumTo" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Message" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CenterfoldNew.dbo.USState' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="USState">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="StateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateAbbrev" Type="nchar" MaxLength="2" />
+        </EntityType>
+        <Association Name="FK_CfsUser_CfsUserType">
+          <End Role="CfsUserType" Type="CfsNamespace.Store.CfsUserType" Multiplicity="1" />
+          <End Role="CfsUser" Type="CfsNamespace.Store.CfsUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CfsUserType">
+              <PropertyRef Name="UserTypeId" />
+            </Principal>
+            <Dependent Role="CfsUser">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CfsUserToSection_CfsSection">
+          <End Role="CfsSection" Type="CfsNamespace.Store.CfsSection" Multiplicity="1" />
+          <End Role="CfsUserToSection" Type="CfsNamespace.Store.CfsUserToSection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CfsSection">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="CfsUserToSection">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CfsUserToSection_CfsUser">
+          <End Role="CfsUser" Type="CfsNamespace.Store.CfsUser" Multiplicity="1" />
+          <End Role="CfsUserToSection" Type="CfsNamespace.Store.CfsUserToSection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CfsUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CfsUserToSection">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CfsUserTypeTemplate_CfsSection">
+          <End Role="CfsSection" Type="CfsNamespace.Store.CfsSection" Multiplicity="0..1" />
+          <End Role="CfsUserTypeTemplate" Type="CfsNamespace.Store.CfsUserTypeTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CfsSection">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="CfsUserTypeTemplate">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CfsUserTypeTemplate_CfsUserType">
+          <End Role="CfsUserType" Type="CfsNamespace.Store.CfsUserType" Multiplicity="0..1" />
+          <End Role="CfsUserTypeTemplate" Type="CfsNamespace.Store.CfsUserTypeTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CfsUserType">
+              <PropertyRef Name="UserTypeId" />
+            </Principal>
+            <Dependent Role="CfsUserTypeTemplate">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Event_Customer">
+          <End Role="Customer" Type="CfsNamespace.Store.Customer" Multiplicity="1" />
+          <End Role="Event" Type="CfsNamespace.Store.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Event">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_Event">
+          <End Role="Event" Type="CfsNamespace.Store.Event" Multiplicity="1" />
+          <End Role="Job" Type="CfsNamespace.Store.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="EventId" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TalentAltPhone_Talent">
+          <End Role="Talent" Type="CfsNamespace.Store.Talent" Multiplicity="1" />
+          <End Role="TalentAltPhone" Type="CfsNamespace.Store.TalentAltPhone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Talent">
+              <PropertyRef Name="TalentId" />
+            </Principal>
+            <Dependent Role="TalentAltPhone">
+              <PropertyRef Name="TalentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TalentCredit_Talent">
+          <End Role="Talent" Type="CfsNamespace.Store.Talent" Multiplicity="1" />
+          <End Role="TalentCredit" Type="CfsNamespace.Store.TalentCredit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Talent">
+              <PropertyRef Name="TalentId" />
+            </Principal>
+            <Dependent Role="TalentCredit">
+              <PropertyRef Name="TalentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TalentHold_Talent">
+          <End Role="Talent" Type="CfsNamespace.Store.Talent" Multiplicity="1" />
+          <End Role="TalentHold" Type="CfsNamespace.Store.TalentHold" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Talent">
+              <PropertyRef Name="TalentId" />
+            </Principal>
+            <Dependent Role="TalentHold">
+              <PropertyRef Name="TalentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TalentToJob_Job">
+          <End Role="Job" Type="CfsNamespace.Store.Job" Multiplicity="1" />
+          <End Role="TalentToJob" Type="CfsNamespace.Store.TalentToJob" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="JobId" />
+            </Principal>
+            <Dependent Role="TalentToJob">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TalentToJob_Talent">
+          <End Role="Talent" Type="CfsNamespace.Store.Talent" Multiplicity="1" />
+          <End Role="TalentToJob" Type="CfsNamespace.Store.TalentToJob" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Talent">
+              <PropertyRef Name="TalentId" />
+            </Principal>
+            <Dependent Role="TalentToJob">
+              <PropertyRef Name="TalentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TalentWorksIn_Talent">
+          <End Role="Talent" Type="CfsNamespace.Store.Talent" Multiplicity="1" />
+          <End Role="TalentWorksIn" Type="CfsNamespace.Store.TalentWorksIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Talent">
+              <PropertyRef Name="TalentId" />
+            </Principal>
+            <Dependent Role="TalentWorksIn">
+              <PropertyRef Name="TalentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="ContactForm_SaveContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="PhoneNumber" Type="nchar" Mode="In" />
+          <Parameter Name="Experience" Type="text" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CfsNamespace" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="CfsEntity">
+          <EntitySet Name="Applicant" EntityType="CfsNamespace.Applicant" />
+          <EntitySet Name="CfsSection" EntityType="CfsNamespace.CfsSection" />
+          <EntitySet Name="CfsUser" EntityType="CfsNamespace.CfsUser" />
+          <EntitySet Name="CfsUserToSection" EntityType="CfsNamespace.CfsUserToSection" />
+          <EntitySet Name="CfsUserType" EntityType="CfsNamespace.CfsUserType" />
+          <EntitySet Name="CfsUserTypeTemplate" EntityType="CfsNamespace.CfsUserTypeTemplate" />
+          <EntitySet Name="ContactForm" EntityType="CfsNamespace.ContactForm" />
+          <EntitySet Name="Customer" EntityType="CfsNamespace.Customer" />
+          <EntitySet Name="Event" EntityType="CfsNamespace.Event" />
+          <EntitySet Name="Job" EntityType="CfsNamespace.Job" />
+          <EntitySet Name="Location" EntityType="CfsNamespace.Location" />
+          <EntitySet Name="MailingList" EntityType="CfsNamespace.MailingList" />
+          <EntitySet Name="OnlineBooking" EntityType="CfsNamespace.OnlineBooking" />
+          <EntitySet Name="Pending" EntityType="CfsNamespace.Pending" />
+          <EntitySet Name="sysdiagrams" EntityType="CfsNamespace.sysdiagrams" />
+          <EntitySet Name="Talent" EntityType="CfsNamespace.Talent" />
+          <EntitySet Name="TalentAltPhone" EntityType="CfsNamespace.TalentAltPhone" />
+          <EntitySet Name="TalentCredit" EntityType="CfsNamespace.TalentCredit" />
+          <EntitySet Name="TalentHold" EntityType="CfsNamespace.TalentHold" />
+          <EntitySet Name="TalentToJob" EntityType="CfsNamespace.TalentToJob" />
+          <EntitySet Name="TalentWorksIn" EntityType="CfsNamespace.TalentWorksIn" />
+          <EntitySet Name="TextMsgLog" EntityType="CfsNamespace.TextMsgLog" />
+          <EntitySet Name="USState" EntityType="CfsNamespace.USState" />
+          <AssociationSet Name="FK_CfsUserToSection_CfsSection" Association="CfsNamespace.FK_CfsUserToSection_CfsSection">
+            <End Role="CfsSection" EntitySet="CfsSection" />
+            <End Role="CfsUserToSection" EntitySet="CfsUserToSection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserTypeTemplate_CfsSection" Association="CfsNamespace.FK_CfsUserTypeTemplate_CfsSection">
+            <End Role="CfsSection" EntitySet="CfsSection" />
+            <End Role="CfsUserTypeTemplate" EntitySet="CfsUserTypeTemplate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUser_CfsUserType" Association="CfsNamespace.FK_CfsUser_CfsUserType">
+            <End Role="CfsUserType" EntitySet="CfsUserType" />
+            <End Role="CfsUser" EntitySet="CfsUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserToSection_CfsUser" Association="CfsNamespace.FK_CfsUserToSection_CfsUser">
+            <End Role="CfsUser" EntitySet="CfsUser" />
+            <End Role="CfsUserToSection" EntitySet="CfsUserToSection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CfsUserTypeTemplate_CfsUserType" Association="CfsNamespace.FK_CfsUserTypeTemplate_CfsUserType">
+            <End Role="CfsUserType" EntitySet="CfsUserType" />
+            <End Role="CfsUserTypeTemplate" EntitySet="CfsUserTypeTemplate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Event_Customer" Association="CfsNamespace.FK_Event_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Event" EntitySet="Event" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_Event" Association="CfsNamespace.FK_Job_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="Job" EntitySet="Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentToJob_Job" Association="CfsNamespace.FK_TalentToJob_Job">
+            <End Role="Job" EntitySet="Job" />
+            <End Role="TalentToJob" EntitySet="TalentToJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentAltPhone_Talent" Association="CfsNamespace.FK_TalentAltPhone_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentAltPhone" EntitySet="TalentAltPhone" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentCredit_Talent" Association="CfsNamespace.FK_TalentCredit_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentCredit" EntitySet="TalentCredit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentHold_Talent" Association="CfsNamespace.FK_TalentHold_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentHold" EntitySet="TalentHold" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentToJob_Talent" Association="CfsNamespace.FK_TalentToJob_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentToJob" EntitySet="TalentToJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TalentWorksIn_Talent" Association="CfsNamespace.FK_TalentWorksIn_Talent">
+            <End Role="Talent" EntitySet="Talent" />
+            <End Role="TalentWorksIn" EntitySet="TalentWorksIn" />
+          </AssociationSet>
+          <EntitySet Name="AppSetting" EntityType="CfsNamespace.AppSetting" />
+          <EntitySet Name="TalentImages" EntityType="CfsNamespace.TalentImages" />
+          <EntitySet Name="Images" EntityType="CfsNamespace.Images" />
+          <EntitySet Name="StaffNote" EntityType="CfsNamespace.StaffNote" /></EntityContainer>
+        <EntityType Name="Applicant">
+          <Key>
+            <PropertyRef Name="ApplicantId" />
+          </Key>
+          <Property Name="ApplicantId" Type="Int32" Nullable="false" />
+          <Property Name="DateApplied" Type="DateTime" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Zip" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="HomePhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="AltPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StageName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HeightFt" Type="Int32" />
+          <Property Name="HeightIn" Type="Int32" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="EyeColor" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="HairColor" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="Bust" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Waist" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Hips" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Experience" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ImageOne" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ImageTwo" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ImageThree" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DaysAvail" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DaysPrefer" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="HasBeenContacted" Type="Boolean" />
+          <Property Name="Status" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="HiringInfo" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CfsSection">
+          <Key>
+            <PropertyRef Name="SectionId" />
+          </Key>
+          <Property Name="SectionId" Type="Int32" Nullable="false" />
+          <Property Name="SectionName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="CfsUserToSection" Relationship="CfsNamespace.FK_CfsUserToSection_CfsSection" FromRole="CfsSection" ToRole="CfsUserToSection" />
+          <NavigationProperty Name="CfsUserTypeTemplate" Relationship="CfsNamespace.FK_CfsUserTypeTemplate_CfsSection" FromRole="CfsSection" ToRole="CfsUserTypeTemplate" />
+        </EntityType>
+        <EntityType Name="CfsUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="UserPass" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="CfsUserType" Relationship="CfsNamespace.FK_CfsUser_CfsUserType" FromRole="CfsUser" ToRole="CfsUserType" />
+          <NavigationProperty Name="CfsUserToSection" Relationship="CfsNamespace.FK_CfsUserToSection_CfsUser" FromRole="CfsUser" ToRole="CfsUserToSection" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          </EntityType>
+        <EntityType Name="CfsUserToSection">
+          <Key>
+            <PropertyRef Name="UserToSectionPk" />
+          </Key>
+          <Property Name="UserToSectionPk" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CfsSection" Relationship="CfsNamespace.FK_CfsUserToSection_CfsSection" FromRole="CfsUserToSection" ToRole="CfsSection" />
+          <NavigationProperty Name="CfsUser" Relationship="CfsNamespace.FK_CfsUserToSection_CfsUser" FromRole="CfsUserToSection" ToRole="CfsUser" />
+        </EntityType>
+        <EntityType Name="CfsUserType">
+          <Key>
+            <PropertyRef Name="UserTypeId" />
+          </Key>
+          <Property Name="UserTypeId" Type="Int32" Nullable="false" />
+          <Property Name="UserTypeName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="CfsUser" Relationship="CfsNamespace.FK_CfsUser_CfsUserType" FromRole="CfsUserType" ToRole="CfsUser" />
+          <NavigationProperty Name="CfsUserTypeTemplate" Relationship="CfsNamespace.FK_CfsUserTypeTemplate_CfsUserType" FromRole="CfsUserType" ToRole="CfsUserTypeTemplate" />
+        </EntityType>
+        <EntityType Name="CfsUserTypeTemplate">
+          <Key>
+            <PropertyRef Name="TemplatePk" />
+          </Key>
+          <Property Name="TemplatePk" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CfsSection" Relationship="CfsNamespace.FK_CfsUserTypeTemplate_CfsSection" FromRole="CfsUserTypeTemplate" ToRole="CfsSection" />
+          <NavigationProperty Name="CfsUserType" Relationship="CfsNamespace.FK_CfsUserTypeTemplate_CfsUserType" FromRole="CfsUserTypeTemplate" ToRole="CfsUserType" />
+        </EntityType>
+        <EntityType Name="ContactForm">
+          <Key>
+            <PropertyRef Name="ContactFormId" /></Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ContactText" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ContactFormId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="true" />
+          <Property Name="New" Type="Boolean" Nullable="true" /></EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Address1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Zip" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="HomePhone" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="BusinessPhone" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="AltContactName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AltContactPhone" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReferredBy" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsCustConfirmSent" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Event" Relationship="CfsNamespace.FK_Event_Customer" FromRole="Customer" ToRole="Event" />
+          <Property Name="BusinessPhoneExt" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ContactPhone" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="GuestOfHonor" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LocationName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocationAddress1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocationAddress2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocationCity" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LocationState" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="LocationZip" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocationCountry" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LocationPhone" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="HasPrivateRoom" Type="Boolean" />
+          <Property Name="HasOwnerPermission" Type="Boolean" />
+          <Property Name="EventDate" Type="DateTime" Nullable="false" />
+          <Property Name="StartTime" Type="DateTime" />
+          <Property Name="EndTime" Type="DateTime" />
+          <Property Name="EventType" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="NumGuests" Type="Int16" />
+          <Property Name="AgeRange" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="IsSurpriseParty" Type="Boolean" />
+          <NavigationProperty Name="Customer" Relationship="CfsNamespace.FK_Event_Customer" FromRole="Event" ToRole="Customer" />
+          <NavigationProperty Name="Job" Relationship="CfsNamespace.FK_Job_Event" FromRole="Event" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobId" />
+          </Key>
+          <Property Name="JobId" Type="Int32" Nullable="false" />
+          <Property Name="DateTimeCreated" Type="DateTime" Nullable="false" />
+          <Property Name="PreparedBy" Type="Int32" Nullable="false" />
+          <Property Name="CCIssueBank" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CCTypeCreditOrDebit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CCTypeBrand" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="CCNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CCcv2Num" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CCExp" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpecialInstructions" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="IsJobCancelled" Type="Boolean" Nullable="false" />
+          <Property Name="IsJobComplete" Type="Boolean" Nullable="false" />
+          <Property Name="IsBalanceCollected" Type="Boolean" Nullable="false" />
+          <Property Name="IsChargeNetToCC" Type="Boolean" Nullable="false" />
+          <Property Name="ChargeForAccessories" Type="Int32" Nullable="false" />
+          <Property Name="ChargeForEntertain" Type="Int32" Nullable="false" />
+          <Property Name="ChargeForLimo" Type="Int32" Nullable="false" />
+          <Property Name="ChargeForLocation" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseTalent" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseGratuity" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseSecurity" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseReferral" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseSales" Type="Int32" Nullable="false" />
+          <Property Name="GrossIncome" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseTotal" Type="Int32" Nullable="false" />
+          <Property Name="OfficeNet" Type="Int32" Nullable="false" />
+          <Property Name="BalanceDue" Type="Int32" />
+          <Property Name="RespForBalance" Type="Int32" />
+          <Property Name="TotalShowLengthMins" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Event" Relationship="CfsNamespace.FK_Job_Event" FromRole="Job" ToRole="Event" />
+          <NavigationProperty Name="TalentToJob" Relationship="CfsNamespace.FK_TalentToJob_Job" FromRole="Job" ToRole="TalentToJob" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="Int32" Nullable="false" />
+          <Property Name="LocDisplayName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocStateProvince" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="LocCountry" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MailingList">
+          <Key>
+            <PropertyRef Name="EmailId" />
+          </Key>
+          <Property Name="EmailId" Type="Int32" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="OnlineBooking">
+          <Key>
+            <PropertyRef Name="BookingId" />
+          </Key>
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="DateSubmitted" Type="DateTime" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Zip" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="HomePhone" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ReferredBy" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LocName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocAddress1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocAddress2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocCity" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LocState" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="LocZip" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="LocCountry" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="LocPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LocCrossSt" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="EventDate" Type="DateTime" />
+          <Property Name="EventType" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="WantFemale" Type="Boolean" Nullable="false" />
+          <Property Name="WantMale" Type="Boolean" Nullable="false" />
+          <Property Name="WantToplessWtr" Type="Boolean" Nullable="false" />
+          <Property Name="WantLittlePeople" Type="Boolean" Nullable="false" />
+          <Property Name="WantDragQueen" Type="Boolean" Nullable="false" />
+          <Property Name="WantBellyDancer" Type="Boolean" Nullable="false" />
+          <Property Name="WantFatMama" Type="Boolean" Nullable="false" />
+          <Property Name="WantImpersonator" Type="Boolean" Nullable="false" />
+          <Property Name="NumGuests" Type="Int32" />
+          <Property Name="NumTalent" Type="Int32" />
+          <Property Name="ShowLengthMins" Type="Int32" />
+          <Property Name="ArrivalTime" Type="DateTime" />
+          <Property Name="CrowdType" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="GuestAgeRange" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="GuestOfHonor" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="IsSurprise" Type="Boolean" Nullable="false" />
+          <Property Name="SpecialInstructions" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Pending">
+          <Key>
+            <PropertyRef Name="PendId" />
+          </Key>
+          <Property Name="PendId" Type="Int32" Nullable="false" />
+          <Property Name="ClientName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReferredBy" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="CityStateZip" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="EventDate" Type="DateTime" Nullable="false" />
+          <Property Name="EventType" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="EntertainType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="GuestType" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="NumOfGuests" Type="Int32" />
+          <Property Name="Budget" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="NumEntertainers" Type="Int32" />
+          <Property Name="TimeRequested" Type="DateTime" />
+          <Property Name="QuotedPrice" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ContactNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Talent">
+          <Key>
+            <PropertyRef Name="TalentId" />
+          </Key>
+          <Property Name="TalentId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsFeatureTalent" Type="Boolean" Nullable="false" />
+          <Property Name="TalentType" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StageName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EmailPrimary" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmailSecondary" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address1" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Zip" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="HomePhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CellCarrier" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IMClient" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IMName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="PersonalSite" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpecialNotes" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="NewTalentImg" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ThumbImg" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ImageOne" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ImageTwo" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ImageThree" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="VideoOne" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="VideoTwo" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="VideoThree" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Bust" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Waist" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Hips" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="HeightFt" Type="Int32" />
+          <Property Name="HeightIn" Type="Int32" />
+          <Property Name="HairColor" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="EyeColor" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="Race" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DoesToys" Type="Boolean" Nullable="false" />
+          <Property Name="DoesFullNudeStrip" Type="Boolean" Nullable="false" />
+          <Property Name="DoesLesbianShow" Type="Boolean" Nullable="false" />
+          <Property Name="DoesPromoModeling" Type="Boolean" Nullable="false" />
+          <Property Name="DoesToplessBartender" Type="Boolean" Nullable="false" />
+          <Property Name="DoesPoleDancing" Type="Boolean" Nullable="false" />
+          <Property Name="DoesToplessStrip" Type="Boolean" Nullable="false" />
+          <Property Name="DoesToplessWaiting" Type="Boolean" Nullable="false" />
+          <Property Name="DoesPopoutCake" Type="Boolean" Nullable="false" />
+          <Property Name="DoesInternetChat" Type="Boolean" Nullable="false" />
+          <Property Name="DoesToplessCardDealing" Type="Boolean" Nullable="false" />
+          <Property Name="DoesLapdancing" Type="Boolean" Nullable="false" />
+          <Property Name="Likes" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Dislikes" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Costumes" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SpecialTalents" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+          <Property Name="DateLastUpdate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="TalentAltPhone" Relationship="CfsNamespace.FK_TalentAltPhone_Talent" FromRole="Talent" ToRole="TalentAltPhone" />
+          <NavigationProperty Name="TalentCredit" Relationship="CfsNamespace.FK_TalentCredit_Talent" FromRole="Talent" ToRole="TalentCredit" />
+          <NavigationProperty Name="TalentHold" Relationship="CfsNamespace.FK_TalentHold_Talent" FromRole="Talent" ToRole="TalentHold" />
+          <NavigationProperty Name="TalentToJob" Relationship="CfsNamespace.FK_TalentToJob_Talent" FromRole="Talent" ToRole="TalentToJob" />
+          <NavigationProperty Name="TalentWorksIn" Relationship="CfsNamespace.FK_TalentWorksIn_Talent" FromRole="Talent" ToRole="TalentWorksIn" />
+          <Property Name="WorksInList" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="TalentAltPhone">
+          <Key>
+            <PropertyRef Name="AltPhoneId" />
+          </Key>
+          <Property Name="AltPhoneId" Type="Int32" Nullable="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="AltPhoneName" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="AltPhoneNum" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Talent" Relationship="CfsNamespace.FK_TalentAltPhone_Talent" FromRole="TalentAltPhone" ToRole="Talent" />
+        </EntityType>
+        <EntityType Name="TalentCredit">
+          <Key>
+            <PropertyRef Name="CreditId" />
+          </Key>
+          <Property Name="CreditId" Type="Int32" Nullable="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Info" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Talent" Relationship="CfsNamespace.FK_TalentCredit_Talent" FromRole="TalentCredit" ToRole="Talent" />
+        </EntityType>
+        <EntityType Name="TalentHold">
+          <Key>
+            <PropertyRef Name="HoldId" />
+          </Key>
+          <Property Name="HoldId" Type="Int32" Nullable="false" />
+          <Property Name="DateStart" Type="DateTime" Nullable="false" />
+          <Property Name="CurLocation" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Talent" Relationship="CfsNamespace.FK_TalentHold_Talent" FromRole="TalentHold" ToRole="Talent" />
+        </EntityType>
+        <EntityType Name="TalentToJob">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="StartDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="ShowLengthMins" Type="Int32" Nullable="false" />
+          <Property Name="Payroll" Type="Int32" Nullable="false" />
+          <Property Name="IsConfirmSent" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Job" Relationship="CfsNamespace.FK_TalentToJob_Job" FromRole="TalentToJob" ToRole="Job" />
+          <NavigationProperty Name="Talent" Relationship="CfsNamespace.FK_TalentToJob_Talent" FromRole="TalentToJob" ToRole="Talent" />
+        </EntityType>
+        <EntityType Name="TalentWorksIn">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Talent" Relationship="CfsNamespace.FK_TalentWorksIn_Talent" FromRole="TalentWorksIn" ToRole="Talent" />
+        </EntityType>
+        <EntityType Name="TextMsgLog">
+          <Key>
+            <PropertyRef Name="MessageId" />
+          </Key>
+          <Property Name="MessageId" Type="Int32" Nullable="false" />
+          <Property Name="PhoneNumTo" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USState">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="StateName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StateAbbrev" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <Association Name="FK_CfsUserToSection_CfsSection">
+          <End Role="CfsSection" Type="CfsNamespace.CfsSection" Multiplicity="1" />
+          <End Role="CfsUserToSection" Type="CfsNamespace.CfsUserToSection" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CfsUserTypeTemplate_CfsSection">
+          <End Role="CfsSection" Type="CfsNamespace.CfsSection" Multiplicity="0..1" />
+          <End Role="CfsUserTypeTemplate" Type="CfsNamespace.CfsUserTypeTemplate" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CfsUser_CfsUserType">
+          <End Role="CfsUserType" Type="CfsNamespace.CfsUserType" Multiplicity="1" />
+          <End Role="CfsUser" Type="CfsNamespace.CfsUser" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CfsUserToSection_CfsUser">
+          <End Role="CfsUser" Type="CfsNamespace.CfsUser" Multiplicity="1" />
+          <End Role="CfsUserToSection" Type="CfsNamespace.CfsUserToSection" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CfsUserTypeTemplate_CfsUserType">
+          <End Role="CfsUserType" Type="CfsNamespace.CfsUserType" Multiplicity="0..1" />
+          <End Role="CfsUserTypeTemplate" Type="CfsNamespace.CfsUserTypeTemplate" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Event_Customer">
+          <End Role="Customer" Type="CfsNamespace.Customer" Multiplicity="1" />
+          <End Role="Event" Type="CfsNamespace.Event" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Job_Event">
+          <End Role="Event" Type="CfsNamespace.Event" Multiplicity="1" />
+          <End Role="Job" Type="CfsNamespace.Job" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TalentToJob_Job">
+          <End Role="Job" Type="CfsNamespace.Job" Multiplicity="1" />
+          <End Role="TalentToJob" Type="CfsNamespace.TalentToJob" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TalentAltPhone_Talent">
+          <End Role="Talent" Type="CfsNamespace.Talent" Multiplicity="1" />
+          <End Role="TalentAltPhone" Type="CfsNamespace.TalentAltPhone" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TalentCredit_Talent">
+          <End Role="Talent" Type="CfsNamespace.Talent" Multiplicity="1" />
+          <End Role="TalentCredit" Type="CfsNamespace.TalentCredit" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TalentHold_Talent">
+          <End Role="Talent" Type="CfsNamespace.Talent" Multiplicity="1" />
+          <End Role="TalentHold" Type="CfsNamespace.TalentHold" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TalentToJob_Talent">
+          <End Role="Talent" Type="CfsNamespace.Talent" Multiplicity="1" />
+          <End Role="TalentToJob" Type="CfsNamespace.TalentToJob" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TalentWorksIn_Talent">
+          <End Role="Talent" Type="CfsNamespace.Talent" Multiplicity="1" />
+          <End Role="TalentWorksIn" Type="CfsNamespace.TalentWorksIn" Multiplicity="*" />
+        </Association>
+        <EntityType Name="AppSetting">
+          <Key>
+            <PropertyRef Name="SettingKey" /></Key>
+          <Property Name="SettingKey" Type="String" Nullable="false" />
+          <Property Name="SettingValue" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="TalentImages">
+          <Key>
+            <PropertyRef Name="rowID" /></Key>
+          <Property Name="rowID" Type="Guid" Nullable="false" />
+          <Property Name="imageID" Type="Guid" Nullable="false" />
+          <Property Name="data" Type="Binary" Nullable="false" />
+          <Property Name="isOriginal" Type="Boolean" Nullable="false" />
+          <Property Name="FK_talentID" Type="Int32" Nullable="false" />
+          <Property Name="imageIndex" Type="Int32" Nullable="false" />
+          <Property Name="isApplicant" Type="Boolean" Nullable="false" /></EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="rowID" /></Key>
+          <Property Name="rowID" Type="Guid" Nullable="false" />
+          <Property Name="imageID" Type="Guid" Nullable="false" />
+          <Property Name="data" Type="Binary" Nullable="false" />
+          <Property Name="isOriginal" Type="Boolean" Nullable="false" /></EntityType>
+        <EntityType Name="StaffNote">
+          <Key>
+            <PropertyRef Name="StaffNoteId" /></Key>
+          <Property Name="StaffNoteId" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="CfsNamespaceStoreContainer" CdmEntityContainer="CfsEntity">
+          <EntitySetMapping Name="Applicant">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Applicant)">
+              <MappingFragment StoreEntitySet="Applicant">
+                <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+                <ScalarProperty Name="DateApplied" ColumnName="DateApplied" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="AltPhone" ColumnName="AltPhone" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="StageName" ColumnName="StageName" />
+                <ScalarProperty Name="HeightFt" ColumnName="HeightFt" />
+                <ScalarProperty Name="HeightIn" ColumnName="HeightIn" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="EyeColor" ColumnName="EyeColor" />
+                <ScalarProperty Name="HairColor" ColumnName="HairColor" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Bust" ColumnName="Bust" />
+                <ScalarProperty Name="Waist" ColumnName="Waist" />
+                <ScalarProperty Name="Hips" ColumnName="Hips" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="ImageOne" ColumnName="ImageOne" />
+                <ScalarProperty Name="ImageTwo" ColumnName="ImageTwo" />
+                <ScalarProperty Name="ImageThree" ColumnName="ImageThree" />
+                <ScalarProperty Name="DaysAvail" ColumnName="DaysAvail" />
+                <ScalarProperty Name="DaysPrefer" ColumnName="DaysPrefer" />
+                <ScalarProperty Name="HasBeenContacted" ColumnName="HasBeenContacted" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="HiringInfo" ColumnName="HiringInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CfsSection">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.CfsSection)">
+              <MappingFragment StoreEntitySet="CfsSection">
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CfsUser">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.CfsUser)">
+              <MappingFragment StoreEntitySet="CfsUser">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserPass" ColumnName="UserPass" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CfsUserToSection">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.CfsUserToSection)">
+              <MappingFragment StoreEntitySet="CfsUserToSection">
+                <ScalarProperty Name="UserToSectionPk" ColumnName="UserToSectionPk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CfsUserType">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.CfsUserType)">
+              <MappingFragment StoreEntitySet="CfsUserType">
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CfsUserTypeTemplate">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.CfsUserTypeTemplate)">
+              <MappingFragment StoreEntitySet="CfsUserTypeTemplate">
+                <ScalarProperty Name="TemplatePk" ColumnName="TemplatePk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactForm">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.ContactForm)">
+              <MappingFragment StoreEntitySet="ContactForm">
+                <ScalarProperty Name="New" ColumnName="New" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ContactFormId" ColumnName="ContactFormId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="ContactText" ColumnName="ContactText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Customer)">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="BusinessPhoneExt" ColumnName="BusinessPhoneExt" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="BusinessPhone" ColumnName="BusinessPhone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="AltContactName" ColumnName="AltContactName" />
+                <ScalarProperty Name="AltContactPhone" ColumnName="AltContactPhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ReferredBy" ColumnName="ReferredBy" />
+                <ScalarProperty Name="IsCustConfirmSent" ColumnName="IsCustConfirmSent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Event">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Event)">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="GuestOfHonor" ColumnName="GuestOfHonor" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="LocationAddress1" ColumnName="LocationAddress1" />
+                <ScalarProperty Name="LocationAddress2" ColumnName="LocationAddress2" />
+                <ScalarProperty Name="LocationCity" ColumnName="LocationCity" />
+                <ScalarProperty Name="LocationState" ColumnName="LocationState" />
+                <ScalarProperty Name="LocationZip" ColumnName="LocationZip" />
+                <ScalarProperty Name="LocationCountry" ColumnName="LocationCountry" />
+                <ScalarProperty Name="LocationPhone" ColumnName="LocationPhone" />
+                <ScalarProperty Name="HasPrivateRoom" ColumnName="HasPrivateRoom" />
+                <ScalarProperty Name="HasOwnerPermission" ColumnName="HasOwnerPermission" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="NumGuests" ColumnName="NumGuests" />
+                <ScalarProperty Name="AgeRange" ColumnName="AgeRange" />
+                <ScalarProperty Name="IsSurpriseParty" ColumnName="IsSurpriseParty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Job">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Job)">
+              <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+                <ScalarProperty Name="PreparedBy" ColumnName="PreparedBy" />
+                <ScalarProperty Name="CCIssueBank" ColumnName="CCIssueBank" />
+                <ScalarProperty Name="CCTypeCreditOrDebit" ColumnName="CCTypeCreditOrDebit" />
+                <ScalarProperty Name="CCTypeBrand" ColumnName="CCTypeBrand" />
+                <ScalarProperty Name="CCName" ColumnName="CCName" />
+                <ScalarProperty Name="CCNum" ColumnName="CCNum" />
+                <ScalarProperty Name="CCcv2Num" ColumnName="CCcv2Num" />
+                <ScalarProperty Name="CCExp" ColumnName="CCExp" />
+                <ScalarProperty Name="SpecialInstructions" ColumnName="SpecialInstructions" />
+                <ScalarProperty Name="IsJobCancelled" ColumnName="IsJobCancelled" />
+                <ScalarProperty Name="IsJobComplete" ColumnName="IsJobComplete" />
+                <ScalarProperty Name="IsBalanceCollected" ColumnName="IsBalanceCollected" />
+                <ScalarProperty Name="IsChargeNetToCC" ColumnName="IsChargeNetToCC" />
+                <ScalarProperty Name="ChargeForAccessories" ColumnName="ChargeForAccessories" />
+                <ScalarProperty Name="ChargeForEntertain" ColumnName="ChargeForEntertain" />
+                <ScalarProperty Name="ChargeForLimo" ColumnName="ChargeForLimo" />
+                <ScalarProperty Name="ChargeForLocation" ColumnName="ChargeForLocation" />
+                <ScalarProperty Name="ExpenseTalent" ColumnName="ExpenseTalent" />
+                <ScalarProperty Name="ExpenseGratuity" ColumnName="ExpenseGratuity" />
+                <ScalarProperty Name="ExpenseSecurity" ColumnName="ExpenseSecurity" />
+                <ScalarProperty Name="ExpenseReferral" ColumnName="ExpenseReferral" />
+                <ScalarProperty Name="ExpenseSales" ColumnName="ExpenseSales" />
+                <ScalarProperty Name="GrossIncome" ColumnName="GrossIncome" />
+                <ScalarProperty Name="ExpenseTotal" ColumnName="ExpenseTotal" />
+                <ScalarProperty Name="OfficeNet" ColumnName="OfficeNet" />
+                <ScalarProperty Name="BalanceDue" ColumnName="BalanceDue" />
+                <ScalarProperty Name="RespForBalance" ColumnName="RespForBalance" />
+                <ScalarProperty Name="TotalShowLengthMins" ColumnName="TotalShowLengthMins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Location">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Location)">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+                <ScalarProperty Name="LocDisplayName" ColumnName="LocDisplayName" />
+                <ScalarProperty Name="LocStateProvince" ColumnName="LocStateProvince" />
+                <ScalarProperty Name="LocCountry" ColumnName="LocCountry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MailingList">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.MailingList)">
+              <MappingFragment StoreEntitySet="MailingList">
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OnlineBooking">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.OnlineBooking)">
+              <MappingFragment StoreEntitySet="OnlineBooking">
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="ReferredBy" ColumnName="ReferredBy" />
+                <ScalarProperty Name="LocName" ColumnName="LocName" />
+                <ScalarProperty Name="LocAddress1" ColumnName="LocAddress1" />
+                <ScalarProperty Name="LocAddress2" ColumnName="LocAddress2" />
+                <ScalarProperty Name="LocCity" ColumnName="LocCity" />
+                <ScalarProperty Name="LocState" ColumnName="LocState" />
+                <ScalarProperty Name="LocZip" ColumnName="LocZip" />
+                <ScalarProperty Name="LocCountry" ColumnName="LocCountry" />
+                <ScalarProperty Name="LocPhone" ColumnName="LocPhone" />
+                <ScalarProperty Name="LocCrossSt" ColumnName="LocCrossSt" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="WantFemale" ColumnName="WantFemale" />
+                <ScalarProperty Name="WantMale" ColumnName="WantMale" />
+                <ScalarProperty Name="WantToplessWtr" ColumnName="WantToplessWtr" />
+                <ScalarProperty Name="WantLittlePeople" ColumnName="WantLittlePeople" />
+                <ScalarProperty Name="WantDragQueen" ColumnName="WantDragQueen" />
+                <ScalarProperty Name="WantBellyDancer" ColumnName="WantBellyDancer" />
+                <ScalarProperty Name="WantFatMama" ColumnName="WantFatMama" />
+                <ScalarProperty Name="WantImpersonator" ColumnName="WantImpersonator" />
+                <ScalarProperty Name="NumGuests" ColumnName="NumGuests" />
+                <ScalarProperty Name="NumTalent" ColumnName="NumTalent" />
+                <ScalarProperty Name="ShowLengthMins" ColumnName="ShowLengthMins" />
+                <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+                <ScalarProperty Name="CrowdType" ColumnName="CrowdType" />
+                <ScalarProperty Name="GuestAgeRange" ColumnName="GuestAgeRange" />
+                <ScalarProperty Name="GuestOfHonor" ColumnName="GuestOfHonor" />
+                <ScalarProperty Name="IsSurprise" ColumnName="IsSurprise" />
+                <ScalarProperty Name="SpecialInstructions" ColumnName="SpecialInstructions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pending">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Pending)">
+              <MappingFragment StoreEntitySet="Pending">
+                <ScalarProperty Name="PendId" ColumnName="PendId" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ReferredBy" ColumnName="ReferredBy" />
+                <ScalarProperty Name="CityStateZip" ColumnName="CityStateZip" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="EntertainType" ColumnName="EntertainType" />
+                <ScalarProperty Name="GuestType" ColumnName="GuestType" />
+                <ScalarProperty Name="NumOfGuests" ColumnName="NumOfGuests" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="NumEntertainers" ColumnName="NumEntertainers" />
+                <ScalarProperty Name="TimeRequested" ColumnName="TimeRequested" />
+                <ScalarProperty Name="QuotedPrice" ColumnName="QuotedPrice" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.sysdiagrams)">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Talent">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Talent)">
+              <MappingFragment StoreEntitySet="Talent">
+                <ScalarProperty Name="WorksInList" ColumnName="WorksInList" />
+                <ScalarProperty Name="TalentId" ColumnName="TalentId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsFeatureTalent" ColumnName="IsFeatureTalent" />
+                <ScalarProperty Name="TalentType" ColumnName="TalentType" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="StageName" ColumnName="StageName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="EmailPrimary" ColumnName="EmailPrimary" />
+                <ScalarProperty Name="EmailSecondary" ColumnName="EmailSecondary" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="CellCarrier" ColumnName="CellCarrier" />
+                <ScalarProperty Name="IMClient" ColumnName="IMClient" />
+                <ScalarProperty Name="IMName" ColumnName="IMName" />
+                <ScalarProperty Name="PersonalSite" ColumnName="PersonalSite" />
+                <ScalarProperty Name="SpecialNotes" ColumnName="SpecialNotes" />
+                <ScalarProperty Name="NewTalentImg" ColumnName="NewTalentImg" />
+                <ScalarProperty Name="ThumbImg" ColumnName="ThumbImg" />
+                <ScalarProperty Name="ImageOne" ColumnName="ImageOne" />
+                <ScalarProperty Name="ImageTwo" ColumnName="ImageTwo" />
+                <ScalarProperty Name="ImageThree" ColumnName="ImageThree" />
+                <ScalarProperty Name="VideoOne" ColumnName="VideoOne" />
+                <ScalarProperty Name="VideoTwo" ColumnName="VideoTwo" />
+                <ScalarProperty Name="VideoThree" ColumnName="VideoThree" />
+                <ScalarProperty Name="Bust" ColumnName="Bust" />
+                <ScalarProperty Name="Waist" ColumnName="Waist" />
+                <ScalarProperty Name="Hips" ColumnName="Hips" />
+                <ScalarProperty Name="HeightFt" ColumnName="HeightFt" />
+                <ScalarProperty Name="HeightIn" ColumnName="HeightIn" />
+                <ScalarProperty Name="HairColor" ColumnName="HairColor" />
+                <ScalarProperty Name="EyeColor" ColumnName="EyeColor" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Race" ColumnName="Race" />
+                <ScalarProperty Name="DoesToys" ColumnName="DoesToys" />
+                <ScalarProperty Name="DoesFullNudeStrip" ColumnName="DoesFullNudeStrip" />
+                <ScalarProperty Name="DoesLesbianShow" ColumnName="DoesLesbianShow" />
+                <ScalarProperty Name="DoesPromoModeling" ColumnName="DoesPromoModeling" />
+                <ScalarProperty Name="DoesToplessBartender" ColumnName="DoesToplessBartender" />
+                <ScalarProperty Name="DoesPoleDancing" ColumnName="DoesPoleDancing" />
+                <ScalarProperty Name="DoesToplessStrip" ColumnName="DoesToplessStrip" />
+                <ScalarProperty Name="DoesToplessWaiting" ColumnName="DoesToplessWaiting" />
+                <ScalarProperty Name="DoesPopoutCake" ColumnName="DoesPopoutCake" />
+                <ScalarProperty Name="DoesInternetChat" ColumnName="DoesInternetChat" />
+                <ScalarProperty Name="DoesToplessCardDealing" ColumnName="DoesToplessCardDealing" />
+                <ScalarProperty Name="DoesLapdancing" ColumnName="DoesLapdancing" />
+                <ScalarProperty Name="Likes" ColumnName="Likes" />
+                <ScalarProperty Name="Dislikes" ColumnName="Dislikes" />
+                <ScalarProperty Name="Costumes" ColumnName="Costumes" />
+                <ScalarProperty Name="SpecialTalents" ColumnName="SpecialTalents" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateLastUpdate" ColumnName="DateLastUpdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TalentAltPhone">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TalentAltPhone)">
+              <MappingFragment StoreEntitySet="TalentAltPhone">
+                <ScalarProperty Name="AltPhoneId" ColumnName="AltPhoneId" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="AltPhoneName" ColumnName="AltPhoneName" />
+                <ScalarProperty Name="AltPhoneNum" ColumnName="AltPhoneNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TalentCredit">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TalentCredit)">
+              <MappingFragment StoreEntitySet="TalentCredit">
+                <ScalarProperty Name="CreditId" ColumnName="CreditId" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Info" ColumnName="Info" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TalentHold">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TalentHold)">
+              <MappingFragment StoreEntitySet="TalentHold">
+                <ScalarProperty Name="HoldId" ColumnName="HoldId" />
+                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+                <ScalarProperty Name="CurLocation" ColumnName="CurLocation" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TalentToJob">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TalentToJob)">
+              <MappingFragment StoreEntitySet="TalentToJob">
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="ShowLengthMins" ColumnName="ShowLengthMins" />
+                <ScalarProperty Name="Payroll" ColumnName="Payroll" />
+                <ScalarProperty Name="IsConfirmSent" ColumnName="IsConfirmSent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TalentWorksIn">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TalentWorksIn)">
+              <MappingFragment StoreEntitySet="TalentWorksIn">
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TextMsgLog">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TextMsgLog)">
+              <MappingFragment StoreEntitySet="TextMsgLog">
+                <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+                <ScalarProperty Name="PhoneNumTo" ColumnName="PhoneNumTo" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USState">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.USState)">
+              <MappingFragment StoreEntitySet="USState">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="StateAbbrev" ColumnName="StateAbbrev" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_CfsUserToSection_CfsSection" TypeName="CfsNamespace.FK_CfsUserToSection_CfsSection" StoreEntitySet="CfsUserToSection">
+            <EndProperty Name="CfsSection">
+              <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+            </EndProperty>
+            <EndProperty Name="CfsUserToSection">
+              <ScalarProperty Name="UserToSectionPk" ColumnName="UserToSectionPk" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CfsUserTypeTemplate_CfsSection" TypeName="CfsNamespace.FK_CfsUserTypeTemplate_CfsSection" StoreEntitySet="CfsUserTypeTemplate">
+            <EndProperty Name="CfsSection">
+              <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+            </EndProperty>
+            <EndProperty Name="CfsUserTypeTemplate">
+              <ScalarProperty Name="TemplatePk" ColumnName="TemplatePk" />
+            </EndProperty>
+            <Condition ColumnName="SectionId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CfsUser_CfsUserType" TypeName="CfsNamespace.FK_CfsUser_CfsUserType" StoreEntitySet="CfsUser">
+            <EndProperty Name="CfsUserType">
+              <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+            </EndProperty>
+            <EndProperty Name="CfsUser">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CfsUserToSection_CfsUser" TypeName="CfsNamespace.FK_CfsUserToSection_CfsUser" StoreEntitySet="CfsUserToSection">
+            <EndProperty Name="CfsUser">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="CfsUserToSection">
+              <ScalarProperty Name="UserToSectionPk" ColumnName="UserToSectionPk" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CfsUserTypeTemplate_CfsUserType" TypeName="CfsNamespace.FK_CfsUserTypeTemplate_CfsUserType" StoreEntitySet="CfsUserTypeTemplate">
+            <EndProperty Name="CfsUserType">
+              <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+            </EndProperty>
+            <EndProperty Name="CfsUserTypeTemplate">
+              <ScalarProperty Name="TemplatePk" ColumnName="TemplatePk" />
+            </EndProperty>
+            <Condition ColumnName="UserTypeId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Event_Customer" TypeName="CfsNamespace.FK_Event_Customer" StoreEntitySet="Event">
+            <EndProperty Name="Customer">
+              <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+            </EndProperty>
+            <EndProperty Name="Event">
+              <ScalarProperty Name="EventId" ColumnName="EventId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Job_Event" TypeName="CfsNamespace.FK_Job_Event" StoreEntitySet="Job">
+            <EndProperty Name="Event">
+              <ScalarProperty Name="EventId" ColumnName="EventId" />
+            </EndProperty>
+            <EndProperty Name="Job">
+              <ScalarProperty Name="JobId" ColumnName="JobId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TalentToJob_Job" TypeName="CfsNamespace.FK_TalentToJob_Job" StoreEntitySet="TalentToJob">
+            <EndProperty Name="Job">
+              <ScalarProperty Name="JobId" ColumnName="JobId" />
+            </EndProperty>
+            <EndProperty Name="TalentToJob">
+              <ScalarProperty Name="UID" ColumnName="UID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TalentAltPhone_Talent" TypeName="CfsNamespace.FK_TalentAltPhone_Talent" StoreEntitySet="TalentAltPhone">
+            <EndProperty Name="Talent">
+              <ScalarProperty Name="TalentId" ColumnName="TalentId" />
+            </EndProperty>
+            <EndProperty Name="TalentAltPhone">
+              <ScalarProperty Name="AltPhoneId" ColumnName="AltPhoneId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TalentCredit_Talent" TypeName="CfsNamespace.FK_TalentCredit_Talent" StoreEntitySet="TalentCredit">
+            <EndProperty Name="Talent">
+              <ScalarProperty Name="TalentId" ColumnName="TalentId" />
+            </EndProperty>
+            <EndProperty Name="TalentCredit">
+              <ScalarProperty Name="CreditId" ColumnName="CreditId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TalentHold_Talent" TypeName="CfsNamespace.FK_TalentHold_Talent" StoreEntitySet="TalentHold">
+            <EndProperty Name="Talent">
+              <ScalarProperty Name="TalentId" ColumnName="TalentId" />
+            </EndProperty>
+            <EndProperty Name="TalentHold">
+              <ScalarProperty Name="HoldId" ColumnName="HoldId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TalentToJob_Talent" TypeName="CfsNamespace.FK_TalentToJob_Talent" StoreEntitySet="TalentToJob">
+            <EndProperty Name="Talent">
+              <ScalarProperty Name="TalentId" ColumnName="TalentId" />
+            </EndProperty>
+            <EndProperty Name="TalentToJob">
+              <ScalarProperty Name="UID" ColumnName="UID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TalentWorksIn_Talent" TypeName="CfsNamespace.FK_TalentWorksIn_Talent" StoreEntitySet="TalentWorksIn">
+            <EndProperty Name="Talent">
+              <ScalarProperty Name="TalentId" ColumnName="TalentId" />
+            </EndProperty>
+            <EndProperty Name="TalentWorksIn">
+              <ScalarProperty Name="UID" ColumnName="UID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="AppSetting">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.AppSetting)">
+              <MappingFragment StoreEntitySet="AppSetting">
+                <ScalarProperty Name="SettingValue" ColumnName="SettingValue" />
+                <ScalarProperty Name="SettingKey" ColumnName="SettingKey" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TalentImages">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.TalentImages)">
+              <MappingFragment StoreEntitySet="TalentImages">
+                <ScalarProperty Name="isApplicant" ColumnName="isApplicant" />
+                <ScalarProperty Name="imageIndex" ColumnName="imageIndex" />
+                <ScalarProperty Name="FK_talentID" ColumnName="FK_talentID" />
+                <ScalarProperty Name="isOriginal" ColumnName="isOriginal" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="imageID" ColumnName="imageID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.Images)">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="isOriginal" ColumnName="isOriginal" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="imageID" ColumnName="imageID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="StaffNote">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespace.StaffNote)">
+              <MappingFragment StoreEntitySet="StaffNote">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="StaffNoteId" ColumnName="StaffNoteId" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="CfsDataModel" ZoomLevel="48">
+        <EntityTypeShape EntityType="CfsNamespace.Applicant" Width="1.5" PointX="8.75" PointY="6.375" Height="6.5227262369791665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.CfsSection" Width="1.5" PointX="5.75" PointY="3.625" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.CfsUser" Width="1.5" PointX="5.75" PointY="23.5" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.CfsUserToSection" Width="1.5" PointX="8" PointY="3.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.CfsUserType" Width="1.5" PointX="5.75" PointY="11.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.CfsUserTypeTemplate" Width="1.5" PointX="8" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.ContactForm" Width="1.5" PointX="10.75" PointY="2.375" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.Customer" Width="1.5" PointX="1.5" PointY="23" Height="4.0575162760416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.Event" Width="1.5" PointX="1.5" PointY="16.875" Height="5.4417122395833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.Job" Width="1.5" PointX="3.75" PointY="16" Height="6.1940315755208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.Location" Width="1.5" PointX="10.75" PointY="5.375" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.MailingList" Width="1.5" PointX="2.75" PointY="2.375" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.OnlineBooking" Width="1.5" PointX="10.75" PointY="8.375" Height="7.8375048828125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.Pending" Width="1.5" PointX="12.75" PointY="2.375" Height="3.5644742838541665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.sysdiagrams" Width="1.5" PointX="12.75" PointY="7.375" Height="1.7566536458333344" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.Talent" Width="1.5" PointX="0.75" PointY="3.375" Height="11.453146158854164" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.TalentAltPhone" Width="1.5" PointX="3" PointY="6.875" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.TalentCredit" Width="1.5" PointX="3" PointY="9.375" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.TalentHold" Width="1.5" PointX="3" PointY="11.875" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.TalentToJob" Width="1.5" PointX="6" PointY="8" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.TalentWorksIn" Width="1.5" PointX="3" PointY="4.5" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.TextMsgLog" Width="1.5" PointX="5.75" PointY="14.375" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespace.USState" Width="1.5" PointX="7.75" PointY="14.375" Height="1.4279589843749996" IsExpanded="true" />
+        <AssociationConnector Association="CfsNamespace.FK_CfsUserToSection_CfsSection" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="4.4639794921875" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="4.4639794921874989" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="4.4639794921875" />
+          <ConnectorPoint PointX="8" PointY="4.4639794921875" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_CfsUserTypeTemplate_CfsSection" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.5" PointY="3.625" />
+          <ConnectorPoint PointX="6.5" PointY="1.4639794921875" />
+          <ConnectorPoint PointX="8" PointY="1.4639794921875" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_CfsUser_CfsUserType" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.75" PointY="12.643992513020834" />
+          <ConnectorPoint PointX="5.5" PointY="12.643992513020834" />
+          <ConnectorPoint PointX="5.5" PointY="23.125" />
+          <ConnectorPoint PointX="6.5" PointY="23.125" />
+          <ConnectorPoint PointX="6.5" PointY="23.5" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_CfsUserToSection_CfsUser" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.906252" PointY="23.5" />
+          <ConnectorPoint PointX="6.906252" PointY="16.412985026041667" />
+          <ConnectorPoint PointX="7.5" PointY="16.412985026041667" />
+          <ConnectorPoint PointX="7.5" PointY="10.864889322916667" />
+          <ConnectorPoint PointX="7.6875" PointY="10.864889322916667" />
+          <ConnectorPoint PointX="7.6875" PointY="4.9780146953124991" />
+          <ConnectorPoint PointX="8" PointY="4.9780146953124991" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_CfsUserTypeTemplate_CfsUserType" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.5" PointY="11.75" />
+          <ConnectorPoint PointX="6.5" PointY="10.335348307291667" />
+          <ConnectorPoint PointX="7.75" PointY="10.335348307291667" />
+          <ConnectorPoint PointX="7.75" PointY="1.85222123828125" />
+          <ConnectorPoint PointX="8" PointY="1.85222123828125" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_Event_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="23" />
+          <ConnectorPoint PointX="2.25" PointY="22.316712239583335" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_Job_Event" ManuallyRouted="false">
+          <ConnectorPoint PointX="3" PointY="19.595856119791669" />
+          <ConnectorPoint PointX="3.75" PointY="19.595856119791669" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_TalentToJob_Job" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.90625" PointY="16" />
+          <ConnectorPoint PointX="4.90625" PointY="9.0033268229166659" />
+          <ConnectorPoint PointX="6" PointY="9.0033268229166659" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_TalentAltPhone_Talent" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.7533268229166667" />
+          <ConnectorPoint PointX="3" PointY="7.7533268229166667" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_TalentCredit_Talent" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.253326822916666" />
+          <ConnectorPoint PointX="3" PointY="10.253326822916666" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_TalentHold_Talent" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.753326822916666" />
+          <ConnectorPoint PointX="3" PointY="12.753326822916666" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_TalentToJob_Talent" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.2204134114583329" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="9.2204134114583329" />
+          <ConnectorPoint PointX="4.989583333333333" PointY="9.2204134114583329" />
+          <ConnectorPoint PointX="6" PointY="9.2204134114583329" /></AssociationConnector>
+        <AssociationConnector Association="CfsNamespace.FK_TalentWorksIn_Talent" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.2961531575520837" />
+          <ConnectorPoint PointX="3" PointY="5.2961531575520837" /></AssociationConnector>
+        <EntityTypeShape EntityType="CfsNamespace.AppSetting" Width="1.5" PointX="13.375" PointY="10.75" Height="1.2636116536458317" />
+        <EntityTypeShape EntityType="CfsNamespace.TalentImages" Width="1.5" PointX="13.375" PointY="13.75" Height="1.5923063151041674" />
+        <EntityTypeShape EntityType="CfsNamespace.Images" Width="1.5" PointX="15.5" PointY="5" Height="1.7879850260416672" />
+        <EntityTypeShape EntityType="CfsNamespace.StaffNote" Width="1.5" PointX="15.375" PointY="0.75" Height="1.7879850260416672" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

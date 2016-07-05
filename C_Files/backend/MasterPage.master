@@ -1,0 +1,398 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CFS Master Page</title>
+   <link rel="icon" type="image/png" href="../images/green_lock.bmp"/>
+    <link href="../css/backend.css" rel="Stylesheet" type="text/css" media="all" />
+    <link href="../AtomImageEditor/ImageEditor.css" rel="Stylesheet" type="text/css" media="all" />
+    <link href="../css/backendPrint.css" rel="Stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" language="javascript" src="../js/offspring-1.0.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script>
+        function renderTime() {
+            var currentTime = new Date();
+            var diem = "AM";
+            var date = currentTime.toDateString();
+            var month = currentTime.getMonth();
+            var year = currentTime.getYear();
+            var h = currentTime.getHours();
+            var m = currentTime.getMinutes();
+            var s = currentTime.getSeconds();
+            setTimeout('renderTime()', 1000);
+            if (h == 0) {
+                h = 12;
+            } else if (h > 12) {
+                h = h - 12;
+                diem = "PM";
+            }
+            if (h < 10) {
+                h = "0" + h;
+            }
+            if (m < 10) {
+                m = "0" + m;
+            }
+            if (s < 10) {
+                s = "0" + s;
+            }
+            var myClock = document.getElementById('clockDisplay');
+            try {
+                myClock.textContent = date+" "+ h + ":" + m + ":" + s + " " + diem;
+                myClock.innerText = date+" "+ h + ":" + m + ":" + s + " " + diem;
+             }
+            catch (err)
+            { }
+        }
+        renderTime();
+</script>
+<style>
+.clockStyle {
+	background-color:#000;
+	color:#0FF;
+	font-size:16px;
+    font-weight:bold;
+	
+	
+}
+</style>
+
+
+
+<script src="jquery-ui-1.11.4.custom/jquery-1.12.2.js"></script>
+<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+  
+  <style>
+  #ctl00_sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #ctl00_sorted{list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #ctl00_sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; height: 90px; font-size: 2em; text-align: center; }
+  </style>
+        <script type="text/javascript">
+        function getProducts(txtBoxId) {
+       //     $('#divResults').hide();
+            //    $('#divLoading').show();
+           // alert("txtid " + txtBoxId);
+            try {
+                if (txtBoxId == null) {
+                   /* $.ajax({
+                        type: "POST",
+                        url: "/jsonwebservice.asmx/SetPanelsJson",
+                        data: "{'prefix':'kkk'}",
+                        contentType: "application/json; charset=utf-8",
+                        success: ajaxCallSucceed,
+                        dataType: "json",
+                        failure: ajaxCallFailed
+                    });*/
+                    alert("came in as null");
+                    //JsonWebServiceWithJQuery/jsonwebservice.asmx?op=GetProducts
+                }
+                else {
+                    $.ajax({
+                        type: "POST",
+                        url: "/jsonwebservice.asmx/SetPanelsJson",
+                        data: "{'prefix':'" + txtBoxId + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        success: ajaxCallSucceed,
+                        dataType: "json",
+                        failure: ajaxCallFailed
+                    });
+                }
+            }
+            catch (e) {
+                alert('failed to call web service. Error: ' + e);
+              //  $('#divLoading').hide();
+            }
+        }
+        function ajaxCallSucceed(response) {
+           // alert("succeeded");
+            var products = eval(response);
+          //  alert(products);
+            var stringme = JSON.stringify(response,"","");
+           
+            var trythis = JSON.parse(stringme);
+            var tttttt = trythis.d[0].ProductName;
+           // var please = JSON.parse(trythis.d);
+
+           
+           // pareseResult(please);
+        }
+        function ajaxCallFailed(error) {
+           // $('#divLoading').hide();
+            alert('error: ' + error);
+           // $('#divResults').hide();
+        }
+        function pareseResult(products) {
+            var lists = '';
+            
+          
+        
+
+
+            /*for (var i = 0; i < products.length; i++) {
+                if (lists == '') {
+                    lists = json[i].ProductName;
+                }
+                else {
+                    lists = lists + " <br />" + products[i].ProductName;
+                }
+            }*/
+            
+            $.each(products, function(idx, obj) {
+               //alert(obj.tagName);
+               // alert(obj.P)
+                if (lists == '') {
+                    lists = obj.ProductName;
+                }
+                else
+                {
+                    lists = lists + " <br />" + obj.ProductName;
+                }
+              
+            });
+
+
+            /*for(var k in json) {
+                
+               // alert(result[k]);
+            }
+            */
+       //     $('#divResults').html(lists);
+        //    $('#divResults').show();
+        }
+        function ff() {
+            $.ajax({
+                type: "POST",
+                url: "/YourWebService.asmx/MethodName",
+                data: "{'prefix':''}",
+                contentType: "application/json; charset=utf-8",
+                success: functionToCallWhenSucceed,
+                dataType: "json",
+                failure: funcitonToCallWhenFailed
+            });
+        }
+        
+   
+      $(function () {
+          $("#ctl00_sortable").sortable();
+          $("#ctl00_sortable").disableSelection();
+          var counter = 0;
+          var index = 0;
+          var elems;
+          var arr = jQuery.makeArray();
+          $("span.clicky").click(function (event) {
+              //event.stopPropagation();
+              // alert("the index length is " + $("li.myClass").length.toString());
+              var holder = "";
+              for (index = 0; index < $("li.myClass").length; index++) {
+                  // alert(index);
+                  //    alert("i'm on " + $("li.myClass").eq(index).text());
+                 // elems = $("li.myClass").eq(index).clone();
+                  elems = $("li.myClass").eq(index).attr("save");
+                  //arr.push(elems);
+                     holder = holder + elems + ",";
+                  
+                  
+                  //alert("i'm on " + $(this).text());
+              }
+              //var arr = jQuery.makeArray(elems);
+              // Use an Array method on list of dom elements
+              //arr.reverse();
+              try {
+                  var createjsonstring = "";
+
+
+                  var panels = holder.split(",");
+                  for (var i = 0 ; i < panels.length-1; i++) {
+                      var individualitem = panels[i].split(":");
+                      var TEXT = individualitem[6];
+                      if (TEXT == null)
+                      {
+                          TEXT = "";
+                      }
+                      else
+                      {
+                          TEXT = encodeURIComponent(TEXT);
+                          TEXT = TEXT.replace("'", "");
+                          TEXT = TEXT.replace(",", "");
+                          TEXT = TEXT.replace("}", "");
+                          TEXT = TEXT.replace("\"", "");
+                      }
+                      var PANEL = individualitem[8];
+                      if (PANEL == null)
+                      {
+                          PANEL = "FALSE";
+                      }
+                      var LINKS = individualitem[10];
+                      if (LINKS == null)
+                      {
+                          LINKS = "FALSE";
+                      }
+
+                      createjsonstring = createjsonstring + "{\"IMG\":\"" + individualitem[1] + "\", \"URL\":\"" + individualitem[3] + "\:"+ individualitem[4] + "\" , \"TEXT\":\"" + TEXT + "\" , \"PANEL\":\"" + PANEL + "\" , \"LINKS\":\"" + LINKS + "\" , \"ORDER\":\"" + (i + 1).toString() + "\"},"
+                    
+                  }
+                
+                  createjsonstring = "{\"panelss\":[" + createjsonstring + "]}";
+              
+                  try
+                  {
+                    //  var xxx = JSON.parse(createjsonstring);
+                      getProducts(createjsonstring);
+                  }
+                  catch (errr)
+                  {
+                      alert("error man " + err);
+                  }
+                  
+              }
+              catch (err)
+              {
+                  alert("problem " + err);
+              }
+             // $("ul.sorted").append(arr);
+              //$(arr).appendTo(document.body.getElementsByTagName("sorted"));
+          });
+          counter = 0;
+          // $(".myClass").css("border", "3px solid red");
+
+      });
+
+     
+         
+      
+
+  </script>
+ 
+
+
+</head>
+<body>
+<form id="form1" runat="server">
+    <div id="container">
+        <div id="content">
+        
+        <ul id="sortable" style="display:inline-block;
+  vertical-align:top" runat="server">
+ 
+
+  
+  
+ 
+ </ul>
+ <!-- --->
+ <span id="clicky" class="clicky">
+ <asp:Button ID="btn_SaveBusinessPanelOrder" CssClass="button" OnClick="btn_SaveBusinessPanelOrder_Click1" runat="server" Text="Save" 
+                />
+        
+       <!-- <button class="button">Save</button>--> 
+                </span>
+            <div id="header">
+                
+                <h1><a href="default.aspx"><asp:Image runat="server" ID="imgLogoTop" Height="80" Width="80" CssClass="LogoIcon" ImageUrl="~/images/specialempty.jpg" AlternateText="Logo Image Not Found!" /> 
+                    <asp:Label ID="LogoName" runat="server"></asp:Label> Admin  </a><a href="https://paytrace.com/login.pay" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Image runat="server" ID="Image1" Height="80" Width="150" CssClass="LogoIcon" ImageUrl="~/images/paytrace.jpg" AlternateText="Logo Image Not Found!" /> </a></h1><div class="logOut"><div id="clockDisplay" class="clockStyle"></div><br /><a href="logout.aspx">Log Out</a>
+                    
+                    </div>
+                
+                <div class="menu">
+                
+                    <ul>
+                         <li runat="server" id="liEmployeeMgmt" ><a href="add_employee.aspx">Employee Managment
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="view_applicants.aspx">View Applicants</a></li>
+                                   <li><a href="add_employee.aspx">Add/Edit Employee/Affiliate</a></li>
+                                   <li><a href="add_edit_holds.aspx">View All Holds</a></li>
+							<li><a href="http://www.stripclubjobs.com/login.php" target="_blank">Strip Club Jobs</a></li>
+                           <!-- <li runat="server" id="liPaytrace"><a href="https://paytrace.com/login.pay" target="_blank">Paytrace</a></li>-->
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         <li runat="server" id="liPendingJobs" ><a href="view_pending_jobs.aspx">Pending Jobs
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="view_pending_jobs.aspx" >View Pending Jobs</a></li>
+                                   <li><a href="add_edit_pending.aspx" >Add A Pending Job</a></li>
+                                   <li><a href="view_online_booking_list.aspx" >View Online Booking Form Orders</a></li>
+                                   
+                                   <li><a href="inquiries.aspx" >View Contact Form Inquiries</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+
+                         <li runat="server" id="liWorkOrders" ><a href="view_work_orders.aspx">Work Orders
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+							<li><a href="view_work_orders.aspx">View All Work Orders</a></li>
+                                   <li><a href="add_edit_bookjob_customer.aspx" >Book A Job</a></li>
+                                   <li><a href="view_job_talent_mgmt.aspx" >Job Talent Management</a></li>
+                                   <li><a href="view_work_order_graveyard.aspx" >Work Order Graveyard</a></li>
+                                   <li><a href="view_post_job_info.aspx" >Post Job Information</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         
+                         <li runat="server" id="liBusinessLinks" ><asp:hyperlink runat="server" NavigateUrl="~/backend/Edit_B_Links.aspx">Business Links</asp:hyperlink>
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <ul id="liBusinessLinksholder" runat="server">
+                            <!--      <li><a href="http://www.compete.com" target="_blank">Compete</a></li>
+                                   <li><a href="http://www.box.net/login" target="_blank">Box.net</a></li>
+							<li><a href="http://www.alexa.com" target="_blank">Alexa</a></li>
+							<li><a href="https://www.google.com/analytics/reporting/login?ctu=https%3A%2F%2Fwww.google.com%2Fanalytics%2Fsettings%2F%3Fet%3Dreset%26hl%3Den" target="_blank">Google Analytics</a></li>
+							<li><a href="https://www.enom.com/Login.asp?page=%2fmyaccount%2fdefault.aspx&" target="_blank">Enom Central</a></li>
+                                   <li><a href="http://www.quantcast.com" target="_blank">Quantcast</a></li>
+                                   <li><a href="http://mail.centerfoldstrips.com" target="_blank">Gmail access</a></li>
+                                   <li><a href="https://secure.sponsoredlistings.ask.com/security/login" target="_blank">Ask Sponsored Listings</a></li>
+                                   <li><a href="https://adwords.google.com/" target="_blank">Google Adwords</a></li>
+                                   <li><a href="https://marketingsolutions.login.yahoo.com" target="_blank">Yahoo Marketing Solutions</a></li>
+                                   <li><a href="http://www.yourmailinglistprovider.com/" target="_blank">Your Mailing List Provider</a></li>
+							<li><a href="https://app.clubtexting.com/" target="_blank">Client Promo Texting</a></li>
+							<li><a href="http://www.clickatell.com/login.php" target="_blank">SMS Messaging</a></li>
+                            <li><a href="https://my.backpage.com/classifieds/central/index?type=user" target="_blank">BACKPAGE </a></li>
+                            <li><a href="https://app.dlvr.it/" target="_blank">DLVR.IT</a></li>
+                            <li><a href="http://blog.centerfoldstrips.com.php5-15.dfw1-1.websitetestlink.com/wp-login.php?redirect_to=http%3A%2F%2Fblog.centerfoldstrips.com.php5-15.dfw1-1.websitetestlink.com%2Fwp-admin%2Findex.php&reauth=1" target="_blank">BLOG LOG IN</a></li>
+                            <li><a href="https://www.onlywire.com" target="_blank">ONLYWIRE</a></li>
+                            <li><a href="https://studios.vs.com" target="_blank">VSMEDIA</a></li>
+                            <li><a href="https://accounts.google.com/ServiceLogin?service=CPanel&passive=1209600&cpbps=1&continue=https://admin.google.com/centerfoldstrips.com/AdminHome&followup=https://admin.google.com/centerfoldstrips.com/AdminHome&skipvpage=true" target="_blank">GOOGLE APPS</a></li>
+                            <li><a href="https://maps.google.com/" target="_blank">GOOGLE MAPS</a></li>
+                            <li><a href="https://secure.mozy.com/login" target="_blank">MOZY BACK UP</a></li>
+                            <li><a href="http://www.socialmention.com/" target="_blank">SOCIAL MENTION</a></li>
+                            <li><a href="http://topsy.com/" target="_blank">TOPSY</a></li>
+                            <li><a href="https://docs.google.com/a/centerfoldstrips.com/spreadsheet/ccc?key=0AuWRoE7_tsPVdGROSHYxWnlqc1QySWJHYVVoQkhUN3c#gid=3" target="_blank">GENTLEMEN’S CLUBS</a></li>
+                            <li><a href="https://docs.google.com/a/centerfoldstrips.com/spreadsheet/ccc?key=0AuWRoE7_tsPVdDh0LWRCa01HZ09lQ2k4Xzg5aFJSOFE#gid=0" target="_blank">FEATURE ENTERTAINERS</a></li>
+                            <li><a href="https://docs.google.com/a/centerfoldstrips.com/spreadsheet/ccc?key=0AuWRoE7_tsPVdEd1R2NTSlNJZ251ekFMSDRJRDN1bFE#gid=0" target="_blank">MEDIA NETWORK</a></li>
+                              !-->
+                              </ul>
+                   
+                         </li>
+                      <li runat="server" id="DocumentList"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/backend/EditDocumentList.aspx">Documents</asp:HyperLink><ul runat="server" id="liDocumentLinks"></ul></li>
+  
+                         <li runat="server" id="liBasicAccouting" ><a href="view_accounting.aspx">Accounting</a></li>
+                         <li runat="server" id="liUserAdmin" ><a href="user_admin.aspx">User Admin</a></li>
+                         
+                         </ul>
+                </div>
+            </div>
+        
+            <asp:ContentPlaceHolder id="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+            <div class="cleaner">&nbsp;</div>
+        </div>
+    </div>
+    <div id="footerGlow" >
+    &nbsp;
+    </div>
+    
+    <!-- <img src="../images/mainBGGlowBottom.png" alt="" width="1018" height="51" /> -->
+
+    <asp:ContentPlaceHolder runat="server" ID="deleteConfirm" ></asp:ContentPlaceHolder>
+
+</form>
+</body>
+</html>

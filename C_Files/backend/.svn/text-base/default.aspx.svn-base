@@ -1,0 +1,294 @@
+﻿<%@ Page Title="Centerfold Strips | Admin" Language="C#" MasterPageFile="~/backend/MasterPage.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css" >
+    
+    </style>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
+    <div id="leftColumn">
+        <div class="contentBlock">
+            <h2>Employee Quick Reference</h2>
+            <table width="218" cellspacing="0">
+                <tr>
+                    <td><%= ddlFemaleDancer.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlFemaleDancer" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Female Dancer -- " />
+                        </asp:DropDownList>
+                    </td>
+                    <td><asp:Button runat="server" ID="btnFemaleDancerGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlMaleDancer.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlMaleDancer"  AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Male Dancer -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnMaleDancerGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlFemaleMini.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlFemaleMini" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Female Little People (Mini) -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnFemaleMiniGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlMaleMini.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlMaleMini" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Male Little People (Mini) -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnMaleMiniGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlBellyDancer.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlBellyDancer" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- BellyDancers -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="bntBellyDanceGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlBbw.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlBbw" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- BBW -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnBbwGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlDragQueen.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlDragQueen" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Drag Queens -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnDragQueenGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlImpersonator.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlImpersonator" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Impersonators -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnImpersonatorGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlNoveltyActs.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlNoveltyActs" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Novelty Acts -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnNoveltyActsGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlDuoShows.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlDuoShows" AppendDataBoundItems="true" CssClass="select" style="width: 163px;" >
+                            <asp:ListItem Value="" Text=" -- Duo Shows -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnDuoShowsGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlDriversBouncers.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlDriversBouncers" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Drivers &amp; Bouncers -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnDriversBouncersGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td><%= ddlAffiliate.Items.Count - 1 %></td>
+                    <td>
+                        <asp:DropDownList runat="server" ID="ddlAffiliate" AppendDataBoundItems="true" CssClass="select" style="width: 160px;" >
+                            <asp:ListItem Value="" Text=" -- Affiliate Companies -- " />
+                        </asp:DropDownList>
+                    </td>
+                    
+                    <td><asp:Button runat="server" ID="btnAffiliateGo" Text="GO" OnClick="OnClick_EmpQuickRefGoBtn" CssClass="button" /></td>
+                </tr>
+            </table>
+
+            <hr />
+            
+            <table width="218" cellspacing="0">
+                <tr>
+                    <td width="69"><label>Find:</label></td>
+                    <td colspan="2">
+                        <asp:DropDownList runat="server" ID="ddlSearchTalType" CssClass="select" />
+                    </td>
+                </tr>
+                <%-- 
+                <tr>
+                    <td><label>Lives In:</label></td>
+                    <td width="106">
+                    --%>
+                        <asp:DropDownList runat="server" ID="ddlSearchLivesIn" CssClass="select" Visible="false" />
+                    <%--
+                    </td>
+                    <td width="45">&nbsp;</td>
+                    
+                </tr>
+                --%>
+                <tr>
+                    <td><label>Works In:</label></td>
+                    <td width="106">
+                        <asp:DropDownList runat="server" ID="ddlSearchWorksIn" CssClass="select" />
+                    </td>
+                    <td width="45"><asp:Button runat="server" ID="btnTalentSearchGo" Text="GO" OnClick="OnClick_btnTalentSearchGo" CssClass="button" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center;">
+                    <asp:Button runat="server" ID="btnGetInactiveEmployees" Text="Inactive Employees" OnClick="OnClick_btnGetInactiveEmployees" CssClass="buttonA" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        <div class="contentBlock">
+            <h2>Manage Promotions</h2>
+            
+            <table width="218" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><asp:Image runat="server" ID="imgPromo" ImageUrl="~/images/specialempty.jpg" AlternateText="Promo Image Not Found!" /></td>
+                </tr>
+                <tr>
+                    <td>Image Location:<br />
+                        <asp:FileUpload runat="server" ID="fuPromoImg" CssClass="textfield" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Promo URL:<br />
+                        <asp:TextBox runat="server" ID="tBoxPromoUrl" size="38" MaxLength="100" CssClass="textfield" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button runat="server" ID="btnUpdatePromo" OnClick="OnClick_btnUpdatePromo" Text="Update" CssClass="button" />
+                        <asp:Label runat="server" ID="lblPromoFeedback" />
+                    </td>
+                </tr>
+            </table>            
+        </div>
+    </div>
+
+    <div id="rightColumn">
+        <div class="contentBlock" style="height:450px; overflow:auto;">
+            <h2>Work Order Quick View</h2>
+            <asp:GridView runat="server" ID="grdViewWorkOrders" AutoGenerateColumns="false" GridLines="None"  >
+                <AlternatingRowStyle BackColor="#383838" />
+                <Columns>
+                    <asp:TemplateField ItemStyle-Width="25" >
+                        <ItemTemplate>
+                            <asp:Image runat="server" ID="imgHasTalent" ImageUrl="~/images/talent.png" AlternateText="T" Visible="false" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField HeaderText="Event Date" DataField="EventDate" DataFormatString="{0:dddd MM/dd/yyyy}" ItemStyle-Width="120" />
+                    <asp:TemplateField HeaderText="Customer Name" ItemStyle-Width="110" >
+                        <ItemTemplate>
+                            <%# Eval("FirstName") + " " + Eval("LastName") %>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField HeaderText="Location" DataField="LocationName" ItemStyle-Width="165" />
+                    <asp:BoundField HeaderText="Start Time" DataField="StartTime" DataFormatString="{0:h:mm tt}" ItemStyle-Width="70" />
+                    <asp:TemplateField HeaderText="Show Length" ItemStyle-Width="70" >
+                        <ItemTemplate>
+                            <%# CfsCommon.FormatShowLengthHumanReadable( (int)Eval("TotalShowLengthMins") ) %>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button runat="server" ID="btnViewWorkOrder" Text="VIEW" CssClass="button" OnClick="OnClick_btnViewWorkOrder" CommandArgument='<%# Eval("JobId") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </div>
+        
+        <div class="contentBlock" style="float:left; width:380px; margin-right:15px;">
+            <h2>Find A Work Order</h2>
+            <table width="380" cellspacing="0">
+                <tr>
+                      <td align="right">Work Order #</td>
+                      <td colspan="3"><asp:TextBox runat="server" ID="tBoxSearchWorkOrderNum" CssClass="textfield" /></td>
+                </tr>
+                <tr>
+                    <td align="right">First Name</td>
+                    <td><asp:TextBox runat="server" ID="tBoxSearchFirstName" CssClass="textfield" ></asp:TextBox></td>
+                    <td align="right">Last Name</td>
+                    <td><asp:TextBox runat="server" ID="tBoxSearchLastName"  CssClass="textfield" ></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td align="right">Job Date</td>
+                    <td><asp:TextBox runat="server" ID="tBoxSearchJobDate" CssClass="textfield" ></asp:TextBox></td>
+                    <td align="right">Location</td>
+                    <td><asp:TextBox runat="server" ID="tBoxSearchLocation" CssClass="textfield" ></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td align="right">City</td>
+                    <td><asp:TextBox runat="server" ID="tBoxSearchCity" CssClass="textfield" ></asp:TextBox></td>
+                    <td align="right">State</td>
+                    <td><asp:DropDownList runat="server" ID="ddlSearchState" CssClass="select" /></td>
+                </tr>
+                <tr>
+                    <td align="right">CC Num</td>
+                    <td colspan="2"><asp:TextBox runat="server" ID="tBoxSearchCcNum" CssClass="textfield" ></asp:TextBox></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="right">Performer @ job</td>
+                    <td colspan="3">
+                        <asp:DropDownList runat="server" ID="ddlSearchFullPerformerList" CssClass="select" style="width:200px;" >
+                            <asp:ListItem Value="" Text="ALL" />
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Referred By</td>
+                    <td colspan="2"><asp:TextBox runat="server" ID="tBoxSearchReferredBy" CssClass="textfield" ></asp:TextBox></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="right"><asp:Button runat="server" ID="btnSearchWorkOrder" OnClick="OnClick_btnSearchWorkOrder" Text="SEARCH" CssClass="button" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="contentBlock" style="float:left; width:244px;">
+            <h2>Staff Notes</h2>
+            <asp:TextBox id="tbStaffNotes" TextMode="MultiLine" CssClass="textfield staffNotes" runat="server" />
+            <asp:Button runat="server" ID="btnStaffNotes" Text="SAVE" CssClass="button" />
+        </div>
+        <div style="float:left;width:266px;">
+            <!--<a href="#" class="buttonLarge">Franchise Management</a>
+            <a href="#" class="buttonLarge">Confirmation Email Admin</a>-->       
+            <a href="../logs/current_month/index.html" class="buttonLarge">Current Month Log Files</a>
+            <a href="../logs/last_month/index.html" class="buttonLarge">Log Files YTD</a>              
+        </div>
+    </div>
+    
+</asp:Content>
+

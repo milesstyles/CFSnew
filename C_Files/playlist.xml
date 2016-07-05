@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example media RSS playlist for the JW Player</title>
+    <link>http://www.google.com</link>
+    <item>
+      <title>CFS</title>
+      <content url="video/cfs_Main.flv" type="video/x-flv" start="00:00" />
+      <thumbnail url="media/video/videoStill1.jpg" />
+      <description>Main Page Video</description>
+      <link>http://CenterfoldStrips.com</link>
+    </item>
+    <item>
+      <title>CFS</title>
+      <content url="video/cfs_Main.flv" type="video/x-flv" start="00:00" />
+      <thumbnail url="media/video/rain.jpg" />
+      <description>Main Page Video</description>
+      <link>http://CenterfoldStrips.com</link>
+    </item>
+    <item>
+      <title>CFS</title>
+      <content url="video/cfs_Main.flv" type="video/x-flv" start="00:00" />
+      <thumbnail url="media/video/videoStill1.jpg" />
+      <description>Main Page Video</description>
+      <link>http://CenterfoldStrips.com</link>
+    </item>
+    <item>
+      <title>CFS</title>
+      <content url="video/cfs_Main.flv" type="video/x-flv" start="00:00" />
+      <thumbnail url="media/video/rain.jpg" />
+      <description>Main Page Video</description>
+      <link>http://CenterfoldStrips.com</link>
+    </item>
+    <item>
+      <title>CFS</title>
+      <content url="video/cfs_Main.flv" type="video/x-flv" start="00:00" />
+      <thumbnail url="media/video/videoStill1.jpg" />
+      <description>Main Page Video</description>
+      <link>http://CenterfoldStrips.com</link>
+    </item>
+  </channel>
+</rss>

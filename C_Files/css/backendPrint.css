@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike,  sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+body {
+	background-color: #fff;
+	text-align: center;
+	font: 62.5%/1.1 "Trebuchet MS", Tahoma, Arial, Helvetica;
+	color: #000;
+}
+caption, th, td { font-weight: normal; 
+}
+label { }
+
+ol, ul {
+	list-style: none;
+}
+hr {
+	border-bottom: 1px solid #595959;
+	clear: both;
+	height: 1px;
+	background-color: #000000;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+p { padding-bottom: 12px; }
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+textarea { font: 1.2em "Trebuchet MS", Tahoma, Arial, Helvetica; }
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+.button {
+	padding: 0px 3px 2px;
+	background-image: url(../images/buttonBG.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	font-size: 0.9em;
+	color: #FFFFFF !important;
+	width: auto;
+	border: 1px solid #000000;
+	text-transform: uppercase;
+	margin: 0px;
+	background-color: #000000;
+}
+.buttonA {
+	padding: 2px 6px;
+	background-image: url(../images/buttonBGALink.png);
+	background-repeat: no-repeat;
+	height: 19px;
+	font-size: 1.1em;
+	color: #FFFFFF;
+	border: 1px solid #060606;
+	text-transform: none;
+	margin: 0px;
+	background-color: #000000;
+	line-height: 23px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.buttonLarge {
+	font-size: 1.2em;
+	line-height: 28px;
+	background-image: url(../images/blank_bw.gif);
+	background-repeat: no-repeat;
+	height: 36px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	clear: left;
+	text-align: center;
+	padding: 0px 5px;
+	margin-bottom: 6px;
+}
+.buttonLarge:hover { background-image: url(../images/blank_over_bw.gif); }
+.cleaner {
+	clear:both;
+	height:1px;
+	font-size:1px;
+	border:none;
+	margin:0; padding:0;
+	background:transparent;
+}
+.contentBlock {
+	padding: 0px;
+	background-color: #fff;
+	border: none;
+	margin-bottom: 0px;
+	color: #000;
+}
+.contentBlock h2, .contentBlockAlt h2 {
+	margin-bottom: 5px;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+.costume {
+	vertical-align: top !important;
+	height: 20px !important;
+}
+
+.fixWidth { width:600px; }
+.fixWidth tr td { display: table-cell; }
+
+/*.fixWidth tr td {
+	text-align: left !important;
+}*/
+.hidePrint { display: none; }
+
+.red {
+	font-weight: bold;
+	color: #DA2C30;
+}
+.showPrint, .showPrint td { display: inline; }
+
+
+.select, .textfield {
+	color: #000;
+	padding: 1px 2px;
+	border-top: 1px solid #808080;
+	border-right: none;
+	border-bottom: 1px solid #808080;
+	border-left: none;
+	background-color: #A7A9AC;
+	font: 1em "Trebuchet MS", Tahoma, Arial, Helvetica;
+}
+.menu { display: none; 
+}
+.sort {
+	margin-bottom: -5px;
+	margin-left: 3px;
+}
+.triCol {
+	float: left;
+	width: 302px;
+	margin-left: 15px;
+	font-size: 1.1em;
+}
+.triCol a, #fullColumn a {
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+#container {
+	width: 600px;
+	text-align: left;
+	background-image: url(none);
+	padding: 0px;
+	margin: 0px;
+}
+#content {
+	width: 100%;
+	background-color: #fff;
+}
+#content  h3 {
+	color: #000;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 15px 0px;
+	display: block;
+}
+
+#fullColumn {
+	color: #A7A9Ac;
+	font-size: 1.1em;
+	margin: 0px;
+	width: 100%;
+}
+#footer {
+	width: 968px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	text-transform: uppercase;
+	color: #A7A9AC;
+	text-align: center;
+}
+#footer a {
+	color: #A7A9AC;
+	text-decoration: none;
+}
+#header {
+	border-bottom: none;
+	margin-bottom: 0px;
+	height: auto;
+}
+#header h1 { display: none; 
+}
+#leftColumn {
+	display: inline;
+	float: left;
+	width: 240px;
+	margin-left: 15px;
+	font-size: 1.1em;
+}
+#fullColumn td, #leftColumn td, #rightColumn td, .triCol td{
+	padding: 2px 1px;
+	vertical-align: top;
+}
+#fullColumn th, #leftColumn th, #rightColumn th, .triCol th {
+	padding: 4px 3px;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	border-bottom: 3px solid #1B1B1B;
+}
+#rightColumn {
+	float: left;
+	width: 683px;
+	font-size: 1.1em;
+	margin-left: 15px;
+}

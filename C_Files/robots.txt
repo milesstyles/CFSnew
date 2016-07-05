@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /backend/
+Allow: /
+
+User-agent: Googlebot-Image
+Disallow: /talentimages/
+Disallow: /backend/
+Allow: /
+

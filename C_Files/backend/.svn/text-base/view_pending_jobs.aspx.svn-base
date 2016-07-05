@@ -1,0 +1,55 @@
+﻿<%@ Page Title="Centerfold Strips | View Pending Jobs" Language="C#" MasterPageFile="~/backend/MasterPage.master" AutoEventWireup="true" CodeFile="view_pending_jobs.aspx.cs" Inherits="backend_view_pending_jobs" %>
+<%@ Register Assembly="System.Web.Entity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
+
+<div id="divDeleteConfirm" runat="server" visible="false" >
+    <div id="deleteConfirm">
+        <label>Confirm Delete:</label>
+        <asp:HiddenField runat="server" ID="hiddenDeleteId" Value="" />
+        <asp:Button runat="server" ID="btnConfirmYes" Text="Yes" OnClick="OnClick_btnConfirmYes" CssClass="button" />
+        <asp:Button runat="server" ID="btnConfirmNo" Text="No" OnClick="OnClick_btnConfirmNo" CssClass="button" />
+    </div>
+</div>
+
+<h3>View Pending Jobs</h3>
+<div id="fullColumn">
+    <table width="100%" cellspacing="0" style="margin-bottom:20px;">
+        <tr>
+            <td width="15%"><asp:Button runat="server" ID="btnAddPendJob" Text="ADD A PENDING JOB" CssClass="button" OnClick="OnClick_btnAddPendJob" /></td>
+            <td width="12%"><asp:Button runat="server" ID="btnPrint" Text="PRINT THIS LIST" OnClientClick="window.print()" CssClass="button" /></td>
+            <td width="40%"><input type="button" class="button" value="VIEW CONTACT FORM INQUIRIES" onclick="window.location = 'inquiries.aspx'" /></td>
+            <td width="80%" style="text-align: right;" ><div style="font-size:1.1em; float:right; margin-bottom:6px;"><span style="display:block; width:15px; height:15px; background-color:#aac3b1; float:left; margin:-1px 6px 0px 0px;">&nbsp;</span>Event in current week</div></td>
+        </tr>
+    </table>
+    
+    <asp:EntityDataSource runat="server" ID="EntityDataSrc"  ConnectionString="name=CfsEntity" DefaultContainerName="CfsEntity" 
+            EntitySetName="Pending" EnableDelete="true" OrderBy="it.EventDate ASC" />
+
+    <asp:GridView runat="server" ID="grdPendingJobs" AllowSorting="true" DataKeyNames="PendId" DataSourceID="EntityDataSrc" AutoGenerateColumns="false" GridLines="Horizontal" BorderColor="#383838" >
+        <Columns>
+            <asp:BoundField HeaderText="Event Date" DataField="EventDate" SortExpression="EventDate" DataFormatString="{0:dddd M/d/yyyy}" />
+            <asp:BoundField HeaderText="Customer Name" DataField="ClientName" SortExpression="ClientName" />
+            <asp:BoundField HeaderText="Location" DataField="CityStateZip" SortExpression="CityStateZip" />
+            <asp:BoundField HeaderText="Number" DataField="ContactNumber" SortExpression="ContactNumber" />
+            <asp:BoundField HeaderText="EmailAddress" DataField="EmailAddress" SortExpression="EmailAddress" DataFormatString="<a href='mailto:{0}'>{0}</a>" HtmlEncodeFormatString="false" ItemStyle-Width="100px" />
+            <asp:BoundField HeaderText="Notes" DataField="Notes" ItemStyle-Width="200px" />
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Button runat="server" ID="btnEdit" Text="VIEW" CommandArgument='<%# Eval("PendId") %>' OnClick="OnClick_btnEdit" CssClass="button" />
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Button runat="server" ID="btnDelete" Text="DELETE" CssClass="button" CommandArgument='<%# Eval("PendId") %>' OnClick="OnClick_btnDelete" />
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+    
+</div>
+</asp:Content>
+

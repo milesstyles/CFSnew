@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CFS Master Page</title>
+    <link href="../css/backend.css" rel="Stylesheet" type="text/css" media="all" />
+    <link href="../AtomImageEditor/ImageEditor.css" rel="Stylesheet" type="text/css" media="all" />
+    <link href="../css/backendPrint.css" rel="Stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" language="javascript" src="../js/offspring-1.0.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div id="container">
+        <div id="content">
+            <div id="header">
+                <h1><a href="default.aspx">Centerfold Strips Admin</a></h1><div class="logOut"><a href="logout.aspx">Log Out</a></div>
+                <div class="menu">
+                    <ul>
+                         <li runat="server" id="liEmployeeMgmt" ><a href="add_edit_employee.aspx">Employee Managment
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="view_applicants.aspx">View Applicants</a></li>
+                                   <li><a href="add_edit_employee.aspx">Add/Edit Employee/Affiliate</a></li>
+                                   <li><a href="add_edit_holds.aspx">View All Holds</a></li>
+							<li><a href="http://www.stripclubjobs.com/jobbase/employers/" target="_blank">Strip Club Jobs</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         <li runat="server" id="liPendingJobs" ><a href="view_pending_jobs.aspx">Pending Jobs
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="view_pending_jobs.aspx" >View Pending Jobs</a></li>
+                                   <li><a href="add_edit_pending.aspx" >Add A Pending Job</a></li>
+                                   <li><a href="view_online_booking_list.aspx" >View Online Booking Form Orders</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+
+                         <li runat="server" id="liWorkOrders" ><a href="view_work_orders.aspx">Work Orders
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+							<li><a href="view_work_orders.aspx">View All Work Orders</a></li>
+                                   <li><a href="add_edit_bookjob_customer.aspx" >Book A Job</a></li>
+                                   <li><a href="view_job_talent_mgmt.aspx" >Job Talent Management</a></li>
+                                   <li><a href="view_work_order_graveyard.aspx" >Work Order Graveyard</a></li>
+                                   <li><a href="view_post_job_info.aspx" >Post Job Information</a></li>
+                                   <li><a href="inquiries.aspx" >View Contact Form Inquiries</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         <li runat="server" id="liBusinessLinks" ><a href="#">Business Links
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <ul>
+                                   <li><a href="http://www.compete.com" target="_blank">Compete</a></li>
+                                   <li><a href="http://www.box.net/login" target="_blank">Box.net</a></li>
+							<li><a href="http://www.alexa.com" target="_blank">Alexa</a></li>
+							<li><a href="https://www.google.com/analytics/reporting/login?ctu=https%3A%2F%2Fwww.google.com%2Fanalytics%2Fsettings%2F%3Fet%3Dreset%26hl%3Den" target="_blank">Google Analytics</a></li>
+							<li><a href="https://www.enom.com/Login.asp?page=%2fmyaccount%2fdefault.aspx&" target="_blank">Enom Central</a></li>
+                                   <li><a href="http://www.quantcast.com" target="_blank">Quantcast</a></li>
+                                   <li><a href="http://mail.centerfoldstrips.com" target="_blank">Gmail access</a></li>
+                                   <li><a href="https://secure.sponsoredlistings.ask.com/security/login" target="_blank">Ask Sponsored Listings</a></li>
+                                   <li><a href="https://adwords.google.com/" target="_blank">Google Adwords</a></li>
+                                   <li><a href="https://marketingsolutions.login.yahoo.com" target="_blank">Yahoo Marketing Solutions</a></li>
+                                   <li><a href="http://www.yourmailinglistprovider.com/" target="_blank">Your Mailing List Provider</a></li>
+							<li><a href="https://app.clubtexting.com/" target="_blank">Client Promo Texting</a></li>
+							<li><a href="http://www.clickatell.com/login.php" target="_blank">SMS Messaging</a></li>
+                              </ul>
+                         </li>
+                         <li runat="server" id="liBasicAccouting" ><a href="view_accounting.aspx">Accounting</a></li>
+                         <li runat="server" id="liUserAdmin" ><a href="user_admin.aspx">User Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <asp:ContentPlaceHolder id="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+            <div class="cleaner">&nbsp;</div>
+        </div>
+    </div>
+    <div id="footerGlow" >
+    &nbsp;
+    </div>
+    
+    <!-- <img src="../images/mainBGGlowBottom.png" alt="" width="1018" height="51" /> -->
+
+    <asp:ContentPlaceHolder runat="server" ID="deleteConfirm" ></asp:ContentPlaceHolder>
+
+</form>
+</body>
+</html>

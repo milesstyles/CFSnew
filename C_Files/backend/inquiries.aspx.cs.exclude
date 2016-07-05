@@ -1,0 +1,71 @@
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+/* Entity Includes */
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
+
+using CfsNamespace;
+
+public partial class backend_inquiries : System.Web.UI.Page
+{
+    protected bool viewNewMessages;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        viewNewMessages = true; //(!(Request.Params["archived"] != null && Request.Params["archived"] == "true"));
+
+        btnSwitchView.Text = (viewNewMessages ? "View Archived" : "View New");
+        
+        GetInqiries(viewNewMessages);
+    }
+
+    protected void GetInqiries(bool newInquiries)
+    {
+        CfsEntity cfEntity = new CfsEntity();
+
+        ObjectQuery<ContactForm> inqQuery = cfEntity.ContactForm.Where("it.New = " + newInquiries.ToString()).OrderBy("it.Date");
+        List<ContactForm> inqList = inqQuery.ToList();
+
+        rptViewInquiries.DataSource = inqList;
+        rptViewInquiries.DataBind();
+    }
+
+    protected void OnClick_btnArchive(object sender, EventArgs e)
+    {
+        Button btn = (Button)sender;
+
+        if (btn.CommandArgument != null && btn.CommandArgument != "")
+        {
+            CfsEntity cfEntity = new CfsEntity();
+
+            ObjectQuery<ContactForm> inqQuery = cfEntity.ContactForm.Where("it.ContactFormId = " + btn.CommandArgument);
+            List<ContactForm> inqList = inqQuery.ToList();
+
+            if (inqList.Count == 1)
+            {
+                inqList[0].New = false;
+            }
+
+            cfEntity.SaveChanges();
+
+            GetInqiries(true);
+        }
+    }
+
+    protected void OnClick_btnSwitchView(object sender, EventArgs e)
+    {
+        if (viewNewMessages)
+        {
+            Response.Redirect("inquiries.aspx?archived=true");
+        }
+        else
+        {
+            Response.Redirect("inquiries.aspx");
+        }
+    }
+}

@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Centerfold Strips Booking Confirmation</title>
+    <style type="text/css" >
+    body
+    {
+        font: 11px Tahoma, Verdana, Arial, Helvetica; 
+        color: #000000;
+    }
+    
+    h1
+    {
+        font-size: 1.5em;
+    }
+    
+    h2
+    {
+        font-size: 1.3em;
+    }
+    
+    p
+    {
+        margin-left: 30px;
+        margin-bottom: 5px;
+    }
+
+    table
+    {
+        border-collapse: collapse;
+    }
+    
+    table th
+    {
+        text-align: right;
+        padding: 4px;
+    }
+    
+    table td
+    {
+        padding: 2px;
+    }
+    
+    div
+    {
+        margin: 5px;
+    }
+    
+    #divContent
+    {
+        width: 650px;
+    }
+    
+    /* These can by styled, if you choose */
+    #divIntro {}
+    #divTableContainer { margin: 5px;}
+    #divPolicy {}
+    #divStatge {}
+    #divTipping {}
+    #divPartyHost {}
+    #divWrapUp {}
+    
+    .feeSection, .totalSection
+    {
+        background-color: #EBEBEB;
+        text-align: right;
+    }
+    
+    .totalSection
+    {
+        border-top: 1px solid black;
+    }
+    
+    .header
+    {
+        text-align: left;
+        background-color: #CCC;
+        padding: 5px;
+    }
+    
+    /* ul */
+    .policyList {}
+    
+    .policyList li
+    {
+        margin-top: 3px;
+    }
+    
+    /* ul */
+    .stageList {}
+    
+    .stageList li
+    {
+        margin-top: 3px;
+    }
+    
+    </style>
+</head>
+<body>
+
+<div id="divContent" >
+    <div id="divIntro" >
+        <h1>CENTERFOLD STRIPS BOOKING CONFIRMATION</h1>
+        <p>Greetings #FIRSTNAME#</p>
+        <p>
+        Thank you for booking your party with Centerfold Strips, the nations premiere  
+        entertainment service. You a receiving this email to confirm the booking of your event. Please review this email carefully.  
+        If any of the information below is incorrect, please contact us immediately at 1-877-427-8747.
+        </p>
+    </div>
+
+    <div id="divTableContainer" >
+        <table>
+	        <tr>
+		        <th class="header" colspan="4">Client Info:</th>
+	        </tr>
+	        <tr>
+	            <th width="125" >Contracted By:</th>
+	            <td width="175" >#FIRSTNAME# #LASTNAME#</td>
+	            <th width="125" >&nbsp;</th>
+	            <td width="175" >&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>Address 1:</th>
+	            <td>#ADDRESS1#</td>
+	            <th>Address 2:</th>
+	            <td>#ADDRESS2#</td>
+	        </tr>
+	        <tr>
+	            <th>City:</th>
+	            <td>#CITY#</td>
+	            <th>State:</th>
+	            <td>#STATE#</td>
+	        </tr>
+	        <tr>
+	            <th>Home Phone:</th>
+	            <td>#HOMEPHONE#</td>
+	            <th>Business Phone:</th>
+	            <td>#BUSPHONE#</td>
+	        </tr>
+	        <tr>
+	            <th>Cell Phone:</th>
+	            <td>#CELLPHONE#</td>
+	            <th>Fax:</th>
+	            <td>#FAX#</td>
+	        </tr>
+	        <tr>
+		        <th class="header" colspan="4">Event Info:</th>
+	        </tr>
+	        <tr>
+	            <th>Contact Person:</th>
+	            <td>#CONTACTPERSON#</td>
+	            <th>Contact Phone:</th>
+	            <td>#CONTACTPHONE#</td>
+	        </tr>
+	        <tr>
+	            <th>Guest of Honor:</th>
+	            <td>#GUESTOFHONOR#</td>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>Location:</th>
+	            <td>#LOCNAME#</td>
+	            <th>Location Phone:</th>
+	            <td>#LOCPHONE#</td>
+	        </tr>
+	        <tr>
+	            <th>Address1:</th>
+	            <td>#LOCADDRESS1#</td>
+	            <th>Address2:</th>
+	            <td>#LOCADDRESS2#</td>
+	        </tr>
+	        <tr>
+	            <th>City:</th>
+	            <td>#LOCCITY#</td>
+	            <th>State:</th>
+	            <td>#LOCSTATE#</td>
+	        </tr>
+	        <tr>
+	            <th>Date of Event:</th>
+	            <td>#EVENTDATE#</td>
+	            <th>Number of Guests:</th>
+	            <td>#NUMOFGUESTS#</td>
+	        </tr>
+	        <tr>
+                <th>Type of Function:</th>
+	            <td>#TYPEOFEVENT#</td>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th class="header" colspan="4" >Dancer and Office Info:</th>
+	        </tr>
+	        <tr>
+	            <th>Number of Dancers:</th>
+	            <td>#NUMOFDANCERS#</td>
+	            <th>Length of Show:</th>
+	            <td>#SHOWLENGTH#</td>
+	        </tr>
+        </table>
+        <table>	    
+	        <tr>
+	            <th width="125" >&nbsp;</th>
+	            <td width="175" >&nbsp;</td>
+	            <th width="125" class="feeSection" >Fees:</th>
+	            <td width="75" class="feeSection" >&nbsp;</td>
+	            <td width="50" class="feeSection" >&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	            <th class="feeSection" >Entertainment:</th>
+	            <td class="feeSection" >#ENTERTAINMENTFEE#</td>
+	            <td class="feeSection" >&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	            <th class="feeSection" >Limo:</th>
+	            <td class="feeSection" >#LIMOFEE#</td>
+	            <td class="feeSection" >&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	            <th class="feeSection" >Location:</th>
+	            <td class="feeSection" >#LOCATIONFEE#</td>
+	            <td class="feeSection" >&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	            <th class="feeSection" >Accessories:</th>
+	            <td class="feeSection" >#ACCESSORIESFEE#</td>
+	            <td class="feeSection" >&nbsp;</td>
+	        </tr>
+	        <tr>
+	            <th>&nbsp;</th>
+	            <td>&nbsp;</td>
+	            <th class="feeSection" >Total:</th>
+	            <td class="totalSection" >#CUSTTOTAL#</td>
+	            <td class="feeSection" >&nbsp;</td>
+	        </tr>
+        </table> 
+    </div>   
+    
+    <div id="divPolicy" >
+        <h2>Centerfold Strips Policies - Please review them carefully</h2>
+        <ul class="policyList" >
+               <li><strong>Cancellation Policy</strong> -  Cancellations received from the time of booking up to 24 (twenty four)  hours prior to the time and date of the event, will be refunded, less a  $100.00 (One hundred dollar) PER ENTERTAINER processing fee (Regardless  of the reason). All other cancellations received within 24 (twenty  four) hours of the time and date of the party will forfeit the full  payment (Regardless Of The Reason). </li>
+                           <li><strong>Refund Policy</strong> - Once the services are rendered, there are no refunds - no exceptions. All deposits are non-refundable.</li>
+                           <li><strong>Work Order Change Fee</strong> - After your reservation is taken by our office, if there are any  material changes to your work order, you will incur a $100 per change  fee. A material change would consist of a change to the date of your  event, address and or location of your event, or the arrival time of  the entertainers. </li>
+                           <li><strong>Abuse Policy</strong> - No pouring beverages or liquids on the dancers, no profane or vulgar  language, no biting, no licking, no poking, no ass smacking, no  grabbing, no hair pulling, no groping, or any other actions that may be  deemed abusive or offensive to the entertainers. Centerfold Strips  employs a zero tolerance abuse policy. If the entertainers are touched  inappropriately, or abused in any way - verbally or physically - the  show is over immediately &amp; you &amp; or the guest/s will be  prosecuted to the fullest extent of the law! </li>
+                           <li><strong>Escort Policy</strong> - Our entertainers are exotic dancers, not escorts - don't even ask.  Prostitution is illegal. If the entertainers are being propositioned  for any sexual services, the show will be terminated immediately &amp;  you and or your guest/s will be prosecuted to the fullest extent of the  law. </li>
+                           <li><strong>Camera, Camera Phones, And Video Camera Policy</strong> - There is absolutely no videotaping, cameras, or camera phones  permitted at the show. If you our your guests are caught taking any  kind of photos during the show, the show will be terminated immediately  &amp; we reserve the right to confiscate &amp; destroy the film, and or  erase any digital photos. </li>
+                           <li><strong>Substitution Policy</strong> - Centerfold Strips will make every effort possible to provide you with  the entertainers that you have requested. However, in the event of an  emergency, Centerfold Strips reserves the right to substitute the  entertainer you have requested with someone comparable. </li>
+                           <li><strong>Payment Policy</strong> - Payment is expected in full in CASH ONLY UPON ARRIVAL. </li>
+                           <li><strong>Arrival Times Policy</strong> - There is a ½ hr leeway time of arrival for the entertainers. It is  the client's responsibility to ensure that all party guests are present  &amp; ready to start the show promptly when the entertainer/s arrive.  The dancers are booked for an INTERVAL of time. If your guests are  late, not organized, or you are not prepared for the show to start  promptly for any reason whatsoever, your performance will be shortened.</li>
+                           <li><strong>Office Contact</strong> - On the night of your event if you have any questions, comments,  concerns, or problems, please contact the office immediately at  1-877-427-8747. </li>
+                           <li><strong>Age Policy</strong> -  All guests of the party, and all persons located on the premises must  be 18 (eighteen) years of age OR older with valid identification.  Centerfold Strips WILL NOT PERFORM if minors are present, and you will  FORFEIT FULL PAYMENT. </li>
+                           <li><strong>Personal Items Policy</strong> - If any personal items (clothing, jewelry, etc.) belonging to the  entertainers are stolen, or broken / damaged you will be responsible  for the repair OR replacement of those items.</li>
+                           <li><strong>Location Policy</strong>-  It is the client's responsibility to provide adequate space for the  entertainers to perform as well as to get permission from the owners or  management of the venue to have an exotic dancer perform at their  location. In addition, it is the client's responsibility to ensure the  venue is properly lit, heated/air conditioned, ventilated, and that  staging if applicable is in safe and good order.</li>
+                           <li><strong>Sound System Policy</strong> - It is the client's responsibility to provide a working sound system  that is loud enough to be heard by everyone present. Centerfold Strips  DOES NOT PROVIDE sound systems.</li>
+                           <li><strong> Insurance Policy</strong> - It is the client's responsibility to provide all proper insurance  coverages for their event, and venue including but not limited to  personal injury, property damage, general liability &amp; liquor  liability. The client agrees to hold harmless, indemnify and not seek  compensation, damages, or legal remedy from Centerfold Strips, its  employees, its affiliated companies &amp; assignees for any claims  arising from the performance of Centerfold Strips entertainers. </li>
+                           <li>Centerfold  Strips is NOT LIABLE for shortened or cancelled performances due to  actions of guests, conditions of location, weather conditions, lateness  of guests, lack of participation of guests, the presence of minors or  illegal substances. </li>
+        </ul>
+    </div>
+    
+    <div id="divStage" >
+        <h2>Setting the Stage</h2>
+        <ul class="stageList" >
+            <li>Please have your balance ready when the dancers arrive.</li>
+            <li>Have some kind of changing room - a bathroom if nothing else - that the dancer can use to get into costume before dancing.</li>
+            <li>Close the doors curtains to make sure the show will only be seen by invited guests of the party.</li>
+            <li>Make sure you have a stereo with a CD playersome cds.</li>
+        </ul>					
+    </div>        
+        
+    <div id="divTipping" >
+        <h2>Tipping</h2>
+        <p>
+        Please remember that the strippers also work for tips throughout the entire party. To maximize the enjoyment of the party,
+        employ the same type of tipping rules as if you were at a strip club. We recommend that your guests be informed in advance to bring
+        plenty of small bills and be prepared for the thrills! The more you tip – the more they strip!</p>
+    </div>        
+
+    <div id="divPartyHost" >
+        <h2>Party Host's Responsibility</h2>
+        <p>To ensure that your party turns out to be an unforgettable experience,  we suggest the host designate one or more guests if possible, to help  maintain order, and prevent disruptive behavior so that the  entertainers can do their jobs!!! Please be in charge of keeping your  crowd under control, and comply with the dancers rules. Also, please  cooperate with and treat the dancers with kindness and respect and  participate in party activities to ensure a fun, longer party for you  and your guests.</p>
+    </div>        
+    
+    <div id="divWrapUp" >
+        <p>We hope you have a great time at your event, and we look forward to doing business with you in the near future!</p>
+        
+        <p>Centerfold Strips <a href='http://www.centerfoldstrips.com'>www.centerfoldstrips.com</a><br />
+        Office # 1-877-4ASTRIP (1-877-427-8747)
+        </p>    
+    </div>
+    
+</div>
+
+</body>
+</html>

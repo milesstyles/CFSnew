@@ -1,0 +1,505 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike,  sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+body {
+	background-color: #000;
+	text-align: center;
+	font: 62.5%/1.1 "Trebuchet MS", Tahoma, Arial, Helvetica;
+}
+caption, th, td { font-weight: normal; 
+}
+h1, #mainMenu { behavior: url(js/iepngfix.htc) }
+label { }
+
+ol, ul {
+	list-style: none;
+}
+hr {
+	border-bottom: 1px solid #595959;
+	clear: both;
+	height: 1px;
+	background-color: #000000;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+p { padding-bottom: 12px; }
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+textarea { font: 1.2em "Trebuchet MS", Tahoma, Arial, Helvetica; }
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+.accouting 
+{
+	float: left;
+	width: 228px;
+}
+.accounting tr td { width: 25%; }
+
+
+.button {
+	padding: 0px 3px 2px;
+	background-image: url('../images/buttonBG.png');
+	background-repeat: no-repeat;
+	height: 20px;
+	font-size: 0.9em;
+	color: #FFFFFF;
+	width: auto;
+	border: 1px solid #000000;
+	text-transform: uppercase;
+	background-color: #000000;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+.buttonA {
+	padding: 2px 6px;
+	background-image: url(../images/buttonBGALink.png);
+	background-repeat: no-repeat;
+	height: 19px;
+	font-size: 1.1em;
+	color: #FFFFFF;
+	border: 1px solid #060606;
+	text-transform: none;
+	margin: 0px;
+	background-color: #000000;
+	line-height: 23px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.LogoIcon
+{
+  vertical-align:middle;  
+    }
+.buttonLarge {
+	font-size: 1.2em;
+	line-height: 28px;
+	background-image: url(../images/blank_bw.gif);
+	background-repeat: no-repeat;
+	height: 36px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	clear: left;
+	text-align: center;
+	padding: 0px 5px;
+	margin-bottom: 6px;
+}
+.buttonLarge:hover { background-image: url(../images/blank_over_bw.gif); }
+.checkRadio {
+	background-color: #A7A9AC;
+	border: 1px solid #808080;
+}
+.cleaner {
+	clear:both;
+	height:1px;
+	font-size:1px;
+	border:none;
+	margin:0; padding:0;
+	background:transparent;
+}
+.contacted td {
+	color: #FFF !important;
+	background-color: #8A181A !important;
+}
+.contentBlock {
+	padding: 8px 10px;
+	background-color: #000;
+	border: 1px solid #8A181A;
+	margin-bottom: 15px;
+	color: #A7A9Ac;
+}
+.contentBlock h2, .contentBlockAlt h2 {
+	margin-bottom: 11px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.contentBlockAlt {
+	padding: 8px 10px;
+	background-color: #E2E1E0;
+	border: 1px solid #797D79;
+	margin-bottom: 15px;
+	color: #121212;
+}
+.currentWeek td {
+	color: #060606 !important;
+	background-color: #AAC3B1 !important;
+}
+.currentWeek td a { color: #000 !important; }
+.highlightWeek td {
+	color: #060606 !important;
+	background-color: Aqua !important;
+}
+.highlightWeek td a { color: #000 !important; }
+
+.fixWidth { width:80%; }
+.floatRight {
+	clear: right;
+	float: right;
+	margin-bottom: 8px;
+	margin-left: 12px;
+}
+.error {
+	color: #fff !important;
+	background-color: #FF0303 !important;
+	border: 1px solid #8A181A !important;
+}
+.errorBox {
+	border-style: solid;
+	border-color: #8A181A;
+	display: block;
+	background-color: #FF0303;
+	padding: 12px;
+	color: #fff;
+	margin-bottom: 12px;
+	width: 60%;
+	margin-left: 15px;
+}
+.errorBox a {
+	color: #fff !important;
+	text-decoration: underline !important;
+}
+.logOut {
+	margin: -50px 10px 0px 0px;
+	float: right;
+}
+.logOut a { color: #fff; }
+
+.menu {
+	width:938px;
+	height:32px;
+	position:relative;
+	z-index:100;
+	margin-left: 15px;
+}
+.menu ul {padding:0;margin:0;list-style-type:none;}
+.menu ul ul {width:149px;}
+.menu li {float:left;width:134px;position:relative;}
+.menu a, .menu a:visited {
+	display:block;
+	font-size:12px;
+	text-decoration:none;
+	color:#fff;
+	width:140px;
+	height:36px;
+	padding-left:8px;
+	line-height:29px;
+	font-weight:bold;
+	background-image: url(../images/blank_bw.gif);
+	background-repeat: no-repeat;
+}
+.menu ul ul {
+	visibility:hidden;
+	position:absolute;
+	height:0;
+	top:27px;
+	left:0;
+	width:149px;
+	border-top:1px solid #000;
+}
+.menu table {position:absolute; top:0; left:0; border-collapse:collapse;}
+.menu ul ul a, .menu ul ul a:visited {
+	color:#000;
+	height:auto;
+	line-height:1em;
+	padding:5px 10px;
+	width:100px;
+	border-width:0 1px 1px 1px;
+	background: #D2D4D3;
+}
+.menu a:hover {
+	color:#fff;
+	background-image: url(../images/blank_over_bw.gif);
+}
+.menu ul ul a:hover{
+	color:#000;
+	background-color: #AAC3B1;
+	background-image: none !important;
+}
+.menu ul li:hover ul,
+.menu ul a:hover ul{visibility:visible; }
+.red {
+	font-weight: bold;
+	color: #DA2C30;
+}
+.redBorder {
+	border: 1px solid #8a181a;
+	margin-bottom: 8px;
+}
+.showPrint, .showPrint td { display: none; }
+.select, .textfield {
+	color: #000;
+	padding: 1px 2px;
+	border-top: 1px solid #808080;
+	border-right: none;
+	border-bottom: 1px solid #808080;
+	border-left: none;
+	background-color: #A7A9AC;
+	font: 1em "Trebuchet MS", Tahoma, Arial, Helvetica;
+}
+
+.sort {
+	margin-bottom: -5px;
+	margin-left: 3px;
+}
+
+
+.tabData tr td { vertical-align: middle; }
+/*
+.tabData tr.nth-child-even td {
+	background-color: #383838;
+	color: #CCC;
+}
+*/
+.tabData tr.nth-child-even td {
+	border-top: 2px solid #383838;
+	border-bottom: 2px solid #383838;
+}
+.topAlign { vertical-align: top !important; }
+.triCol {
+	float: left;
+	width: 302px;
+	margin-left: 15px;
+	font-size: 1.1em;
+}
+.triCol a, #fullColumn a {
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+#container {
+	margin: 0px auto;
+	width: 968px;
+	text-align: left;
+	padding: 0px 25px;
+	background-image: url(../images/mainBGGlow.png);
+	background-repeat: repeat-y;
+}
+#content {
+	width: 968px;
+	background-color: #08070b;
+	min-height: 600px;
+}
+#content  h3 {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0px 0px 15px 30px;
+	display: block;
+}
+
+#fullColumn {
+	width: 938px;
+	margin-left: 15px;
+	color: #A7A9Ac;
+	font-size: 1.1em;
+}
+#footer {
+	width: 968px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	text-transform: uppercase;
+	color: #A7A9AC;
+	text-align: center;
+}
+#footer a {
+	color: #A7A9AC;
+	text-decoration: none;
+}
+#header {
+	width: 968px;
+	border-bottom: 1px solid #4b4a4d;
+	height: 105px;
+	margin-bottom: 30px;
+}
+#header h1 {
+	color: #FFFFFF;
+	font-size: 2.5em;
+	padding: 20px 0px 0px 26px;
+}
+#header h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+#leftColumn {
+	display: inline;
+	float: left;
+	width: 240px;
+	margin-left: 15px;
+	font-size: 1.1em;
+}
+#fullColumn td, #leftColumn td, #rightColumn td, .triCol td{
+	padding: 4px 3px;
+	vertical-align: middle;
+}
+#fullColumn th, #leftColumn th, #rightColumn th, .triCol th {
+	padding: 4px 3px;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	border-bottom: 3px solid #1B1B1B;
+}
+#rightColumn {
+	float: left;
+	width: 683px;
+	font-size: 1.1em;
+	margin-left: 15px;
+}
+#sortableList { margin-top: 20px; }
+#sortableList li {
+	margin-bottom: 5px;
+}
+#sortableList li a {
+	color: #060606;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	padding: 8px 4px;
+	background-color: #CCCCCC;
+}
+#sortableList li a span {
+	float: right;
+	text-decoration: underline;
+}
+
+/* Extra Styles by ATOM */
+.textfieldreadonly, .selectreadonly
+{
+    padding: 1px 2px;
+    border: none;
+    font: 1em "Trebuchet MS", Tahoma, Arial, Helvetica;
+
+    color: White;
+    background-color: #222;
+}
+
+#divDeleteConfirm {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+#deleteConfirm
+{
+    color: Black;
+    background-color: Red;
+    border: 3px solid white;
+    width: 200px;
+    padding: 10px;
+}
+
+#deleteConfirm label
+{
+    font-size:larger;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#footerGlow
+{
+    background-image:url('../images/mainBGGlowBottom.png');
+    background-repeat: no-repeat;
+    margin:0 auto;
+    padding:0 25px;
+    text-align:left;
+    width:968px;
+    height: 51px;
+}
+
+/* Calendar Display Bug Fix */
+.ajax__calendar_days table thead tr td
+{
+    padding: 0 !important;
+}
+
+.ajax__calendar_days table tbody tr td
+{
+    padding: 0 !important;
+}
+
+/* image editor */
+
+.imageEditorContainer 
+{
+    margin-top: 15px;
+    border: dashed 1px red;
+    width: 220px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    float: left;
+    margin-left: 20px;
+}
+
+.imageEditorContainer .scaleSlider
+{
+    margin-bottom: 10px;
+}
+
+.imageEditorContainer a 
+{
+    color: #fff;
+    margin-right: 10px;
+}
+
+.selectImageButton 
+{
+
+}
+
+.watermarkLibrary 
+{
+    margin-top: 15px;
+    background-color: #ccc;
+    padding: 8px;
+}
+.watermarkLibrary h2 
+{
+    color: #4a4a4a;
+}
+
+.watermarkLibrary img
+{
+    margin-right: 15px;
+}
+
+/* staff notes */
+
+.staffNotes
+{
+    width: 239px;
+    height: 192px;
+    margin-bottom: 7px;
+}

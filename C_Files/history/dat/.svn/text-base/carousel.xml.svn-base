@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carousel>
+<!--	<config>
+		<blurRange>12</blurRange>
+		<glowColor>#fc0303</glowColor>
+		<glowAmount>32</glowAmount>
+	</config>-->
+	<config>
+		<speed>0.05</speed>
+		<centerX>0.5</centerX>
+		<centerY>0.5</centerY>
+		<radiusX>250</radiusX>
+		<radiusY>75</radiusY>
+		<glowAmount>16</glowAmount>
+		<glowColor>0xfc0303</glowColor>
+		<blurRange>32</blurRange>
+	</config>
+	<items>
+		<item caption="Female Dancers" src="images/female_dancer.png" href="Entertainers/Talent.aspx?cat=female" />
+		<item caption="Male Dancers" src="images/male_dancer1.png" href="Entertainers/Talent.aspx?cat=male" />
+		<item caption="Duo Shows" src="images/duo_dancer.png" href="Entertainers/Talent.aspx?cat=duo" />
+		<item caption="Female Little People" src="images/female_mini.png" href="Entertainers/Talent.aspx?cat=minifemale" />
+		<item caption="Male Little People" src="images/male_mini.png" href="Entertainers/Talent.aspx?cat=minimale" />
+		<item caption="Big Beautiful Women" src="images/fat_dancer.png" href="Entertainers/Talent.aspx?cat=bbw" />
+		<item caption="Belly Dancers" src="images/belly_dancer.png" href="Entertainers/Talent.aspx?cat=bellydancer" />
+	</items>
+</carousel>

@@ -1,0 +1,180 @@
+@charset "utf-8";
+#footer {
+	background-color: #08070B;
+
+}
+
+#frameHolder {
+	background-image: url(../images/flashHolder.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 358px;
+	width: 880px;
+	margin-left: 44px;
+	font-family: "Trebuchet MS", Tahoma, Arial, Helvetica;
+}
+#frameHolder  h1 {
+	position: relative;
+	left: 287px;
+	top: 10px;
+	width: 323px;
+	height: 43px;
+	background-image: url(../images/weBringStripclub.png);
+	background-repeat: no-repeat;
+}
+#frameHolder  h1  span { display: none; }
+#frameHolder  #flashNav {
+	height: 269px;
+	width: 813px;
+	position: relative;
+	left: 33px;
+	top: 18px;
+}
+#header {
+	width: 968px;
+	height: 100px;
+	padding-top: 21px;
+}
+#header .cCards {
+	display: inline;
+	float: right;
+	clear: right;
+	margin: 35px 21px 0px 0px;
+}
+#header .findTalent {
+	float: left;
+	display: inline;
+	margin: 35px 0px 0px 21px;
+}
+#header .logo {
+	margin-top: 11px;
+	margin-left: 139px;
+}
+#leftColumn #subMenu {
+	margin-top: 22px;
+	margin-left: 18px;
+	padding-bottom: 22px;
+	height: 84px;
+}
+#leftColumn #subMenu a:hover { text-decoration: underline; }
+#mainMenu {
+	height: 65px;
+	width: 931px;
+	background-image: url(../images/menuBGIndex.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 0px 0px 0px 21px;
+	padding-right: 1px;
+	padding-left: 1px;
+	display: block;
+}
+#mainMenu li {
+	position: relative;
+	float: left;
+}
+#mainMenu li a {
+	display: block;
+	width: 185px;
+	float: left;
+	background-image: url(../images/menuButton.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin-top: 1px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	height: 26px;
+	font-size: 1.1em;
+	padding-top: 13px;
+}
+#mainMenu li a:hover {
+	background-position: right top;
+	color: #E0E0E0;
+}
+#mainMenu li a.active
+{
+	background-position:right top;
+	color: #E0E0E0;
+}
+#mainMenu li ul {
+	display: none;
+	position: absolute;
+	left: 6px;
+	top: 40px;
+	background-image: url(../images/menuBG.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	width: 173px;
+	padding: 0px 15px 16px 0px;
+	z-index: 1000;
+}
+#mainMenu li ul li a {
+	display: block;
+	width: 135px;
+	background-image: url(none) !important;
+	text-align: left;
+	color: #000;
+	text-decoration: none;
+	font-size: 1.2em;
+	height: auto;
+	padding: 6px 19px;
+	margin: 0px;
+	text-transform: none;
+}
+#mainMenu li ul li a:hover { background-color: #979797 !important; color: #000; }
+#mainMenu li:hover ul, #mainMenu li.over ul {
+	display: block;
+}
+#middleColumn #newTalent {
+	height: 116px;
+	width: 514px;
+	display: block;
+	padding-bottom: 0px;
+}
+#middleColumn #newTalent #shortLeft {
+	float: left;
+	width: 130px;
+}
+#middleColumn #newTalent #tallRight {
+	float: left;
+	width: 384px;
+	height: 116px;
+	overflow: hidden;
+}
+#middleColumn #newTalent #tallRight ul {
+	margin: 0px !important;
+	list-style: none !important;
+}
+
+#middleColumn #newTalent #tallRight ul li {
+	display: inline;
+	float: left;
+	margin-left: 20px;
+	width: 55px;
+}
+#middleColumn #newTalent #tallRight ul li a {
+	float: left;
+	width: 55px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #A7A9AC;
+}
+#middleColumn  #newTalent  #tallRight  ul  li  a  img  { margin-bottom: 7px; }
+#middleColumn #partyAccessories {
+	float: left;
+	width: 102px;
+	border: 1px solid #8A181A;
+	
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 120px;
+	color: #A7A9AC;
+	padding: 180px 11px 0px 155px;
+	margin-bottom: 7px;
+}
+
+#rightColumn {
+	font-size: 1.1em;
+}

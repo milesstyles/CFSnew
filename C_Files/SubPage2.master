@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SubPage2.master.cs" Inherits="_SubPage" %>
+<%@ Register TagName="Footer" Src="~/Controls/Footer.ascx" TagPrefix="cc1" %>
+<%@ Register TagName="MainMenu" Src="~/Controls/MainMenu.ascx" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="SHORTCUT ICON" HREF="http://www.centerfoldstrips.com/favicon.ico"> 
+    
+    <link rel="Stylesheet" type="text/css" media="all" href="~/css/mainStyle.css" runat="server" />
+  <link rel="Stylesheet" type="text/css" media="all" href="~/css/subStyle2.css" runat="server" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/js/rightclick.js" />
+            <asp:ScriptReference Path="~/js/ie7.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div id="container">
+        <div id="content" style="margin-left:20px">
+            <div id="header">
+                <!--<asp:HyperLink runat="server" NavigateUrl="#" ID="hlFindTalent" ImageUrl="~/images/findTalentButton.gif" Text="Find Talent In Your Area" Width="100" Height="35" CssClass="findTalent" />
+                <asp:Image runat="server" ID="imgCards" ImageUrl="~/images/phoneCCards.jpg" AlternateText="1-877-4-A-Strip" Height="47" Width="135" CssClass="cCards" />-->
+			 <asp:HyperLink runat="server" CssClass="findTalent" ID="findTalent" NavigateUrl="~/Entertainers/Booking.aspx" ImageUrl="~/images/bookNow.gif" Text="Book Your Party Now" width="156" height="54"  />
+                 <a href="tel:+18774278747"><asp:Image ID="cCards" runat="server" CssClass="cCards" ImageUrl="~/images/phoneNumber.gif" AlternateText="1-877-4-A-Strip" width="153" height="52" /></a>
+                <asp:HyperLink runat="server" NavigateUrl="~/default.aspx" ID="hlCFS" ImageUrl="~/images/logoSub.gif" Text="Centerfold Strips" Width="253" Height="58" CssClass="logo" />  
+               
+
+<h1 id="webbringheader"><span id="webring"">We Bring The Stripclub To You</span></h1>
+            </div>
+            
+            <cc1:MainMenu runat="server" ID="mainMenu1" />
+            
+            <asp:ContentPlaceHolder runat="server" ID="mainContentHolder" />
+            
+            <div class="cleaner">&nbsp;</div>
+            <cc1:Footer runat="server" ID="footer1" />
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    </div>
+    <asp:Image runat="server" ID="imgBottom" ImageUrl="~/images/mainBGGlowBottom.png" AlternateText="&nbsp;" Width="1100" Height="51" />
+    </form>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<!--<script type="text/javascript">_uacct = "UA-1316591-2";urchinTracker();</script>-->
+<script type="text/javascript">
+var _sf_async_config={uid:6798,domain:"centerfoldstrips.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); bodyloadTwo();};
+})();
+
+</script>
+<!-- Begin Tracking Code -->
+<script type="text/javascript">
+var trackCid = 136781;
+var trackTid = '';
+</script>
+<script type="text/javascript">
+document.write(unescape('%3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//otracking.com/js/TrackingV2.js" type="text/javascript"%3E%3C/script%3E'));
+</script>
+<!-- End Tracking Code -->
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-caklBAn4EXPWs"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-caklBAn4EXPWs.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+</body>
+</html>

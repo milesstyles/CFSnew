@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Centerfold Strips | Admin</title>
+<link href="css/backend.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" language="javascript" src="js/offspring-1.0.js"></script>
+</head>
+<body>
+<div id="container">
+     <div id="content">
+          <div id="header">
+               <h1><a href="index.html">Centerfold Strips Admin</a></h1><div class="logOut"><a href="#">Log Out</a></div>
+               <div class="menu">
+                    <ul>
+                         <li><a href="users.html">User Admin</a></li>
+                         <li><a href="employee_edit.html">Employee Managment
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="view_applicants.html">View Applicants</a></li>
+                                   <li><a href="employee_edit.html">Add/Edit Employee/Affiliate</a></li>
+                                   <li><a href="add_edit_holds.html">Add/Edit Holds</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         <li><a href="pending_jobs.html">Pending Jobs
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="pending_jobs.html">View Pending Jobs</a></li>
+                                   <li><a href="add_edit_pending.html">Add A Pending Job</a></li>
+                                   <li><a href="online_booking_form.html">View Online Booking Form Orders</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         <li><a href="view_work_orders.html">Work Orders
+                              <!--[if IE 7]><!--></a><!--<![endif]-->
+                              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                              <ul>
+                                   <li><a href="book_a_job.html">Book A Job</a></li>
+                                   <li><a href="job_talent_management.html">Job Talent Management</a></li>
+                                   <li><a href="work_order_graveyard.html">Work Order Graveyard</a></li>
+                                   <li><a href="post_job_information.html">Post Job Information</a></li>
+                              </ul>
+                              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                         </li>
+                         <li><a href="franchise_management.html">Franchise Management</a></li>
+                         <li><a href="basic_accounting.html">Accounting</a></li>
+                    </ul>
+               </div>
+          </div>
+          <div id="leftColumn">
+               <div class="contentBlock">
+                    <h2>Employee Quick Reference</h2>
+                    <form id="form1" name="form1" method="post" action="">
+                         <table width="218" cellspacing="0">
+                              <tr>
+                                   <td><select name="female" class="select" id="female" style="width:170px;">
+                                             <option>Female Dancer</option>
+                                        </select>
+                                   </td>
+                                   <td><input type="submit" name="button" id="button" value="Go" class="button" /></td>
+                              </tr>
+                              <tr>
+                                   <td><select name="female2" class="select" id="female2" style="width:170px;">
+                                             <option>Male Dancer</option>
+                                        </select></td>
+                                   <td><input name="button2" type="submit" class="button" id="button2" value="Go" /></td>
+                              </tr>
+                              <tr>
+                                   <td><select name="female3" class="select" id="female3" style="width:170px;">
+                                             <option>Little People (Mini)</option>
+                                        </select></td>
+                                   <td><input name="button3" type="submit" class="button" id="button3" value="Go" /></td>
+                              </tr>
+                              <tr>
+                                   <td><select name="female4" class="select" id="female4" style="width:170px;">
+                                             <option>Novelty Acts</option>
+                                        </select></td>
+                                   <td><input name="button4" type="submit" class="button" id="button4" value="Go" /></td>
+                              </tr>
+                              <tr>
+                                   <td><select name="female5" class="select" id="female5" style="width:170px;">
+                                             <option>Drivers &amp; Bouncers</option>
+                                        </select></td>
+                                   <td><input name="button5" type="submit" class="button" id="button5" value="Go" /></td>
+                              </tr>
+                              <tr>
+                                   <td><select name="female6" class="select" id="female6" style="width:170px;">
+                                             <option>Affiliate Companys</option>
+                                        </select></td>
+                                   <td><input name="button6" type="submit" class="button" id="button6" value="Go" /></td>
+                              </tr>
+                         </table>
+                    </form>
+                    <hr />
+                    <form action="" method="get">
+                         <table width="218" cellspacing="0">
+                              <tr>
+                                   <td width="69"><label>Find:</label></td>
+                                   <td colspan="2"><select name="sex" class="select" id="select5" style="width:120px;">
+                                             <option selected="selected">All</option>
+                                             <option>Female</option>
+                                             <option>Male</option>
+                                             <option>Little Person</option>
+                                             <option>Novelty</option>
+                                             <option>Driver</option>
+                                             <option>Affiliate</option>
+                                        </select></td>
+                              </tr>
+                              <tr>
+                                   <td><label>Located In:</label></td>
+                                   <td width="106"><select name="select" class="select" id="select" style="width:100px;">
+                                             <option>Select State</option>
+                                             <option>List should be generated by list of states CFS Covers</option>
+                                        </select>
+                                   </td>
+                                   <td width="45"><input name="button7" type="submit" class="button" id="button7" value="Go" /></td>
+                              </tr>
+                              <tr>
+                                   <td colspan="3" style="text-align:center;"><br />
+                                        <a href="inactive_talent.html" class="buttonA">Inactive Employees</a></td>
+                              </tr>
+                         </table>
+                    </form>
+               </div>
+               <a href="view_applicants.html" class="buttonLarge">Employee Applications</a> <a href="add_edit_holds.html" class="buttonLarge">Employee Holds</a>          </div>
+          <div id="rightColumn">
+          	<div class="contentBlock" style="height:250px; overflow:auto;">
+               	<h2>Work Order Quick View</h2>
+          	     <table width="100%" cellspacing="0" class="tabData">
+                         <tr>
+                              <td width="26">&nbsp;</th>
+                              <th width="120">Event Date</th>
+                              <th width="108">Customers Name</th>
+                              <th width="165">Location</th>
+                              <th width="69">Start Time</th>
+                              <th width="116">Show Length</th>
+                              <th width="50">&nbsp;</th>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Jennifer Manning</td>
+                              <td>La View En Rose Banquet Hall</td>
+                              <td>5:00 PM</td>
+                              <td>3 Hours Inc 2 Lez</td>
+                              <td><input name="button8" type="submit" class="button" id="button8" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td>&nbsp;</td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Mark Valente</td>
+                              <td>Polish American Club</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button9" type="submit" class="button" id="button9" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Barabra Pecce</td>
+                              <td>Bill and Jenns Home</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button10" type="submit" class="button" id="button10" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Edward Mcgee</td>
+                              <td>Residence</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button11" type="submit" class="button" id="button11" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Jennifer Manning</td>
+                              <td>La View En Rose Banquet Hall</td>
+                              <td>5:00 PM</td>
+                              <td>3 Hours Inc 2 Lez</td>
+                              <td><input name="button12" type="submit" class="button" id="button15" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td>&nbsp;</td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Mark Valente</td>
+                              <td>Polish American Club</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button12" type="submit" class="button" id="button14" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Barabra Pecce</td>
+                              <td>Bill and Jenns Home</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button12" type="submit" class="button" id="button13" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Edward Mcgee</td>
+                              <td>Residence</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button12" type="submit" class="button" id="button12" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Jennifer Manning</td>
+                              <td>La View En Rose Banquet Hall</td>
+                              <td>5:00 PM</td>
+                              <td>3 Hours Inc 2 Lez</td>
+                              <td><input name="button12" type="submit" class="button" id="button19" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td>&nbsp;</td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Mark Valente</td>
+                              <td>Polish American Club</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button12" type="submit" class="button" id="button18" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Barabra Pecce</td>
+                              <td>Bill and Jenns Home</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button12" type="submit" class="button" id="button17" value="Edit" /></td>
+                         </tr>
+                         <tr>
+                              <td><img src="images/talent.png" alt="Talent" width="20" height="20" /></td>
+                              <td>Tuesday 11/18/2008</td>
+                              <td>Edward Mcgee</td>
+                              <td>Residence</td>
+                              <td>5:00 PM</td>
+                              <td>40 min</td>
+                              <td><input name="button12" type="submit" class="button" id="button16" value="Edit" /></td>
+                         </tr>
+                    </table>
+               </div>
+               <div class="contentBlock" style="float:left; width:380px; margin-right:15px;">
+                    <h2>Find A Work Order</h2>
+                    <form id="form2" name="form2" method="post" action="">
+                    <table width="380" cellspacing="0">
+                         <tr>
+                              <td align="right">Work Order #</td>
+                              <td colspan="3">
+                                   <input name="textfield" type="text" class="textfield" id="textfield" size="30" />                              </td>
+                              </tr>
+                         <tr>
+                              <td align="right">First Name</td>
+                              <td><input name="textfield2" type="text" class="textfield" id="textfield2" size="15" /></td>
+                              <td align="right">Last Name</td>
+                              <td><input name="textfield3" type="text" class="textfield" id="textfield3" size="15" /></td>
+                         </tr>
+                         <tr>
+                              <td align="right">Job Date</td>
+                              <td><input name="textfield5" type="text" class="textfield" id="textfield5" size="15" /></td>
+                              <td align="right">Location</td>
+                              <td><input name="textfield4" type="text" class="textfield" id="textfield4" size="15" /></td>
+                         </tr>
+                         <tr>
+                              <td align="right">City</td>
+                              <td><input name="textfield6" type="text" class="textfield" id="textfield6" size="15" /></td>
+                              <td align="right">State</td>
+                              <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                              <td align="right">CC Num</td>
+                              <td colspan="2"><input name="textfield7" type="text" class="textfield" id="textfield7" size="20" /></td>
+                              <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                              <td align="right">Performer @ job</td>
+                              <td colspan="3"><select name="select2" class="select" id="select2" style="width:200px;">
+                                   <option>Full List of Performers</option>
+                              </select>
+                              </td>
+                              </tr>
+                         <tr>
+                              <td align="right">Referred By</td>
+                              <td colspan="2"><input name="textfield8" type="text" class="textfield" id="textfield8" size="15" /></td>
+                              <td>&nbsp;</td>
+                         </tr>
+
+                         <tr>
+                              <td colspan="4" align="right"><input name="button13" type="submit" class="button" id="button20" value="Search" /></td>
+                         </tr>
+                    </table>
+                    </form>
+               </div>
+          	<div style="float:left;width:266px;">
+               	<a href="online_booking_form.html" class="buttonLarge">View Online Booking Form</a>
+                    <a href="post_job_information.html" class="buttonLarge">Post Job Info</a>
+                    <a href="franchise_management.html" class="buttonLarge">Franchise Management</a>
+                    <a href="#" class="buttonLarge">Confirmation Email Admin</a>               </div>
+          </div>
+          <div class="cleaner">&nbsp;</div>
+          
+     </div>
+     <div class="cleaner">&nbsp;</div>
+</div>
+<img src="images/mainBGGlowBottom.png" alt="" width="1018" height="51" />
+</body>
+</html>

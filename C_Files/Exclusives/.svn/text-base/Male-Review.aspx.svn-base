@@ -1,0 +1,44 @@
+﻿<%@ Language="C#" MasterPageFile="~/Content.master" AutoEventWireup="true" CodeFile="Male-Review.aspx.cs" Inherits="Exclusives_Male_Review" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server" >
+<title>Male Revue | Exotic male dancers: The Men Of Centerfold Strips Male Revue™</title>
+<meta name="keywords" content="Male Revue, Exotic male dancers" />
+<meta name="description" content="An upscale, classy exotic cabaret featuring the finest model quality male strippers found anywhere on earth" />
+<style type="text/css">
+    #frameHolder #flashNav
+    {
+    	background-image:url(../images/headerMaleRevue.jpg);
+    	background-repeat:no-repeat;
+    }
+</style>
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="partyLocationsHolder" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContentHolder" Runat="Server">
+<p>
+    <span style="font-weight: bold;" >
+    Centerfold Strips Presents<br />
+    The Men Of Centerfold Strips Male Revue™
+    </span>
+</p>
+<p>WHO SAYS THAT GOOD MEN ARE HARD TO FIND??</p>
+<p>THE MEN, THE MUSIC, THE TIPPING AND STRIPPING!</p>
+<ul>
+    <li>Bachelorette parties</li>
+    <li>Bridal showers</li>
+    <li>Birthday parties</li>
+    <li>Retirement parties</li>
+    <li>Girls night out</li>
+</ul>
+<p>Introducing…The  ultimate ladies night out is the all male revue starring the gorgeous  hunks of Centerfold Strips. An upscale, classy exotic cabaret featuring the finest model quality male strippers found anywhere on earth!</p>
+<p>Planning a Bachelorette party? More than just male strippers, we are the hottest  male revue in the US and we'll make your night special.</p>
+<p>Girl's night out? Round up your friends, it's your turn to party! Celebrate  being a woman with our sexy male strippers doing it just for you.</p>
+<p>Come experience the Men Of Centerfold Strips. We perform weekly in the hottest bars, restaurants and clubs!</p>
+<p>Would you like to see us perform in your area?</p>
+<p><a href="mailto:webmaster@centerfoldstrips.com">E-mail us</a> with the name, address and phone number (including area code) of any  bar, restaurant, nightclub or catering facility that you think would be  interested in hosting a Men Of Centerfold Strips Male Revue.</p>
+<p>If  you know a contact person, include their name as well. If we book a  show based on your referral we will give you and up to four friends free admission to the show that evening!</p>
+
+</asp:Content>
+

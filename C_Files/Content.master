@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SubPage.master" AutoEventWireup="true" CodeFile="Content.master.cs" Inherits="Content" %>
+<%@ Register TagName="LeftColumn" TagPrefix="cc1" Src="~/Controls/LeftColumn.ascx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder runat="server" ID="head" >
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headFemale" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headMale" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headBBW" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headDuo" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headFemaleLittle" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headMaleLittle" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headImpersonator" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headBellyDancer" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headNovelty" Visible="false">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="headDragQueen" Visible="false">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContentHolder" Runat="Server">
+    <div id="frameHolder">
+        <div id="flashNav">
+            <asp:ContentPlaceHolder ID="partyLocationsHolder" runat="server" />
+        </div>
+    </div>
+    
+    <cc1:LeftColumn runat="server" ID="leftColumn1" />
+    
+    <div id="middleColumn">
+        <asp:ContentPlaceHolder id="mainContentHolder" runat="server" />
+    </div>
+    
+    <div id="rightColumn">
+        <div class="contentBlock3">
+            <h2>
+                <asp:Image runat="server" ID="imgFeature" ImageUrl="~/images/h2FeatureEntertainers.gif" AlternateText="Feature Entertainers" />
+                <span>Feature Entertainers</span>
+            </h2>
+            <p>
+                <asp:HyperLink runat="server" ID="imgEntertainers" NavigateUrl="~/Exclusives/Feature-Entertainers.aspx" ImageUrl="~/images/featureEntertainers.jpg" AlternateText="Feature Entertainers"
+                    Width="127" Height="136" />
+            </p>
+            <h2>
+                Centerfold Strips presents our Feature Entertainers. This elite group  of dancers are the hottest, sexiest high-energy showgirls, 
+                who have  reached the pinnacle of the exotic dancing industry! This stunning  collection of superstar cover girl models have graced 
+                the covers and  centerfolds for the top men's &amp; fashion magazines worldwide. Their  countless credits also include major Hollywood 
+                productions, television,  and of course, adult stars in their own film projects.<span>Credits &amp; Appearences</span>
+            </h2>
+            <asp:HyperLink runat="server" ID="hlBookMap" NavigateUrl="~/Entertainers/Booking.aspx" ImageUrl="~/images/bookMap.gif" Text="Book Map" Width="144" Height="73" /><br />
+            <asp:HyperLink runat="server" ID="hlBookParty" NavigateUrl="~/Entertainers/Booking.aspx" Text="CLICK HERE TO BOOK YOUR PARTY IMMEDIATELY USING OUR SECURE ONLINE BOOKING FORM" />
+        </div>
+    </div>
+</asp:Content>
+

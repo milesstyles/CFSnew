@@ -1,0 +1,1140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CfsNamespaceOld.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="CfsNamespaceOldStoreContainer">
+          <EntitySet Name="Applicants" EntityType="CfsNamespaceOld.Store.Applicants" store:Type="Tables" store:Schema="dbo" store:Name="Applicants">
+            <DefiningQuery>SELECT 
+      [Applicants].[Image1] AS [Image1], 
+      [Applicants].[Image2] AS [Image2], 
+      [Applicants].[Image3] AS [Image3], 
+      [Applicants].[PAddress] AS [PAddress], 
+      [Applicants].[PAge] AS [PAge], 
+      [Applicants].[PAvailable] AS [PAvailable], 
+      [Applicants].[PBust] AS [PBust], 
+      [Applicants].[PCellPhone] AS [PCellPhone], 
+      [Applicants].[PCity] AS [PCity], 
+      [Applicants].[PContact] AS [PContact], 
+      [Applicants].[PEmail] AS [PEmail], 
+      [Applicants].[PExperience] AS [PExperience], 
+      [Applicants].[PEyes] AS [PEyes], 
+      [Applicants].[PFirstName] AS [PFirstName], 
+      [Applicants].[PHair] AS [PHair], 
+      [Applicants].[PHeightFt] AS [PHeightFt], 
+      [Applicants].[PHeightIn] AS [PHeightIn], 
+      [Applicants].[PHips] AS [PHips], 
+      [Applicants].[PHomePhone] AS [PHomePhone], 
+      [Applicants].[PID] AS [PID], 
+      [Applicants].[PLastName] AS [PLastName], 
+      [Applicants].[PNotes] AS [PNotes], 
+      [Applicants].[PPreference] AS [PPreference], 
+      [Applicants].[PStageName] AS [PStageName], 
+      [Applicants].[PState] AS [PState], 
+      [Applicants].[PSubmit] AS [PSubmit], 
+      [Applicants].[PWaist] AS [PWaist], 
+      [Applicants].[PWebsite] AS [PWebsite], 
+      [Applicants].[PWeight] AS [PWeight], 
+      [Applicants].[PZip] AS [PZip]
+      FROM [dbo].[Applicants] AS [Applicants]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BookAct" EntityType="CfsNamespaceOld.Store.BookAct" store:Type="Tables" store:Schema="dbo" store:Name="BookAct">
+            <DefiningQuery>SELECT 
+      [BookAct].[baddress1] AS [baddress1], 
+      [BookAct].[baddress2] AS [baddress2], 
+      [BookAct].[bagerange] AS [bagerange], 
+      [BookAct].[bbelly] AS [bbelly], 
+      [BookAct].[bbookDate] AS [bbookDate], 
+      [BookAct].[bbookTime] AS [bbookTime], 
+      [BookAct].[bcity] AS [bcity], 
+      [BookAct].[bcrossstreet] AS [bcrossstreet], 
+      [BookAct].[bdancerID] AS [bdancerID], 
+      [BookAct].[bdancernum] AS [bdancernum], 
+      [BookAct].[bdrag] AS [bdrag], 
+      [BookAct].[bdrill] AS [bdrill], 
+      [BookAct].[bemail] AS [bemail], 
+      [BookAct].[beventDate] AS [beventDate], 
+      [BookAct].[beventType] AS [beventType], 
+      [BookAct].[bfat] AS [bfat], 
+      [BookAct].[bfemale] AS [bfemale], 
+      [BookAct].[bfirstName] AS [bfirstName], 
+      [BookAct].[bguesthonor] AS [bguesthonor], 
+      [BookAct].[bguests] AS [bguests], 
+      [BookAct].[bID] AS [bID], 
+      [BookAct].[bimperson] AS [bimperson], 
+      [BookAct].[bipAddress] AS [bipAddress], 
+      [BookAct].[blastName] AS [blastName], 
+      [BookAct].[blittle] AS [blittle], 
+      [BookAct].[blocaddress] AS [blocaddress], 
+      [BookAct].[bloccity] AS [bloccity], 
+      [BookAct].[blocname] AS [blocname], 
+      [BookAct].[blocphone] AS [blocphone], 
+      [BookAct].[blocstate] AS [blocstate], 
+      [BookAct].[bloczip] AS [bloczip], 
+      [BookAct].[bmale] AS [bmale], 
+      [BookAct].[bpole] AS [bpole], 
+      [BookAct].[bpopOut] AS [bpopOut], 
+      [BookAct].[bpriphone] AS [bpriphone], 
+      [BookAct].[brefer] AS [brefer], 
+      [BookAct].[bsecphone] AS [bsecphone], 
+      [BookAct].[bshower] AS [bshower], 
+      [BookAct].[bshowLength] AS [bshowLength], 
+      [BookAct].[bspecial] AS [bspecial], 
+      [BookAct].[bstartTime] AS [bstartTime], 
+      [BookAct].[bstate] AS [bstate], 
+      [BookAct].[bsuprise] AS [bsuprise], 
+      [BookAct].[btopless] AS [btopless], 
+      [BookAct].[btypeofcrowd] AS [btypeofcrowd], 
+      [BookAct].[bzip] AS [bzip]
+      FROM [dbo].[BookAct] AS [BookAct]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Customers" EntityType="CfsNamespaceOld.Store.Customers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dtproperties" EntityType="CfsNamespaceOld.Store.dtproperties" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Event" EntityType="CfsNamespaceOld.Store.Event" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Hold" EntityType="CfsNamespaceOld.Store.Hold" store:Type="Tables" store:Schema="dbo" store:Name="Hold">
+            <DefiningQuery>SELECT 
+      [Hold].[DateStart] AS [DateStart], 
+      [Hold].[HID] AS [HID], 
+      [Hold].[Location] AS [Location], 
+      [Hold].[Notes] AS [Notes], 
+      [Hold].[TalentName] AS [TalentName], 
+      [Hold].[TimesAva] AS [TimesAva]
+      FROM [dbo].[Hold] AS [Hold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Jobs" EntityType="CfsNamespaceOld.Store.Jobs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locations" EntityType="CfsNamespaceOld.Store.Locations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pending" EntityType="CfsNamespaceOld.Store.Pending" store:Type="Tables" store:Schema="dbo" store:Name="Pending">
+            <DefiningQuery>SELECT 
+      [Pending].[CustomerName] AS [CustomerName], 
+      [Pending].[EventDate] AS [EventDate], 
+      [Pending].[Location] AS [Location], 
+      [Pending].[Notes] AS [Notes], 
+      [Pending].[PartyType] AS [PartyType], 
+      [Pending].[Phone] AS [Phone], 
+      [Pending].[UID] AS [UID]
+      FROM [dbo].[Pending] AS [Pending]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Talent" EntityType="CfsNamespaceOld.Store.Talent" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'centerfold.dbo.Applicants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Applicants">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="Image1" Type="varchar" MaxLength="50" />
+          <Property Name="Image2" Type="varchar" MaxLength="50" />
+          <Property Name="Image3" Type="varchar" MaxLength="50" />
+          <Property Name="PAddress" Type="varchar" MaxLength="70" />
+          <Property Name="PAge" Type="smalldatetime" />
+          <Property Name="PAvailable" Type="varchar" MaxLength="103" />
+          <Property Name="PBust" Type="varchar" MaxLength="10" />
+          <Property Name="PCellPhone" Type="varchar" MaxLength="30" />
+          <Property Name="PCity" Type="varchar" MaxLength="50" />
+          <Property Name="PContact" Type="bit" />
+          <Property Name="PEmail" Type="varchar" MaxLength="40" />
+          <Property Name="PExperience" Type="text" />
+          <Property Name="PEyes" Type="char" MaxLength="10" />
+          <Property Name="PFirstName" Type="varchar" MaxLength="30" />
+          <Property Name="PHair" Type="char" MaxLength="20" />
+          <Property Name="PHeightFt" Type="int" />
+          <Property Name="PHeightIn" Type="int" />
+          <Property Name="PHips" Type="varchar" MaxLength="10" />
+          <Property Name="PHomePhone" Type="varchar" MaxLength="30" />
+          <Property Name="PID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PLastName" Type="varchar" MaxLength="30" />
+          <Property Name="PNotes" Type="varchar" MaxLength="1000" />
+          <Property Name="PPreference" Type="varchar" MaxLength="100" />
+          <Property Name="PStageName" Type="varchar" MaxLength="50" />
+          <Property Name="PState" Type="varchar" MaxLength="5" />
+          <Property Name="PSubmit" Type="smalldatetime" />
+          <Property Name="PWaist" Type="int" />
+          <Property Name="PWebsite" Type="varchar" MaxLength="50" />
+          <Property Name="PWeight" Type="int" />
+          <Property Name="PZip" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'centerfold.dbo.BookAct' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="BookAct">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="baddress1" Type="varchar" MaxLength="50" />
+          <Property Name="baddress2" Type="varchar" MaxLength="40" />
+          <Property Name="bagerange" Type="char" MaxLength="64" />
+          <Property Name="bbelly" Type="bit" />
+          <Property Name="bbookDate" Type="datetime" />
+          <Property Name="bbookTime" Type="datetime" />
+          <Property Name="bcity" Type="varchar" MaxLength="30" />
+          <Property Name="bcrossstreet" Type="char" MaxLength="64" />
+          <Property Name="bdancerID" Type="int" />
+          <Property Name="bdancernum" Type="char" MaxLength="10" />
+          <Property Name="bdrag" Type="bit" />
+          <Property Name="bdrill" Type="bit" />
+          <Property Name="bemail" Type="varchar" MaxLength="40" />
+          <Property Name="beventDate" Type="varchar" MaxLength="20" />
+          <Property Name="beventType" Type="varchar" MaxLength="64" />
+          <Property Name="bfat" Type="bit" />
+          <Property Name="bfemale" Type="bit" />
+          <Property Name="bfirstName" Type="varchar" MaxLength="20" />
+          <Property Name="bguesthonor" Type="char" MaxLength="64" />
+          <Property Name="bguests" Type="varchar" MaxLength="10" />
+          <Property Name="bID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bimperson" Type="bit" />
+          <Property Name="bipAddress" Type="varchar" MaxLength="20" />
+          <Property Name="blastName" Type="varchar" MaxLength="30" />
+          <Property Name="blittle" Type="bit" />
+          <Property Name="blocaddress" Type="varchar" MaxLength="50" />
+          <Property Name="bloccity" Type="varchar" MaxLength="50" />
+          <Property Name="blocname" Type="varchar" MaxLength="50" />
+          <Property Name="blocphone" Type="varchar" MaxLength="20" />
+          <Property Name="blocstate" Type="varchar" MaxLength="50" />
+          <Property Name="bloczip" Type="varchar" MaxLength="30" />
+          <Property Name="bmale" Type="bit" />
+          <Property Name="bpole" Type="bit" />
+          <Property Name="bpopOut" Type="bit" />
+          <Property Name="bpriphone" Type="varchar" MaxLength="20" />
+          <Property Name="brefer" Type="varchar" MaxLength="128" />
+          <Property Name="bsecphone" Type="varchar" MaxLength="20" />
+          <Property Name="bshower" Type="bit" />
+          <Property Name="bshowLength" Type="varchar" MaxLength="20" />
+          <Property Name="bspecial" Type="varchar" MaxLength="1000" />
+          <Property Name="bstartTime" Type="varchar" MaxLength="10" />
+          <Property Name="bstate" Type="varchar" MaxLength="4" />
+          <Property Name="bsuprise" Type="bit" />
+          <Property Name="btopless" Type="bit" />
+          <Property Name="btypeofcrowd" Type="varchar" MaxLength="50" />
+          <Property Name="bzip" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="CAlternate" Type="varchar" MaxLength="14" />
+          <Property Name="CAlternateName" Type="varchar" MaxLength="50" />
+          <Property Name="CBusiness" Type="varchar" MaxLength="14" />
+          <Property Name="CCell" Type="varchar" MaxLength="14" />
+          <Property Name="CCity" Type="varchar" MaxLength="20" />
+          <Property Name="CEmail" Type="varchar" MaxLength="50" />
+          <Property Name="CFax" Type="varchar" MaxLength="14" />
+          <Property Name="CFirstName" Type="varchar" MaxLength="20" />
+          <Property Name="CHear" Type="varchar" MaxLength="100" />
+          <Property Name="CHome" Type="varchar" MaxLength="14" />
+          <Property Name="CID" Type="int" Nullable="false" />
+          <Property Name="CLastName" Type="varchar" MaxLength="20" />
+          <Property Name="CPager" Type="varchar" MaxLength="14" />
+          <Property Name="CState" Type="varchar" MaxLength="5" />
+          <Property Name="CStreet" Type="varchar" MaxLength="50" />
+          <Property Name="CZip" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="lvalue" Type="image" />
+          <Property Name="objectid" Type="int" />
+          <Property Name="property" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+          <Property Name="value" Type="varchar" MaxLength="255" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="CusID" Type="int" Nullable="false" />
+          <Property Name="ECity" Type="varchar" MaxLength="20" />
+          <Property Name="EContact" Type="varchar" MaxLength="30" />
+          <Property Name="EContactPhone" Type="varchar" MaxLength="14" />
+          <Property Name="EDate" Type="datetime" />
+          <Property Name="EEnd" Type="nvarchar" MaxLength="20" />
+          <Property Name="EGuests" Type="smallint" />
+          <Property Name="EHonor" Type="varchar" MaxLength="30" />
+          <Property Name="EID" Type="int" Nullable="false" />
+          <Property Name="ELocation" Type="varchar" MaxLength="50" />
+          <Property Name="EPhone" Type="varchar" MaxLength="14" />
+          <Property Name="ERange" Type="varchar" MaxLength="20" />
+          <Property Name="EStart" Type="nvarchar" MaxLength="20" />
+          <Property Name="EState" Type="varchar" MaxLength="5" />
+          <Property Name="EStreet" Type="varchar" MaxLength="50" />
+          <Property Name="ESuprise" Type="bit" />
+          <Property Name="EType" Type="varchar" MaxLength="30" />
+          <Property Name="EZip" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'centerfold.dbo.Hold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Hold">
+          <Key>
+            <PropertyRef Name="HID" />
+          </Key>
+          <Property Name="DateStart" Type="smalldatetime" />
+          <Property Name="HID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Location" Type="varchar" MaxLength="60" />
+          <Property Name="Notes" Type="varchar" MaxLength="500" />
+          <Property Name="TalentName" Type="varchar" MaxLength="60" />
+          <Property Name="TimesAva" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JID" />
+          </Key>
+          <Property Name="Balance" Type="bit" />
+          <Property Name="BalanceDue" Type="smallint" />
+          <Property Name="Cancel" Type="bit" />
+          <Property Name="CCExp" Type="varchar" MaxLength="10" />
+          <Property Name="CCName" Type="varchar" MaxLength="30" />
+          <Property Name="CCNum" Type="varchar" MaxLength="25" />
+          <Property Name="CCType" Type="varchar" MaxLength="15" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="CV2Num" Type="varchar" MaxLength="5" />
+          <Property Name="Dancer1" Type="smallint" />
+          <Property Name="Dancer2" Type="smallint" />
+          <Property Name="Dancer3" Type="smallint" />
+          <Property Name="Dancer4" Type="smallint" />
+          <Property Name="Dancer5" Type="smallint" />
+          <Property Name="Dancer6" Type="smallint" />
+          <Property Name="Dancer7" Type="smallint" />
+          <Property Name="DancerNum" Type="smallint" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="JID" Type="int" Nullable="false" />
+          <Property Name="JobDone" Type="bit" />
+          <Property Name="Limo" Type="smallint" />
+          <Property Name="MiscExp" Type="smallint" />
+          <Property Name="PartyFee" Type="smallint" />
+          <Property Name="Pay1" Type="smallint" />
+          <Property Name="Pay2" Type="smallint" />
+          <Property Name="Pay3" Type="smallint" />
+          <Property Name="Pay4" Type="smallint" />
+          <Property Name="Pay5" Type="smallint" />
+          <Property Name="Pay6" Type="smallint" />
+          <Property Name="Pay7" Type="smallint" />
+          <Property Name="PreparedBy" Type="varchar" MaxLength="10" />
+          <Property Name="Responsible" Type="int" />
+          <Property Name="ShowLength" Type="varchar" MaxLength="20" />
+          <Property Name="Special" Type="varchar" MaxLength="1000" />
+          <Property Name="Start1" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start2" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start3" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start4" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start5" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start6" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start7" Type="nvarchar" MaxLength="20" />
+          <Property Name="Subtotal" Type="smallint" />
+          <Property Name="TimeCreated" Type="datetime" />
+          <Property Name="Total" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="LID" />
+          </Key>
+          <Property Name="LID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LocationLong" Type="varchar" MaxLength="50" />
+          <Property Name="LocationName" Type="varchar" MaxLength="50" />
+          <Property Name="LocationPic" Type="varchar" MaxLength="50" />
+          <Property Name="LocationValue" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'centerfold.dbo.Pending' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Pending">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+          <Property Name="EventDate" Type="datetime" />
+          <Property Name="Location" Type="varchar" MaxLength="300" />
+          <Property Name="Notes" Type="varchar" MaxLength="500" />
+          <Property Name="PartyType" Type="varchar" MaxLength="60" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="UID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Talent">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="Active" Type="bit" />
+          <Property Name="Address" Type="varchar" MaxLength="30" />
+          <Property Name="Bio" Type="varchar" MaxLength="1000" />
+          <Property Name="Bust" Type="varchar" MaxLength="10" />
+          <Property Name="City" Type="varchar" MaxLength="30" />
+          <Property Name="DateCreate" Type="datetime" />
+          <Property Name="DOB" Type="smalldatetime" />
+          <Property Name="Duo" Type="bit" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Eyes" Type="varchar" MaxLength="10" />
+          <Property Name="Feature" Type="bit" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="Hair" Type="varchar" MaxLength="15" />
+          <Property Name="HeightFt" Type="varchar" MaxLength="50" />
+          <Property Name="HeightIn" Type="varchar" MaxLength="50" />
+          <Property Name="Hips" Type="varchar" MaxLength="10" />
+          <Property Name="Image1" Type="varchar" MaxLength="100" />
+          <Property Name="Image2" Type="varchar" MaxLength="100" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="PriPhone" Type="varchar" MaxLength="50" />
+          <Property Name="Race" Type="varchar" MaxLength="10" />
+          <Property Name="SecPhone" Type="varchar" MaxLength="50" />
+          <Property Name="SpecialNotes" Type="varchar" MaxLength="1000" />
+          <Property Name="StageName" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="30" />
+          <Property Name="ThumbImage" Type="varchar" MaxLength="100" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="UID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="Waist" Type="varchar" MaxLength="10" />
+          <Property Name="WebSite" Type="varchar" MaxLength="50" />
+          <Property Name="Weight" Type="varchar" MaxLength="10" />
+          <Property Name="Zip" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <Function Name="dt_addtosourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchSourceSafeINI" Type="varchar" Mode="In" />
+          <Parameter Name="vchProjectName" Type="varchar" Mode="In" />
+          <Parameter Name="vchComment" Type="varchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_addtosourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchSourceSafeINI" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchProjectName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="dt_adduserobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dt_adduserobject_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchProperty" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_checkinobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chObjectType" Type="char" Mode="In" />
+          <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+          <Parameter Name="vchComment" Type="varchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+          <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+          <Parameter Name="iActionFlag" Type="int" Mode="In" />
+          <Parameter Name="txStream1" Type="text" Mode="In" />
+          <Parameter Name="txStream2" Type="text" Mode="In" />
+          <Parameter Name="txStream3" Type="text" Mode="In" />
+        </Function>
+        <Function Name="dt_checkinobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chObjectType" Type="char" Mode="In" />
+          <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+          <Parameter Name="iActionFlag" Type="int" Mode="In" />
+          <Parameter Name="txStream1" Type="text" Mode="In" />
+          <Parameter Name="txStream2" Type="text" Mode="In" />
+          <Parameter Name="txStream3" Type="text" Mode="In" />
+        </Function>
+        <Function Name="dt_checkoutobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chObjectType" Type="char" Mode="In" />
+          <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+          <Parameter Name="vchComment" Type="varchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+          <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+          <Parameter Name="iActionFlag" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_checkoutobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chObjectType" Type="char" Mode="In" />
+          <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+          <Parameter Name="iActionFlag" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_displayoaerror" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iObject" Type="int" Mode="In" />
+          <Parameter Name="iresult" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_displayoaerror_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iObject" Type="int" Mode="In" />
+          <Parameter Name="iresult" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_droppropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_dropuserobjectbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_generateansiname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="dt_getobjwithprop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="property" Type="varchar" Mode="In" />
+          <Parameter Name="value" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_getobjwithprop_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="property" Type="varchar" Mode="In" />
+          <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="dt_getpropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_getpropertiesbyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_getpropertiesbyid_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+          <Parameter Name="value" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="dt_getpropertiesbyid_vcs_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+          <Parameter Name="value" Type="nvarchar" Mode="InOut" />
+        </Function>
+        <Function Name="dt_isundersourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+          <Parameter Name="iWhoToo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_isundersourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="iWhoToo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dt_removefromsourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dt_setpropertybyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+          <Parameter Name="value" Type="varchar" Mode="In" />
+          <Parameter Name="lvalue" Type="image" Mode="In" />
+        </Function>
+        <Function Name="dt_setpropertybyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="property" Type="varchar" Mode="In" />
+          <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+          <Parameter Name="lvalue" Type="image" Mode="In" />
+        </Function>
+        <Function Name="dt_validateloginparams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_validateloginparams_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="dt_vcsenabled" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dt_verstamp006" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dt_verstamp007" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dt_whocheckedout" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chObjectType" Type="char" Mode="In" />
+          <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="dt_whocheckedout_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chObjectType" Type="char" Mode="In" />
+          <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+          <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CfsNamespaceOld" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="CfsEntityOld">
+          <EntitySet Name="Applicants" EntityType="CfsNamespaceOld.Applicants" />
+          <EntitySet Name="BookAct" EntityType="CfsNamespaceOld.BookAct" />
+          <EntitySet Name="Customers" EntityType="CfsNamespaceOld.Customers" />
+          <EntitySet Name="dtproperties" EntityType="CfsNamespaceOld.dtproperties" />
+          <EntitySet Name="Event" EntityType="CfsNamespaceOld.Event" />
+          <EntitySet Name="Hold" EntityType="CfsNamespaceOld.Hold" />
+          <EntitySet Name="Jobs" EntityType="CfsNamespaceOld.Jobs" />
+          <EntitySet Name="Locations" EntityType="CfsNamespaceOld.Locations" />
+          <EntitySet Name="Pending" EntityType="CfsNamespaceOld.Pending" />
+          <EntitySet Name="Talent" EntityType="CfsNamespaceOld.Talent" />
+        </EntityContainer>
+        <EntityType Name="Applicants">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="Image1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Image2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Image3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PAddress" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="PAge" Type="DateTime" />
+          <Property Name="PAvailable" Type="String" MaxLength="103" Unicode="false" FixedLength="false" />
+          <Property Name="PBust" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PCellPhone" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="PCity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PContact" Type="Boolean" />
+          <Property Name="PEmail" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="PExperience" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PEyes" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="PFirstName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="PHair" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="PHeightFt" Type="Int32" />
+          <Property Name="PHeightIn" Type="Int32" />
+          <Property Name="PHips" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PHomePhone" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="PLastName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="PNotes" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="PPreference" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PStageName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PState" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="PSubmit" Type="DateTime" />
+          <Property Name="PWaist" Type="Int32" />
+          <Property Name="PWebsite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PWeight" Type="Int32" />
+          <Property Name="PZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="BookAct">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="baddress1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="baddress2" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="bagerange" Type="String" MaxLength="64" Unicode="false" FixedLength="true" />
+          <Property Name="bbelly" Type="Boolean" />
+          <Property Name="bbookDate" Type="DateTime" />
+          <Property Name="bbookTime" Type="DateTime" />
+          <Property Name="bcity" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="bcrossstreet" Type="String" MaxLength="64" Unicode="false" FixedLength="true" />
+          <Property Name="bdancerID" Type="Int32" />
+          <Property Name="bdancernum" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="bdrag" Type="Boolean" />
+          <Property Name="bdrill" Type="Boolean" />
+          <Property Name="bemail" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="beventDate" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="beventType" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="bfat" Type="Boolean" />
+          <Property Name="bfemale" Type="Boolean" />
+          <Property Name="bfirstName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="bguesthonor" Type="String" MaxLength="64" Unicode="false" FixedLength="true" />
+          <Property Name="bguests" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="bID" Type="Int32" Nullable="false" />
+          <Property Name="bimperson" Type="Boolean" />
+          <Property Name="bipAddress" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="blastName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="blittle" Type="Boolean" />
+          <Property Name="blocaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bloccity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="blocname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="blocphone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="blocstate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bloczip" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="bmale" Type="Boolean" />
+          <Property Name="bpole" Type="Boolean" />
+          <Property Name="bpopOut" Type="Boolean" />
+          <Property Name="bpriphone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="brefer" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="bsecphone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="bshower" Type="Boolean" />
+          <Property Name="bshowLength" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="bspecial" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="bstartTime" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="bstate" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="bsuprise" Type="Boolean" />
+          <Property Name="btopless" Type="Boolean" />
+          <Property Name="btypeofcrowd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bzip" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="CAlternate" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="CAlternateName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CBusiness" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="CCell" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="CCity" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CFax" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="CFirstName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CHear" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CHome" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="CID" Type="Int32" Nullable="false" />
+          <Property Name="CLastName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CPager" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="CState" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="CStreet" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CZip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="objectid" Type="Int32" />
+          <Property Name="property" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="uvalue" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="value" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="CusID" Type="Int32" Nullable="false" />
+          <Property Name="ECity" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EContact" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="EContactPhone" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="EDate" Type="DateTime" />
+          <Property Name="EEnd" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EGuests" Type="Int16" />
+          <Property Name="EHonor" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="EID" Type="Int32" Nullable="false" />
+          <Property Name="ELocation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EPhone" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="ERange" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EStart" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EState" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="EStreet" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ESuprise" Type="Boolean" />
+          <Property Name="EType" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="EZip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Hold">
+          <Key>
+            <PropertyRef Name="HID" />
+          </Key>
+          <Property Name="DateStart" Type="DateTime" />
+          <Property Name="HID" Type="Int32" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="TalentName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="TimesAva" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JID" />
+          </Key>
+          <Property Name="Balance" Type="Boolean" />
+          <Property Name="BalanceDue" Type="Int16" />
+          <Property Name="Cancel" Type="Boolean" />
+          <Property Name="CCExp" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CCName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CCNum" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="CCType" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="CV2Num" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="Dancer1" Type="Int16" />
+          <Property Name="Dancer2" Type="Int16" />
+          <Property Name="Dancer3" Type="Int16" />
+          <Property Name="Dancer4" Type="Int16" />
+          <Property Name="Dancer5" Type="Int16" />
+          <Property Name="Dancer6" Type="Int16" />
+          <Property Name="Dancer7" Type="Int16" />
+          <Property Name="DancerNum" Type="Int16" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="JID" Type="Int32" Nullable="false" />
+          <Property Name="JobDone" Type="Boolean" />
+          <Property Name="Limo" Type="Int16" />
+          <Property Name="MiscExp" Type="Int16" />
+          <Property Name="PartyFee" Type="Int16" />
+          <Property Name="Pay1" Type="Int16" />
+          <Property Name="Pay2" Type="Int16" />
+          <Property Name="Pay3" Type="Int16" />
+          <Property Name="Pay4" Type="Int16" />
+          <Property Name="Pay5" Type="Int16" />
+          <Property Name="Pay6" Type="Int16" />
+          <Property Name="Pay7" Type="Int16" />
+          <Property Name="PreparedBy" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Responsible" Type="Int32" />
+          <Property Name="ShowLength" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Special" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Start1" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Start2" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Start3" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Start4" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Start5" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Start6" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Start7" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Subtotal" Type="Int16" />
+          <Property Name="TimeCreated" Type="DateTime" />
+          <Property Name="Total" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="LID" />
+          </Key>
+          <Property Name="LID" Type="Int32" Nullable="false" />
+          <Property Name="LocationLong" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LocationName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LocationPic" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LocationValue" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Pending">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="CustomerName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EventDate" Type="DateTime" />
+          <Property Name="Location" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="PartyType" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Talent">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Address" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Bio" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Bust" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="DateCreate" Type="DateTime" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="Duo" Type="Boolean" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Eyes" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Feature" Type="Boolean" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Hair" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="HeightFt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HeightIn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Hips" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Image1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Image2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriPhone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Race" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SecPhone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SpecialNotes" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="StageName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ThumbImage" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="Updated" Type="DateTime" />
+          <Property Name="Waist" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="WebSite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Weight" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Zip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="CfsNamespaceOldStoreContainer" CdmEntityContainer="CfsEntityOld">
+          <EntitySetMapping Name="Applicants">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Applicants)">
+              <MappingFragment StoreEntitySet="Applicants">
+                <ScalarProperty Name="Image1" ColumnName="Image1" />
+                <ScalarProperty Name="Image2" ColumnName="Image2" />
+                <ScalarProperty Name="Image3" ColumnName="Image3" />
+                <ScalarProperty Name="PAddress" ColumnName="PAddress" />
+                <ScalarProperty Name="PAge" ColumnName="PAge" />
+                <ScalarProperty Name="PAvailable" ColumnName="PAvailable" />
+                <ScalarProperty Name="PBust" ColumnName="PBust" />
+                <ScalarProperty Name="PCellPhone" ColumnName="PCellPhone" />
+                <ScalarProperty Name="PCity" ColumnName="PCity" />
+                <ScalarProperty Name="PContact" ColumnName="PContact" />
+                <ScalarProperty Name="PEmail" ColumnName="PEmail" />
+                <ScalarProperty Name="PExperience" ColumnName="PExperience" />
+                <ScalarProperty Name="PEyes" ColumnName="PEyes" />
+                <ScalarProperty Name="PFirstName" ColumnName="PFirstName" />
+                <ScalarProperty Name="PHair" ColumnName="PHair" />
+                <ScalarProperty Name="PHeightFt" ColumnName="PHeightFt" />
+                <ScalarProperty Name="PHeightIn" ColumnName="PHeightIn" />
+                <ScalarProperty Name="PHips" ColumnName="PHips" />
+                <ScalarProperty Name="PHomePhone" ColumnName="PHomePhone" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="PLastName" ColumnName="PLastName" />
+                <ScalarProperty Name="PNotes" ColumnName="PNotes" />
+                <ScalarProperty Name="PPreference" ColumnName="PPreference" />
+                <ScalarProperty Name="PStageName" ColumnName="PStageName" />
+                <ScalarProperty Name="PState" ColumnName="PState" />
+                <ScalarProperty Name="PSubmit" ColumnName="PSubmit" />
+                <ScalarProperty Name="PWaist" ColumnName="PWaist" />
+                <ScalarProperty Name="PWebsite" ColumnName="PWebsite" />
+                <ScalarProperty Name="PWeight" ColumnName="PWeight" />
+                <ScalarProperty Name="PZip" ColumnName="PZip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookAct">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.BookAct)">
+              <MappingFragment StoreEntitySet="BookAct">
+                <ScalarProperty Name="baddress1" ColumnName="baddress1" />
+                <ScalarProperty Name="baddress2" ColumnName="baddress2" />
+                <ScalarProperty Name="bagerange" ColumnName="bagerange" />
+                <ScalarProperty Name="bbelly" ColumnName="bbelly" />
+                <ScalarProperty Name="bbookDate" ColumnName="bbookDate" />
+                <ScalarProperty Name="bbookTime" ColumnName="bbookTime" />
+                <ScalarProperty Name="bcity" ColumnName="bcity" />
+                <ScalarProperty Name="bcrossstreet" ColumnName="bcrossstreet" />
+                <ScalarProperty Name="bdancerID" ColumnName="bdancerID" />
+                <ScalarProperty Name="bdancernum" ColumnName="bdancernum" />
+                <ScalarProperty Name="bdrag" ColumnName="bdrag" />
+                <ScalarProperty Name="bdrill" ColumnName="bdrill" />
+                <ScalarProperty Name="bemail" ColumnName="bemail" />
+                <ScalarProperty Name="beventDate" ColumnName="beventDate" />
+                <ScalarProperty Name="beventType" ColumnName="beventType" />
+                <ScalarProperty Name="bfat" ColumnName="bfat" />
+                <ScalarProperty Name="bfemale" ColumnName="bfemale" />
+                <ScalarProperty Name="bfirstName" ColumnName="bfirstName" />
+                <ScalarProperty Name="bguesthonor" ColumnName="bguesthonor" />
+                <ScalarProperty Name="bguests" ColumnName="bguests" />
+                <ScalarProperty Name="bID" ColumnName="bID" />
+                <ScalarProperty Name="bimperson" ColumnName="bimperson" />
+                <ScalarProperty Name="bipAddress" ColumnName="bipAddress" />
+                <ScalarProperty Name="blastName" ColumnName="blastName" />
+                <ScalarProperty Name="blittle" ColumnName="blittle" />
+                <ScalarProperty Name="blocaddress" ColumnName="blocaddress" />
+                <ScalarProperty Name="bloccity" ColumnName="bloccity" />
+                <ScalarProperty Name="blocname" ColumnName="blocname" />
+                <ScalarProperty Name="blocphone" ColumnName="blocphone" />
+                <ScalarProperty Name="blocstate" ColumnName="blocstate" />
+                <ScalarProperty Name="bloczip" ColumnName="bloczip" />
+                <ScalarProperty Name="bmale" ColumnName="bmale" />
+                <ScalarProperty Name="bpole" ColumnName="bpole" />
+                <ScalarProperty Name="bpopOut" ColumnName="bpopOut" />
+                <ScalarProperty Name="bpriphone" ColumnName="bpriphone" />
+                <ScalarProperty Name="brefer" ColumnName="brefer" />
+                <ScalarProperty Name="bsecphone" ColumnName="bsecphone" />
+                <ScalarProperty Name="bshower" ColumnName="bshower" />
+                <ScalarProperty Name="bshowLength" ColumnName="bshowLength" />
+                <ScalarProperty Name="bspecial" ColumnName="bspecial" />
+                <ScalarProperty Name="bstartTime" ColumnName="bstartTime" />
+                <ScalarProperty Name="bstate" ColumnName="bstate" />
+                <ScalarProperty Name="bsuprise" ColumnName="bsuprise" />
+                <ScalarProperty Name="btopless" ColumnName="btopless" />
+                <ScalarProperty Name="btypeofcrowd" ColumnName="btypeofcrowd" />
+                <ScalarProperty Name="bzip" ColumnName="bzip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Customers)">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="CAlternate" ColumnName="CAlternate" />
+                <ScalarProperty Name="CAlternateName" ColumnName="CAlternateName" />
+                <ScalarProperty Name="CBusiness" ColumnName="CBusiness" />
+                <ScalarProperty Name="CCell" ColumnName="CCell" />
+                <ScalarProperty Name="CCity" ColumnName="CCity" />
+                <ScalarProperty Name="CEmail" ColumnName="CEmail" />
+                <ScalarProperty Name="CFax" ColumnName="CFax" />
+                <ScalarProperty Name="CFirstName" ColumnName="CFirstName" />
+                <ScalarProperty Name="CHear" ColumnName="CHear" />
+                <ScalarProperty Name="CHome" ColumnName="CHome" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="CLastName" ColumnName="CLastName" />
+                <ScalarProperty Name="CPager" ColumnName="CPager" />
+                <ScalarProperty Name="CState" ColumnName="CState" />
+                <ScalarProperty Name="CStreet" ColumnName="CStreet" />
+                <ScalarProperty Name="CZip" ColumnName="CZip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dtproperties">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.dtproperties)">
+              <MappingFragment StoreEntitySet="dtproperties">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+                <ScalarProperty Name="objectid" ColumnName="objectid" />
+                <ScalarProperty Name="property" ColumnName="property" />
+                <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Event">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Event)">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="CusID" ColumnName="CusID" />
+                <ScalarProperty Name="ECity" ColumnName="ECity" />
+                <ScalarProperty Name="EContact" ColumnName="EContact" />
+                <ScalarProperty Name="EContactPhone" ColumnName="EContactPhone" />
+                <ScalarProperty Name="EDate" ColumnName="EDate" />
+                <ScalarProperty Name="EEnd" ColumnName="EEnd" />
+                <ScalarProperty Name="EGuests" ColumnName="EGuests" />
+                <ScalarProperty Name="EHonor" ColumnName="EHonor" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="ELocation" ColumnName="ELocation" />
+                <ScalarProperty Name="EPhone" ColumnName="EPhone" />
+                <ScalarProperty Name="ERange" ColumnName="ERange" />
+                <ScalarProperty Name="EStart" ColumnName="EStart" />
+                <ScalarProperty Name="EState" ColumnName="EState" />
+                <ScalarProperty Name="EStreet" ColumnName="EStreet" />
+                <ScalarProperty Name="ESuprise" ColumnName="ESuprise" />
+                <ScalarProperty Name="EType" ColumnName="EType" />
+                <ScalarProperty Name="EZip" ColumnName="EZip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hold">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Hold)">
+              <MappingFragment StoreEntitySet="Hold">
+                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+                <ScalarProperty Name="HID" ColumnName="HID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="TalentName" ColumnName="TalentName" />
+                <ScalarProperty Name="TimesAva" ColumnName="TimesAva" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Jobs)">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="BalanceDue" ColumnName="BalanceDue" />
+                <ScalarProperty Name="Cancel" ColumnName="Cancel" />
+                <ScalarProperty Name="CCExp" ColumnName="CCExp" />
+                <ScalarProperty Name="CCName" ColumnName="CCName" />
+                <ScalarProperty Name="CCNum" ColumnName="CCNum" />
+                <ScalarProperty Name="CCType" ColumnName="CCType" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CV2Num" ColumnName="CV2Num" />
+                <ScalarProperty Name="Dancer1" ColumnName="Dancer1" />
+                <ScalarProperty Name="Dancer2" ColumnName="Dancer2" />
+                <ScalarProperty Name="Dancer3" ColumnName="Dancer3" />
+                <ScalarProperty Name="Dancer4" ColumnName="Dancer4" />
+                <ScalarProperty Name="Dancer5" ColumnName="Dancer5" />
+                <ScalarProperty Name="Dancer6" ColumnName="Dancer6" />
+                <ScalarProperty Name="Dancer7" ColumnName="Dancer7" />
+                <ScalarProperty Name="DancerNum" ColumnName="DancerNum" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="JID" ColumnName="JID" />
+                <ScalarProperty Name="JobDone" ColumnName="JobDone" />
+                <ScalarProperty Name="Limo" ColumnName="Limo" />
+                <ScalarProperty Name="MiscExp" ColumnName="MiscExp" />
+                <ScalarProperty Name="PartyFee" ColumnName="PartyFee" />
+                <ScalarProperty Name="Pay1" ColumnName="Pay1" />
+                <ScalarProperty Name="Pay2" ColumnName="Pay2" />
+                <ScalarProperty Name="Pay3" ColumnName="Pay3" />
+                <ScalarProperty Name="Pay4" ColumnName="Pay4" />
+                <ScalarProperty Name="Pay5" ColumnName="Pay5" />
+                <ScalarProperty Name="Pay6" ColumnName="Pay6" />
+                <ScalarProperty Name="Pay7" ColumnName="Pay7" />
+                <ScalarProperty Name="PreparedBy" ColumnName="PreparedBy" />
+                <ScalarProperty Name="Responsible" ColumnName="Responsible" />
+                <ScalarProperty Name="ShowLength" ColumnName="ShowLength" />
+                <ScalarProperty Name="Special" ColumnName="Special" />
+                <ScalarProperty Name="Start1" ColumnName="Start1" />
+                <ScalarProperty Name="Start2" ColumnName="Start2" />
+                <ScalarProperty Name="Start3" ColumnName="Start3" />
+                <ScalarProperty Name="Start4" ColumnName="Start4" />
+                <ScalarProperty Name="Start5" ColumnName="Start5" />
+                <ScalarProperty Name="Start6" ColumnName="Start6" />
+                <ScalarProperty Name="Start7" ColumnName="Start7" />
+                <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Locations)">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="LID" ColumnName="LID" />
+                <ScalarProperty Name="LocationLong" ColumnName="LocationLong" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="LocationPic" ColumnName="LocationPic" />
+                <ScalarProperty Name="LocationValue" ColumnName="LocationValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pending">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Pending)">
+              <MappingFragment StoreEntitySet="Pending">
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="PartyType" ColumnName="PartyType" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Talent">
+            <EntityTypeMapping TypeName="IsTypeOf(CfsNamespaceOld.Talent)">
+              <MappingFragment StoreEntitySet="Talent">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Bio" ColumnName="Bio" />
+                <ScalarProperty Name="Bust" ColumnName="Bust" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Duo" ColumnName="Duo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Eyes" ColumnName="Eyes" />
+                <ScalarProperty Name="Feature" ColumnName="Feature" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Hair" ColumnName="Hair" />
+                <ScalarProperty Name="HeightFt" ColumnName="HeightFt" />
+                <ScalarProperty Name="HeightIn" ColumnName="HeightIn" />
+                <ScalarProperty Name="Hips" ColumnName="Hips" />
+                <ScalarProperty Name="Image1" ColumnName="Image1" />
+                <ScalarProperty Name="Image2" ColumnName="Image2" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="PriPhone" ColumnName="PriPhone" />
+                <ScalarProperty Name="Race" ColumnName="Race" />
+                <ScalarProperty Name="SecPhone" ColumnName="SecPhone" />
+                <ScalarProperty Name="SpecialNotes" ColumnName="SpecialNotes" />
+                <ScalarProperty Name="StageName" ColumnName="StageName" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ThumbImage" ColumnName="ThumbImage" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="Waist" ColumnName="Waist" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="CfsDataModelOLD">
+        <EntityTypeShape EntityType="CfsNamespaceOld.Applicants" Width="1.5" PointX="0.75" PointY="0.75" Height="5.8653369140625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.BookAct" Width="1.5" PointX="2.75" PointY="0.75" Height="8.4948942057291656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Customers" Width="1.5" PointX="4.75" PointY="0.75" Height="3.5644742838541665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.dtproperties" Width="1.5" PointX="4.75" PointY="5.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Event" Width="1.5" PointX="6.75" PointY="0.75" Height="3.8931689453124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Hold" Width="1.5" PointX="6.75" PointY="5.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Jobs" Width="1.5" PointX="8.75" PointY="0.75" Height="8.330546875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Locations" Width="1.5" PointX="4.75" PointY="8.75" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Pending" Width="1.5" PointX="10.75" PointY="0.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CfsNamespaceOld.Talent" Width="1.5" PointX="0.75" PointY="10.75" Height="6.5227262369791674" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
